@@ -39,6 +39,11 @@ export default async function (eleventyConfig) {
             }
         },
     })
+
+    // Copy static files without processing
+    // We could add ESBuild later if you wanted more
+    // sophisticated javascript/CSS compilation
+    eleventyConfig.addPassthroughCopy("src/static")
 }
 
 export const config = {
