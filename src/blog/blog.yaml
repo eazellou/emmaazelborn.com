@@ -1,0 +1,11 @@
+# This file provides the default configuration for all posts in this directory
+
+# All posts in this directory will use the post.njk layout
+layout: post.njk
+
+# Change this line to have a different permalink format.
+# For example, to include year and month in the permalink,
+# use this line instead:
+#
+# permalink: "{{ page.date | date:'yyyy/MM' }}/{{ page.fileSlug }}/"
+permalink: "p/{{ page.fileSlug }}/"

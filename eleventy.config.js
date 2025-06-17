@@ -1,0 +1,57 @@
+import { format } from 'date-fns'
+import yaml from 'js-yaml'
+import { feedPlugin } from '@11ty/eleventy-plugin-rss'
+
+export default async function (eleventyConfig) {
+    // Add a collection for posts
+    eleventyConfig.addCollection("posts", (collection) => {
+        return collection.getFilteredByGlob("src/blog/*.md")
+    })
+
+    // Add a filter to format dates using date-fns
+    eleventyConfig.addFilter(
+        "date",
+        (date, formatStr = "MMMM d, yyyy") => format(new Date(date), formatStr)
+    )
+
+    // Add YAML as an acceptable data file format
+    eleventyConfig.addDataExtension(
+        "yml,yaml",
+        (contents) => yaml.load(contents)
+    )
+
+    // Add RSS feed
+    eleventyConfig.addPlugin(feedPlugin, {
+        type: "atom",
+        outputPath: "/feed.xml",
+        collection: {
+            name: "posts",
+            limit: 10,
+        },
+        metadata: {
+            language: "en",
+            title: "Emma Azelborn",
+            subtitle: "This is a longer description about your blog.",
+            base: "https://emmaazelborn.com",
+            author: {
+                name: "Emma Azelborn",
+                email: "", // Optional
+            }
+        },
+    })
+}
+
+export const config = {
+    dir: {
+        input: "src",
+        output: "dist",
+        // Store template layouts and includes in the same directory
+        // for simplicity
+        layouts: "_layouts",
+        includes: "_layouts",
+        // Switch Markdown and HTML template engines to Nunjucks
+        // (otherwise, the default is Liquid)
+        markdownTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
+    },
+}
