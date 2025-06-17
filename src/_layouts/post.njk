@@ -1,0 +1,8 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+    <a href="/">← Home</a>
+    <h2>{{ title }}</h2>
+    <time>{{ date | date("LLLL d, yyyy") }}</time>
+    {{ content | safe }}
+{% endblock %}
