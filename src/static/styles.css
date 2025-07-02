@@ -1,3 +1,15 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-image {
+    display: block;
+    margin: 0 auto;
+    max-height: 400px;
+    width: auto;
+}
