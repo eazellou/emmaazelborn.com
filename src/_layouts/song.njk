@@ -2,5 +2,15 @@
 
 {% block content %}
     <h2>{{ title }}</h2>
+    {% if released %}
+      <div class="song-projects">
+        <strong>Appears in:</strong>
+        <ul>
+          {% for project in released %}
+            <li><a href="/projects/{{ project }}/">{{ project | replace('-', ' ') | title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
     {{ content | safe }}
 {% endblock %}
