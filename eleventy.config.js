@@ -1,6 +1,7 @@
 import { format } from 'date-fns'
 import yaml from 'js-yaml'
 import { feedPlugin } from '@11ty/eleventy-plugin-rss'
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default async function (eleventyConfig) {
     // Add a collection for posts
@@ -54,6 +55,9 @@ export default async function (eleventyConfig) {
     // We could add ESBuild later if you wanted more
     // sophisticated javascript/CSS compilation
     eleventyConfig.addPassthroughCopy("src/static")
+
+    // optimize image sizes: https://www.11ty.dev/docs/plugins/image/#html-transform
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 }
 
 export const config = {
