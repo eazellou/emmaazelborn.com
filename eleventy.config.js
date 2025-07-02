@@ -8,6 +8,16 @@ export default async function (eleventyConfig) {
         return collection.getFilteredByGlob("src/blog/*.md")
     })
 
+    // Add a collection for projects
+    eleventyConfig.addCollection("projects", (collection) => {
+        return collection.getFilteredByGlob("src/projects/*.md")
+    })
+
+    // Add highlighted projects
+    eleventyConfig.addCollection("highlightedProjects", (collection) => {
+        return collection.getFilteredByGlob("src/projects/*.md").filter(project => project.data.highlighted)
+    })
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",

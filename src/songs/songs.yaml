@@ -1,0 +1,4 @@
+# This file provides the default configuration for all songs in this directory
+
+# All songs in this directory will use the song.njk layout
+layout: song.njk
