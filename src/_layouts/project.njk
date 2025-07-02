@@ -3,5 +3,6 @@
 {% block content %}
     <h2>{{ title }}</h2>
     <time>{{ date | date("LLLL d, yyyy") }}</time>
+    <img src="{{ image }}" alt="{{ title }}" class="project-image" />
     {{ content | safe }}
 {% endblock %}
