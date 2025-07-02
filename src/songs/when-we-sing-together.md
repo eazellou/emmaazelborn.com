@@ -1,6 +1,6 @@
 ---
 title: When We Sing Together
-released: [magnolia-sun]
+released: [magnolia-sun, circle-songs]
 composer: Emma Azelborn
 ---
 
