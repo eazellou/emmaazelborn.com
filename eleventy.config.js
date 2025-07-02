@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import { UTCDate } from '@date-fns/utc'
 import yaml from 'js-yaml'
 import { feedPlugin } from '@11ty/eleventy-plugin-rss'
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
@@ -22,7 +23,7 @@ export default async function (eleventyConfig) {
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",
-        (date, formatStr = "MMMM d, yyyy") => format(new Date(date), formatStr)
+        (date, formatStr = "MMMM d, yyyy") => format(new UTCDate(date), formatStr)
     )
 
     // Add YAML as an acceptable data file format
