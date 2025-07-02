@@ -1,8 +1,16 @@
 ---
 title: Circle Songs
-date: 2025-01-03
+date: 2023-11-03
 highlighted: true
 image: /static/images/CircleSongs_AlbumArt.png
 ---
 
-I write songs for social singing.
+In August 2023, I gathered a group of my friends and we sang some of my song circle songs together. I wanted to capture the feeling of socially singing with friends in a living room, so that's what we did. It was a wonderful afternoon of music, and the feeling of community in the space was tangible. I hope some of the joy of singing with friends I felt that day comes through in these recordings.
+
+1. [Toss the Bones](/songs/toss-the-bones)
+2. [This Old Floor](/songs/this-old-floor)
+3. [The Hall Remembers](/songs/the-hall-remembers)
+4. [Sea Creature of Greenland](/songs/sea-creature-of-greenland)
+5. [When We Sing Together](/songs/when-we-sing-together)
+6. [Midnight Pizza](/songs/midnight-pizza)
+7. [Legacy Code](/songs/legacy-code)
