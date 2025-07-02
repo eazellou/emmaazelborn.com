@@ -8,7 +8,7 @@ You've been afraid for far too long
 So hidden away  
 So scared of a change and what could go wrong  
 
-_chorus:_
+_chorus:_  
 Toss the bones high  
 Be steady and small  
 And dance while they spin in the sky  

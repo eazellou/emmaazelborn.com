@@ -9,7 +9,7 @@ the light is dim, the shadows long our time is slipping away
 our voices blend so easily just like they always do  
 as we join again in joyful song and let it bring us through  
 
-_chorus:_
+_chorus:_  
 when we sing together it's like we were never alone  
 we want to forever believe our music will ring where green things grow  
 we know it'll fade so we sing ever stronger, fill up our hearts with home  

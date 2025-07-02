@@ -14,7 +14,7 @@ her life was so entwined with yours
 your cardigan she always wore  
 now her days are done  
 
-_half-chorus:_
+_half-chorus:_  
 a part of me will always be in love with what I saw in you  
 we're not each other's people anymore  
 but a part of me will always be in love with who I was with you  
@@ -29,7 +29,7 @@ she'd never needed to rebuild
 no mended seams to slowly gild  
 unafraid and bold  
 
-_chorus:_
+_chorus:_  
 a part of me will always be in love with what I saw in you  
 we're not each other's people anymore  
 but a part of me will always be in love with who I was with you  

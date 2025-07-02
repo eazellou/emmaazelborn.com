@@ -13,7 +13,7 @@ We've gotta go
 Our ancient patterns are hard to change  
 Down, down, down  
 
-_chorus:_
+_chorus:_  
 We've gotta go down, down, down  
 Down in the depths where nobody goes  
 And what we will find there nobody knows  

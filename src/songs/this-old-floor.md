@@ -8,7 +8,7 @@ Today, my friends we stand upon these boards so old and worn
 They've served us well but now they're done  
 We're pulling them up on this crisp autumn morn  
 
-_chorus:_
+_chorus:_  
 This old floor has held us a hundred years  
 It's marked by the soles/souls of those who've gathered here  
 
