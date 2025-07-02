@@ -7,7 +7,7 @@ composer: Emma Azelborn
 on every sunday morning  
 I would stand and I would sing  
 
-_refrain:_
+_refrain:_  
 I would raise my hand and petition the light  
 till I ran right out of breath  
 

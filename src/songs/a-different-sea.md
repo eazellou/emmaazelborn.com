@@ -9,7 +9,7 @@ of the shape of the curve on the edge of your smile
 as you sang us a tale from the end of the bed  
 I've been thinking of you, my friend  
 
-_chorus:_
+_chorus:_  
 I've been thinking of you lately  
 I've been thinking of you lately  
 but your shore faces a different sea  

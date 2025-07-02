@@ -9,7 +9,7 @@ When disciples set sail on the word of their lord
 The lookout exclaimed as they crossed Baffin Bay  
 There was something emerging from within the waves  
 
-_chorus:_
+_chorus:_  
 It was a most unusual sight  
 Wondrous and wiggling and wrinkled and white  
 Its head as high as the ship  

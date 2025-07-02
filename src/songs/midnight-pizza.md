@@ -9,7 +9,7 @@ No, no, not the munchies
 We could go for something crunchy  
 We don't want the munchies  
 
-_chorus:_
+_chorus:_  
 We know what we are wanting  
 Midnight, midnight pizza  
 We know what we are wanting  

@@ -12,7 +12,7 @@ how will they know what happened here
 scars stuck forever stretching  
 the battleground never grown over the years  
 
-_chorus:_
+_chorus:_  
 nothing stays the same  
 nothing stays the same  
 we'll rest in the sun and we'll burn away  

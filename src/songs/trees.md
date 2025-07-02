@@ -9,7 +9,7 @@ piles of bark and branches up to your ears
 your neighbor's roof has fallen in  
 no one spared from damage, it's more than you feared  
 
-_chorus:_
+_chorus:_  
 houses can be made, but trees have to grow  
 but trees have to grow  
 but trees have to grow  

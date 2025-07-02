@@ -4,7 +4,7 @@ released: [magnolia-sun]
 composer: Emma Azelborn
 ---
 
-_chorus:_
+_chorus:_  
 if you ever wanna glow, you gotta go ride  
 if you ever wanna glow, you gotta go ride  
 superstar limo  
