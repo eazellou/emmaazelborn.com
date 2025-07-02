@@ -4,27 +4,27 @@ released: [magnolia-sun]
 composer: Emma Azelborn
 ---
 
-I've been thinking about the way things change  
-how nothing stays the same  
-and how we try to hold on tight  
-but time keeps slipping through our hands  
+what will we do if the grass doesn't grow
+crumbling blades becoming sculptures
+sitting among the stones
 
-I've been thinking about the way we love  
-how it burns so bright and hot  
-and how we think it'll last forever  
-but we know it cannot  
+how will they know what happened here
+scars stuck forever stretching
+the battleground never grown over the years
 
-we'll burn away  
-like stars in the night  
-we'll burn away  
-but oh, what a light  
+_chorus:_
+nothing stays the same
+nothing stays the same
+we'll rest in the sun and we'll burn away
 
-I've been thinking about the way we dance  
-how we move without a care  
-and how we think the music's endless  
-but silence fills the air  
+what will we say if it stays how it is
+brittle will break and splinter
+shimmer fading and starting to chip
 
-we'll burn away  
-like stars in the night  
-we'll burn away  
-but oh, what a light 
+how could they say that we were wise
+we fought with the ants
+stuck in the sludge of our hopeful lies
+
+she was brilliance
+starlight searing
+stained by rose and strawberry streaming
