@@ -1,4 +1,4 @@
-# This file provides the default configuration for all posts in this directory
+# This file provides the default configuration for all projects in this directory
 
-# All posts in this directory will use the post.njk layout
+# All projects in this directory will use the project.njk layout
 layout: project.njk
