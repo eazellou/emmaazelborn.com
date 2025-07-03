@@ -41,7 +41,7 @@
     --color-light-green: #7A8C51; 
 
     font-size: 10px;
-    background: var(--color-light-blue);
+    /* background: var(--color-light-blue); */
     font-family: 'lehigh-regular';
 }
 
@@ -65,8 +65,28 @@ ul, ol {
     list-style: none;
 }
 
+.header {
+    background: var(--color-light-blue);
+}
+
+nav {
+    background: var(--color-dark-green);
+    padding: 1rem;
+}
+
+.home-intro {
+    background: var(--color-light-green);
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+.home-projects {
+    background: var(--color-dark-blue);
+    padding: 1rem;
+}
+
 body {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: var(--font-size-base);
