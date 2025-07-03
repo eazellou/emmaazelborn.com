@@ -3,6 +3,9 @@ layout: page.njk
 title: Contact
 ---
 
+<img src="/static/images/house-show.jpg" alt="Emma performing at a house show" class="project-image">
+
+
 email: <a href="mailto:music@emmaazelborn.com">music@emmaazelborn.com</a>
 
 signal: [emma.26](https://signal.me/#eu/rE5VP66SqSu1TDD8syRG3a8NFzyZTkX2iQRuf4KnvRvxCz-w1mpCPpka_ybNsgps)
