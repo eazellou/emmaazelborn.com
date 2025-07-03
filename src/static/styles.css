@@ -51,6 +51,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     margin: 0;
 }
 
+h1 {
+    font-family: 'lehigh-black';
+    font-size: 8rem;
+}
+
+h2 {
+    font-family: 'lehigh-bold';
+    font-size: 4rem;
+}
+
 ul, ol {
     list-style: none;
 }
