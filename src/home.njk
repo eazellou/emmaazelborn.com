@@ -9,13 +9,29 @@ permalink: /
 </section>
 
 <section>
-    {% for project in collections.highlightedProjects %}
-        <div>
-            <h2>{{ project.data.title }}</h2>
-            <!-- <p>{{ project.data.description }}</p> -->
-        </div>
-    {% endfor %}
-    <a href="/projects">View all projects</a>
+    <ul class="project-list">
+        {% for project_title in config.highlightedProjects %}
+            {% for project in collections.projects %}
+                {% if project.data.title == project_title %}
+                    <li class="project-item">
+                        <a href="{{ project.url }}">
+                            <img
+                                src="{{ project.data.image }}"
+                                alt="{{ project.data.title }}"
+                                eleventy:widths="400"
+                                eleventy:heights="400"
+                            />
+                            <div class="project-details">
+                                <h2>{{ project.data.title }}</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    <a class="button" href="/projects">View all projects ›</a>
 </section>
 
 <!-- <section>

@@ -1,7 +1,6 @@
 ---
 title: Circle Songs
 date: 2023-11-03
-highlighted: true
 image: /static/images/CircleSongs_AlbumArt.png
 ---
 

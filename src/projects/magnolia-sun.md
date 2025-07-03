@@ -1,7 +1,6 @@
 ---
 title: Magnolia Sun
 date: 2025-01-03
-highlighted: true
 image: /static/images/magnolia-sun-album-art.png
 ---
 
