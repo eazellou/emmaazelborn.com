@@ -11,10 +11,12 @@
         <h1>Emma Azelborn</h1>
     </section>
     {% include "./includes/site-nav.njk" %}
+    <section class="page-content">
     {% block content %}
         {{ content | safe }}
     {% endblock %}
-    <section>
+    </section>
+    <section class="footer">
         <a href="https://emmaazelborn.bandcamp.com/">bandcamp</a>
         <a href="https://www.instagram.com/emmaazelborn/">instagram</a>
     </section>
