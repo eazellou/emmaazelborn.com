@@ -17,8 +17,15 @@ Regan Wang - Vocals, Guitar, Bass, Fiddle, Cajon
 
 ![Many Miles album art](/static/images/many-miles.jpg)
 
+1. Unchosen Lives _written by Lena_  
+2. [Poison](/songs/poison) _written by Emma_  
+3. In Between Places _written by Regan_  
+4. [New Hands, Old Strings](/songs/new-hands-old-strings) _written by Emma_  
+5. Deja Vu _written by Lena_  
+6. Many Miles _written by Regan_  
+
 Composed, Recorded, and Edited by Lucy Goose  
-Mixed by Jack Tarricone  
-Mastered by Lena Sutter  
+Mixed by [Jack Tarricone](https://jacktarricone.com/)   
+Mastered by [Lena Sutter](https://lenasutter.com/)  
 
 _released October 4th, 2023_
