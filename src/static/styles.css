@@ -74,6 +74,11 @@ nav {
     padding: 1rem;
 }
 
+.footer {
+    background: var(--color-light-blue);
+    padding: 1rem;
+}
+
 .home-intro {
     background: var(--color-light-green);
     color: var(--color-white);
@@ -86,11 +91,18 @@ nav {
 }
 
 body {
-    /* max-width: 1200px; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0 auto;
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+}
+
+.page-content {
+    flex: 1;
+    background: var(--color-light-blue);
 }
 
 .project-image-wrapper {
@@ -102,11 +114,11 @@ body {
 
 .project-image {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
     object-fit: cover;
-    left: 0;
-    top: 0;
+    left: 1rem;
+    top: 1rem;
     display: block;
     max-width: 100%;
 }
