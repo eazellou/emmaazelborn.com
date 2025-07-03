@@ -15,6 +15,10 @@ Emma Azelborn - Vocals, Uke, So Many Different Kinds of Flutes
 Lena Sutter - Vocals, Guitar, Bass, Banjo, Fiddle, Shaker  
 Regan Wang - Vocals, Guitar, Bass, Fiddle, Cajon  
 
+[Many Miles](https://album.link/i/1710103597)
+
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3966217537/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lucygoose.bandcamp.com/album/many-miles">Many Miles by Lucy Goose</a></iframe>
+
 ![Many Miles album art](/static/images/many-miles.jpg)
 
 1. Unchosen Lives _written by Lena_  
