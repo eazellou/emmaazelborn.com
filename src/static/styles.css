@@ -1,3 +1,33 @@
+@font-face {
+    font-family: "lehigh-black";
+    src: url("/static/fonts/Lehigh-Personal-Black.otf");
+  }
+
+@font-face {
+    font-family: "lehigh-bold";
+    src: url("/static/fonts/Lehigh-Personal-Bold.otf");
+  }
+
+@font-face {
+    font-family: "lehigh-regular";
+    src: url("/static/fonts/Lehigh-Personal-Regular.otf");
+  }
+
+@font-face {
+    font-family: "lehigh-light";
+    src: url("/static/fonts/Lehigh-Personal-Light.otf");
+  }
+
+@font-face {
+    font-family: "lehigh-semibold";
+    src: url("/static/fonts/Lehigh-Personal-Semibold.otf");
+  }
+
+@font-face {
+    font-family: "lehigh-thin";
+    src: url("/static/fonts/Lehigh-Personal-Thin.otf");
+  }
+
 :root {
     --font-size-base: 2.4rem;
     --line-height-base: 1.5;
@@ -12,6 +42,7 @@
 
     font-size: 10px;
     background: var(--color-light-blue);
+    font-family: 'lehigh-regular';
 }
 
 /* Reset */
@@ -27,7 +58,7 @@ ul, ol {
 body {
     max-width: 1200px;
     margin: 0 auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
 }

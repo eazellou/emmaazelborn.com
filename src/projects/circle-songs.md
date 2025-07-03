@@ -2,6 +2,7 @@
 title: Circle Songs
 date: 2023-11-03
 image: /static/images/CircleSongs_AlbumArt.png
+summary: "A collection of original songs written for singing together"
 ---
 
 In August 2023, I gathered a group of my friends and we sang some of my song circle songs together. I wanted to capture the feeling of socially singing with friends in a living room, so that's what we did. It was a wonderful afternoon of music, and the feeling of community in the space was tangible. I hope some of the joy of singing with friends I felt that day comes through in these recordings.
