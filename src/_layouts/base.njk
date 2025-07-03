@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <section class="header">
+    <section class="full-width-stripe header">
         <h1>Emma Azelborn</h1>
     </section>
+    <section class="full-width-stripe nav-bar">
     {% include "./includes/site-nav.njk" %}
+    </section>
     <section class="page-content">
     {% block content %}
         {{ content | safe }}
     {% endblock %}
     </section>
-    <section class="footer">
+    <section class="full-width-stripe footer">
         <a href="https://emmaazelborn.bandcamp.com/"><img src="/static/images/bandcamp-button-bc-circle-black-128.png" alt="bandcamp"></a>
         <a href="https://www.instagram.com/emmaazelborn/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram"></a>
     </section>
