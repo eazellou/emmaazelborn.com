@@ -127,16 +127,6 @@ nav {
     /* text-align: center; */
 }
 
-.home-projects .button {
-    /* border-color: var(--color-dark-blue);
-    border-width: 0.25rem;
-    border-style: solid; */
-}
-
-.home-projects .button:hover {
-    background: var(--color-light-blue);
-}
-
 
 body {
     display: flex;
@@ -169,13 +159,13 @@ body {
     max-width: 100%;
 }
 
-/* Button*/
 .button {
     display: inline-block;
     background: var(--color-white);
     padding: calc(0.25 * var(--line-height-base-rem)) calc(0.5 * var(--line-height-base-rem));
     text-decoration: none;
     color: inherit;
+    font-family: 'lehigh-semibold';
     
     &:hover {
         background-color: var(--color-light-blue);
@@ -193,9 +183,6 @@ body {
     width: 100%;
     background-color: var(--color-white);
     display: flex;
-    /* border-color: var(--color-dark-blue);
-    border-width: 0.25rem;
-    border-style: solid; */
 }
 
 .project-item > a {
