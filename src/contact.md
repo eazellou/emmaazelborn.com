@@ -3,7 +3,7 @@ layout: page.njk
 title: Contact
 ---
 
-<img src="/static/images/house-show.jpg" alt="Emma performing at a house show" class="project-image">
+<img src="/static/images/house-show.jpg" alt="Emma performing at a house show">
 
 
 email: <a href="mailto:music@emmaazelborn.com">music@emmaazelborn.com</a>
