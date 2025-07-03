@@ -116,10 +116,17 @@ nav {
     padding: 1rem;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .footer img {
     width: 4rem;
     height: 4rem;
     padding: 1rem;
+    display: inline-block;
 }
 
 .home-intro {
