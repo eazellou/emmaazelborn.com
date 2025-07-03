@@ -79,6 +79,12 @@ nav {
     padding: 1rem;
 }
 
+.footer img {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+}
+
 .home-intro {
     background: var(--color-light-green);
     color: var(--color-white);
