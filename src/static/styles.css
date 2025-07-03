@@ -74,10 +74,12 @@ body {
 }
 
 .project-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
-    max-height: 400px;
-    width: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Button*/
@@ -100,7 +102,9 @@ body {
 }
 
 .project-item {
-    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    width: 100%;
     background-color: var(--color-white);
     display: flex;
 }
@@ -122,4 +126,6 @@ body {
 
 .project-item .project-details {
     padding: calc(0.5 * var(--line-height-base-rem));
+    width: 100%;
+    box-sizing: border-box;
 }
