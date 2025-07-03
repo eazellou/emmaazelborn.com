@@ -79,6 +79,12 @@ a {
     }
 }
 
+picture, img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}   
+
 ul, ol {
     list-style: none;
 }
