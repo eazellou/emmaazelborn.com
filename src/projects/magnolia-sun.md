@@ -8,6 +8,9 @@ image: /static/images/magnolia-sun-album-art.png
 During the lonely days of COVID quarantine, I dove into songwriting. What started as an escape turned into a collection of songs that follow the journey from those isolated times through the gradual reopening of the world.
 It’s been incredible to see these songs grow far beyond what I imagined. A huge part of that has been the chance to collaborate with the amazing friends and musicians that brought these songs to life in ways I never could have alone.
 
+[Magnolia Sun](https://album.link/s/7grSbplzaqUnZo2wsteiXv)
+
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1983118898/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com/album/magnolia-sun">Magnolia Sun by Emma Azelborn</a></iframe>
 
 1. [Getting Easier](/songs/getting-easier)
 2. [Trees](/songs/trees)
