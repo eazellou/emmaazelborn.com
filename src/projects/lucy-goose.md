@@ -1,6 +1,7 @@
 ---
 title: Lucy Goose
 image: /static/images/lucy-goose.jpg
+summary: "Emma, Regan, and Lena love singing together"
 ---
 
 Lucy Goose is Emma Azelborn, Lena Sutter, and Regan Wang. 

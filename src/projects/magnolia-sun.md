@@ -2,6 +2,7 @@
 title: Magnolia Sun
 date: 2025-01-03
 image: /static/images/magnolia-sun-album-art.png
+summary: "An introspective mix of original songs blending folk, jazz, and pop"
 ---
 
 During the lonely days of COVID quarantine, I dove into songwriting. What started as an escape turned into a collection of songs that follow the journey from those isolated times through the gradual reopening of the world.

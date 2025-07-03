@@ -1,6 +1,7 @@
 ---
 title: Violet Folk Sings
-image: /static/images/singingatthehag.jpeg
+image: /static/images/singingatthehag-square.jpg
+summary: "Hosting social folk singing events with Annaleah Ernst"
 ---
 
 I host social folk singing events with my friend Annaleah Ernst under the name Violet Folk Sings. Singing together in community is a special joy and Annaleah and I put a lot of thought into how to create welcoming, friendly singing spaces.
