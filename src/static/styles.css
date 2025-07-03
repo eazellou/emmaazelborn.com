@@ -35,7 +35,6 @@
     --color-white: #fff;
     --color-black: #000;
     --color-dark-blue: #5D718C;
-    --color-medium-blue: #B6D6F2;
     --color-light-blue: #C9E7F2;
     --color-dark-green: #365946;
     --color-light-green: #7A8C51; 
@@ -65,13 +64,32 @@ ul, ol {
     list-style: none;
 }
 
+.full-width-stripe {
+    width: 100%;
+    text-align: center;
+    & > * {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
 .header {
     background: var(--color-light-blue);
+    padding-top: 2rem;
+}
+
+.nav-bar {
+    background: var(--color-dark-blue);
 }
 
 nav {
-    background: var(--color-dark-green);
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 .footer {
@@ -91,24 +109,42 @@ nav {
     padding: 1rem;
 }
 
-.home-projects {
-    background: var(--color-dark-blue);
-    padding: 1rem;
+.home-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
+
+.home-projects {
+    background: var(--color-dark-green);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /* text-align: center; */
+}
+
+.home-projects .button {
+    /* border-color: var(--color-dark-blue);
+    border-width: 0.25rem;
+    border-style: solid; */
+}
+
+.home-projects .button:hover {
+    background: var(--color-light-blue);
+}
+
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0 auto;
-    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
 }
 
 .page-content {
     flex: 1;
-    background: var(--color-light-blue);
 }
 
 .project-image-wrapper {
@@ -138,11 +174,10 @@ body {
     color: inherit;
     
     &:hover {
-        background-color: var(--color-medium-blue);
+        background-color: var(--color-light-blue);
     }
 }
 
-/* Project List */
 .project-list {
     display: flex;
     gap: 20px;
@@ -154,6 +189,9 @@ body {
     width: 100%;
     background-color: var(--color-white);
     display: flex;
+    /* border-color: var(--color-dark-blue);
+    border-width: 0.25rem;
+    border-style: solid; */
 }
 
 .project-item > a {
@@ -163,7 +201,7 @@ body {
 }
 
 .project-item > a:hover {
-    background-color: var(--color-medium-blue);
+    background-color: var(--color-light-blue);
 }
 
 .project-item picture, .project-item img {
