@@ -322,6 +322,14 @@ body {
   margin-top: auto;
 }
 
+.footer-links {
+  padding-left: 4rem;
+}
+
+.footer-links a {
+    padding-left: 0;
+}
+
 .page-content {
   padding: 2rem;
   background: var(--color-light-blue);
