@@ -12,6 +12,8 @@
             {% endfor %}
             </ul>
         </div>
+        {% else %}
+        <p>This song is not released yet, but I've been singing it out in the world. Feel free to learn it and sing it with your friends!</p>
         {% endif %}
         <div class="song-lyrics">
             {{ content | safe }}
