@@ -282,10 +282,15 @@ body {
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33.333vw;
   height: 100vh;
   background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
 }
 
 .sidebar a {
@@ -305,10 +310,12 @@ body {
 .nav-bar .button {
   width: 100%;
   text-align: left;
+  padding-left: 4rem;
+  box-sizing: border-box;
 }
 
 .nav-bar .button:hover {
-    background-color: var(--color-light-blue);
+  background-color: var(--color-light-blue);
 }
 
 .footer {
@@ -318,4 +325,8 @@ body {
 .page-content {
   padding: 2rem;
   background: var(--color-light-blue);
+  margin-left: 33.333vw;
+  min-height: 100vh;
+  width: calc(100vw - 33.333vw);
+  box-sizing: border-box;
 }
