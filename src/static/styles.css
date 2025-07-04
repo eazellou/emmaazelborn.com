@@ -309,6 +309,10 @@ body {
   text-align: left;
 }
 
+.nav-bar .button:hover {
+    background-color: var(--color-light-blue);
+}
+
 .footer {
   margin-top: auto;
 }
