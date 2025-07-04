@@ -19,7 +19,7 @@ Regan Wang - Vocals, Guitar, Bass, Fiddle, Cajon
 
 [Many Miles](https://album.link/i/1710103597)
 
-<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3966217537/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lucygoose.bandcamp.com/album/many-miles">Many Miles by Lucy Goose</a></iframe>
+<iframe style="border: 0; width: 400px; height: 340px;" src="https://bandcamp.com/EmbeddedPlayer/album=3966217537/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://lucygoose.bandcamp.com/album/many-miles">Many Miles by Lucy Goose</a></iframe>
 
 ![Many Miles album art](/static/images/many-miles.jpg)
 
