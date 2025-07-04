@@ -336,3 +336,89 @@ body {
     }
 }
 
+.project-featured-image {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin: 0 2rem 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-featured-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Clear float after content */
+.project-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Two-column layout for project pages */
+.project-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.project-page-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.project-image-column {
+    position: sticky;
+    top: 2rem;
+}
+
+.project-featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+}
+
+.project-featured-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .project-page {
+        padding: 2rem 1rem;
+    }
+    
+    .project-page-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-image-column {
+        position: static;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .project-featured-image {
+        float: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 2rem auto;
+        display: block;
+    }
+}
