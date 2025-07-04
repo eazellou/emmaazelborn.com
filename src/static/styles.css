@@ -94,43 +94,9 @@ ul, ol {
     list-style: none;
 }
 
-.full-width-stripe {
-    width: 100%;
-    text-align: center;
-}
-
-.stripe-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header {
-    background: var(--color-light-blue);
-    padding-top: 2rem;
-}
-
-.nav-bar {
-    background: var(--color-dark-blue);
-}
-
-nav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.footer {
-    background: var(--color-light-blue);
-    padding: 1rem;
-}
-
 .footer-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 
@@ -142,24 +108,13 @@ nav {
 }
 
 .home-intro {
-    background: var(--color-light-green);
-    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .home-intro p {
     max-width: 800px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
-
-.home-projects {
-    background: var(--color-dark-green);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    /* text-align: center; */
-}
-
 
 body {
     display: flex;
@@ -168,11 +123,6 @@ body {
     margin: 0 auto;
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-}
-
-.page-content {
-    flex: 1;
-    background: var(--color-light-green);
 }
 
 .highlighted-project-image-wrapper {
@@ -202,7 +152,7 @@ body {
     font-family: 'lehigh-semibold';
     
     &:hover {
-        background-color: var(--color-light-blue);
+        background-color: var(--color-dark-blue);
     }
 }
 
@@ -227,7 +177,7 @@ body {
 }
 
 .highlighted-project-item > a:hover {
-    background-color: var(--color-light-blue);
+    background-color: var(--color-dark-blue);
 }
 
 .highlighted-project-item picture, .highlighted-project-item img {
@@ -267,7 +217,6 @@ body {
     padding: 0.5rem 0;
 }
 
-/* Project Grid Styles */
 .project-item {
     margin-bottom: 2rem;
     max-width: 800px;
@@ -323,80 +272,48 @@ body {
     line-height: 1.4;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .project-item a {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .project-image-wrapper {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-}
-
-.project-featured-image {
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-/* Clear float after content */
-.project-content::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Two-column layout for project pages */
-.project-page-content {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.project-image-column {
-    position: sticky;
-    top: 2rem;
-}
-
-
-
-.project-content-column {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-/* Responsive behavior for smaller screens */
-@media (max-width: 768px) {
-    .project-page {
-        padding: 2rem 1rem;
-    }
-    
-    .project-page-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .project-image-column {
-        position: static;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .project-featured-image {
-        float: none;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 2rem auto;
-        display: block;
-    }
-}
-
 .song-lyrics p {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-white);
+}
+
+.sidebar a {
+    padding-left: 4rem;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}   
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-bar .button {
+  width: 100%;
+  text-align: left;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.page-content {
+  padding: 2rem;
+  background: var(--color-light-blue);
 }
