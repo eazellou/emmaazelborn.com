@@ -291,6 +291,7 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 10;
+  padding-top: 2rem;
 }
 
 .sidebar a {
@@ -320,6 +321,7 @@ body {
 
 .footer {
   margin-top: auto;
+  padding-bottom: 3rem;
 }
 
 .footer-links {
