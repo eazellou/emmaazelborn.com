@@ -352,3 +352,28 @@ body {
   width: calc(100vw - 33.333vw);
   box-sizing: border-box;
 }
+
+.project-content blockquote {
+  background: var(--color-white);
+  padding: 2rem;
+  border-left: 4px solid var(--color-purple);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.project-content ol {
+  list-style: decimal;
+  padding-left: 8rem;
+}
+
+.project-content ol li a {
+  text-decoration: none;
+  font-family: 'lehigh-regular';
+}
+
+.project-content ol li a:hover {
+  text-decoration: underline;
+  color: var(--color-dark-purple);
+}
