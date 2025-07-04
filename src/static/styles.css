@@ -175,14 +175,14 @@ body {
     background: var(--color-light-green);
 }
 
-.project-image-wrapper {
+.highlighted-project-image-wrapper {
     aspect-ratio: 1 / 1;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.project-image {
+.highlighted-project-image {
     position: absolute;
     width: calc(100% - 2rem);
     height: calc(100% - 2rem);
@@ -206,12 +206,12 @@ body {
     }
 }
 
-.project-list {
+.highlighted-project-list {
     display: flex;
     gap: 20px;
 }
 
-.project-item {
+.highlighted-project-item {
     max-width: 400px;
     margin: 0 auto 2rem auto;
     width: 100%;
@@ -219,23 +219,23 @@ body {
     display: flex;
 }
 
-.project-item > a {
+.highlighted-project-item > a {
     display: block;
     text-decoration: none;
     color: inherit;
     font-family: 'lehigh-regular';
 }
 
-.project-item > a:hover {
+.highlighted-project-item > a:hover {
     background-color: var(--color-light-blue);
 }
 
-.project-item picture, .project-item img {
+.highlighted-project-item picture, .highlighted-project-item img {
     max-width: 100%;
     display: block;
 }
 
-.project-item .project-details {
+.highlighted-project-item .highlighted-project-details {
     padding: calc(0.5 * var(--line-height-base-rem));
     width: 100%;
     box-sizing: border-box;
