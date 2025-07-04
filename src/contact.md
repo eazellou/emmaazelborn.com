@@ -3,19 +3,23 @@ layout: page.njk
 title: Contact
 ---
 
-<img src="/static/images/house-show.jpg" alt="Emma performing at a house show">
+<div class="contact-container">
+    <div class="contact-image">
+    <img src="/static/images/house-show.jpg" alt="Emma performing at a house show">
+    </div>
+    <div class="contact-details">
+    <p>email: <a href="mailto:music@emmaazelborn.com">music@emmaazelborn.com</a></p>
 
+    signal: [emma.26](https://signal.me/#eu/rE5VP66SqSu1TDD8syRG3a8NFzyZTkX2iQRuf4KnvRvxCz-w1mpCPpka_ybNsgps)
 
-email: <a href="mailto:music@emmaazelborn.com">music@emmaazelborn.com</a>
+    bandcamp: [emmaazelborn](https://emmaazelborn.bandcamp.com/)
 
-signal: [emma.26](https://signal.me/#eu/rE5VP66SqSu1TDD8syRG3a8NFzyZTkX2iQRuf4KnvRvxCz-w1mpCPpka_ybNsgps)
+    instagram: [@emmaazelborn](https://www.instagram.com/emmaazelborn/)
 
-bandcamp: [emmaazelborn](https://emmaazelborn.bandcamp.com/)
+    youtube: [@emmaazelborn](https://www.youtube.com/@emmaazelborn)
 
-instagram: [@emmaazelborn](https://www.instagram.com/emmaazelborn/)
+    github: [@eazellou](https://github.com/eazellou)
 
-youtube: [@emmaazelborn](https://www.youtube.com/@emmaazelborn)
-
-github: [@eazellou](https://github.com/eazellou)
-
-linkedin: [@emmaazelborn](https://www.linkedin.com/in/emmaazelborn/)  
+    linkedin: [@emmaazelborn](https://www.linkedin.com/in/emmaazelborn/)  
+    </div>
+</div>
