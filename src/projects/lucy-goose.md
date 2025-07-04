@@ -9,7 +9,7 @@ Lucy Goose is Emma Azelborn, Lena Sutter, and Regan Wang.
 
 We are friends from college who love making music together. We bring a mix of genre influences to our songs, ranging from folk to classical to punk. We love vocal harmonies and layered guitars.
 
-## Many Miles
+### Many Miles
 
 In summer 2021, Lucy Goose went to a cabin for a week to sing together. They left Wisconsin a week later with these tracks written and recorded, resulting in a beautifully earnest EP.
 
