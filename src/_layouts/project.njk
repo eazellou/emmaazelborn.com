@@ -2,11 +2,8 @@
 
 {% block content %}
     <h2>{{ title }}</h2>
-    {% if date %}
-        <time>{{ date | date("LLLL d, yyyy") }}</time>
-    {% endif %}
     {% if image %}
-        <img src="{{ image }}" alt="{{ title }}" class="project-image" />
+        <img src="{{ image }}" alt="{{ title }}" />
     {% endif %}
     {{ content | safe }}
 {% endblock %}

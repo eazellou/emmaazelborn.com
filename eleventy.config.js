@@ -13,6 +13,7 @@ export default async function (eleventyConfig) {
     // Add a collection for projects
     eleventyConfig.addCollection("projects", (collection) => {
         return collection.getFilteredByGlob("src/projects/*.md")
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     })
 
     // Add a filter to format dates using date-fns
