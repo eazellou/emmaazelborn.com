@@ -16,6 +16,11 @@ export default async function (eleventyConfig) {
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     })
 
+    // Add a collection for songs
+    eleventyConfig.addCollection("songs", (collection) => {
+        return collection.getFilteredByGlob("src/songs/*.md")
+    })
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",
