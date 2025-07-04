@@ -350,12 +350,6 @@ body {
 }
 
 /* Two-column layout for project pages */
-.project-page {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-}
-
 .project-page-content {
     display: grid;
     grid-template-columns: 350px 1fr;
