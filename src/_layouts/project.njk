@@ -1,9 +1,17 @@
 {% extends "./base.njk" %}
 
 {% block content %}
-    <h2>{{ title }}</h2>
-    {% if image %}
-        <img src="{{ image }}" alt="{{ title }}" />
-    {% endif %}
-    {{ content | safe }}
+<div class="project-page">
+    <h1>{{ title }}</h1>
+    <div class="project-page-content">
+        <div class="project-image-column">
+            {% if image %}
+                <img src="{{ image }}" alt="{{ title }}" class="project-featured-image" />
+            {% endif %}
+        </div>
+        <div class="project-content-column">
+            {{ content | safe }}
+        </div>
+    </div>
+</div>
 {% endblock %}
