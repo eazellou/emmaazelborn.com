@@ -21,8 +21,6 @@ Regan Wang - Vocals, Guitar, Bass, Fiddle, Cajon
 
 <iframe style="border: 0; width: 400px; height: 340px;" src="https://bandcamp.com/EmbeddedPlayer/album=3966217537/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://lucygoose.bandcamp.com/album/many-miles">Many Miles by Lucy Goose</a></iframe>
 
-![Many Miles album art](/static/images/many-miles.jpg)
-
 1. Unchosen Lives _written by Lena_  
 2. [Poison](/songs/poison) _written by Emma_  
 3. In Between Places _written by Regan_  
