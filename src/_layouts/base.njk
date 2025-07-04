@@ -8,10 +8,14 @@
 </head>
 <body>
     <section class="full-width-stripe header">
-        <h1><a href="/">Emma Azelborn</a></h1>
+        <div class="stripe-content">
+            <h1><a href="/">Emma Azelborn</a></h1>
+        </div>
     </section>
     <section class="full-width-stripe nav-bar">
-    {% include "./includes/site-nav.njk" %}
+        <div class="stripe-content">
+            {% include "./includes/site-nav.njk" %}
+        </div>
     </section>
     <section class="page-content">
     {% block content %}
@@ -19,9 +23,11 @@
     {% endblock %}
     </section>
     <section class="full-width-stripe footer">
-        <div class="footer-links">
-            <a href="https://emmaazelborn.bandcamp.com/"><img src="/static/images/bandcamp-button-bc-circle-black-128.png" alt="bandcamp"></a>
-            <a href="https://www.instagram.com/emmaazelborn/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram"></a>
+        <div class="stripe-content">
+            <div class="footer-links">
+                <a href="https://emmaazelborn.bandcamp.com/"><img src="/static/images/bandcamp-button-bc-circle-black-128.png" alt="bandcamp"></a>
+                <a href="https://www.instagram.com/emmaazelborn/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram"></a>
+            </div>
         </div>
     </section>
 </body>
