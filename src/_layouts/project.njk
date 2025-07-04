@@ -2,9 +2,23 @@
 
 {% block content %}
 <div class="stripe-content">
-    <h2>{{ title }}</h2>
-        <div class="project-content">
-            {{ content | safe }}
+    <div class="project-content">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        <div class="side-by-side">
+            {% if bandcampID and bandcampUrl %}
+            <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
+            {% endif %}
+            {% if songs %}
+            <ol>
+                {% for song in songs %}
+                <li><a href="{{ song.lyricsUrl }}">{{ song.title }}</a></li>
+                {% endfor %}
+            </ol>
+            {% endif %}
         </div>
+        <a href="{{ songLink }}" class="button">Stream {{ title }}</a>
+        {{ content | safe }}
+    </div>
 </div>
 {% endblock %}
