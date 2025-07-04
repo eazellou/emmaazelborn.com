@@ -34,14 +34,15 @@
     --line-height-base-rem: calc(var(--line-height-base) * var(--font-size-base));
     --color-white: #fff;
     --color-black: #000;
-    --color-dark-blue: #5D718C;
-    --color-light-blue: #C9E7F2;
-    --color-dark-green: #365946;
-    /* --color-medium-green: #7A8C51; */
-    --color-light-green: #aec96d;
+    --color-dark-purple: #444161;
+    --color-purple:#8580A6;
+    --color-light-purple:#BEBAD9;
+    --color-light-green: #AFB96A;
+    --color-green: #535922;
+    --color-dark-green: #42471B;
+    --color-tan: #E1DBCB;
 
     font-size: 10px;
-    /* background: var(--color-light-blue); */
     font-family: 'lehigh-regular';
 }
 
@@ -57,7 +58,11 @@ h1 {
     text-decoration: none;
 }
 
-h1 a {
+.header h1 {
+    /* color: var(--color-dark-purple); */
+}
+
+.header h1 a {
     text-decoration: inherit;
     color: inherit;
     font-family: inherit;
@@ -152,7 +157,9 @@ body {
     font-family: 'lehigh-semibold';
     
     &:hover {
-        background-color: var(--color-dark-blue);
+        background-color: var(--color-dark-purple);
+        color: var(--color-white);
+        text-decoration: none;
     }
 }
 
@@ -177,7 +184,8 @@ body {
 }
 
 .highlighted-project-item > a:hover {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
 }
 
 .highlighted-project-item picture, .highlighted-project-item img {
@@ -235,7 +243,8 @@ body {
 }
 
 .project-item a:hover {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
 }
 
 .project-image-wrapper {
@@ -306,6 +315,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  /* color: var(--color-dark-purple); */
 }
 
 .nav-bar .button {
@@ -313,10 +323,12 @@ body {
   text-align: left;
   padding-left: 4rem;
   box-sizing: border-box;
+  background-color: var(--color-white);
 }
 
 .nav-bar .button:hover {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-light-purple);
+  color: inherit;
 }
 
 .footer {
@@ -334,7 +346,7 @@ body {
 
 .page-content {
   padding: 2rem;
-  background: var(--color-light-blue);
+  background: var(--color-light-purple);
   margin-left: 33.333vw;
   min-height: 100vh;
   width: calc(100vw - 33.333vw);
