@@ -337,18 +337,10 @@ body {
 }
 
 .project-featured-image {
-    float: left;
-    width: 300px;
+    width: 100%;
     height: auto;
-    margin: 0 2rem 1.5rem 0;
     border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-featured-image:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 
 /* Clear float after content */
@@ -377,19 +369,7 @@ body {
     top: 2rem;
 }
 
-.project-featured-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0;
-}
 
-.project-featured-image:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-}
 
 .project-content-column {
     display: flex;
