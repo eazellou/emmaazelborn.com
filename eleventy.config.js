@@ -3,6 +3,7 @@ import { UTCDate } from '@date-fns/utc'
 import yaml from 'js-yaml'
 import { feedPlugin } from '@11ty/eleventy-plugin-rss'
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import  markdownIt  from 'markdown-it'
 
 export default async function (eleventyConfig) {
     // Add a collection for posts
@@ -32,6 +33,15 @@ export default async function (eleventyConfig) {
         "yml,yaml",
         (contents) => yaml.load(contents)
     )
+
+    // add a markdown filter
+    eleventyConfig.addFilter("markdown", (content) => {
+        const md = new markdownIt({
+          html: true
+        });
+      
+        return md.render(content);
+    })
 
     // Add RSS feed
     eleventyConfig.addPlugin(feedPlugin, {

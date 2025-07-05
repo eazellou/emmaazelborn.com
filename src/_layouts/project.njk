@@ -12,13 +12,26 @@
             {% if songs %}
             <ol>
                 {% for song in songs %}
-                <li><a href="{{ song.lyricsUrl }}">{{ song.title }}</a></li>
+                <li>
+                    {% if song.lyricsUrl %}
+                    <a href="{{ song.lyricsUrl }}">
+                        {{ song.title }}
+                    </a>
+                    {% else %}
+                    {{ song.title }}
+                    {% endif %}
+                </li>
                 {% endfor %}
             </ol>
             {% endif %}
         </div>
         <a href="{{ songLink }}" class="button">Stream {{ title }}</a>
         {{ content | safe }}
+        {% if credits %}
+        <div class="credits">
+            {{ credits | markdown | safe }}
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
