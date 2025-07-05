@@ -8,6 +8,27 @@
 </head>
 <body>
   <div class="layout-grid">
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div class="mobile-header">
+        <h1><a href="/">Emma Azelborn</a></h1>
+        <button class="hamburger-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav-menu">
+        {% include "./includes/site-nav.njk" %}
+        <div class="mobile-footer-links">
+          <a href="https://emmaazelborn.bandcamp.com/"><img src="/static/images/bandcamp-button-bc-circle-black-128.png" alt="bandcamp"></a>
+          <a href="https://www.instagram.com/emmaazelborn/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram"></a>
+          <a href="https://www.youtube.com/@emmaazelborn"><img src="/static/images/youtube_social_squircle_dark.png" alt="youtube"></a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Desktop Sidebar -->
     <aside class="sidebar">
       <header class="header">
         <h1><a href="/">Emma</a><br><a href="/">Azelborn</a></h1>
@@ -29,5 +50,27 @@
       {% endblock %}
     </main>
   </div>
+
+  <script>
+    // Mobile navigation toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger-menu');
+      const mobileNav = document.querySelector('.mobile-nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on a link
+      const mobileNavLinks = mobileNav.querySelectorAll('a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          mobileNav.classList.remove('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
