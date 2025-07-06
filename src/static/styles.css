@@ -150,6 +150,11 @@ body {
     }
 }
 
+.stream-button {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
 .highlighted-project-list {
     display: flex;
     gap: 20px;
