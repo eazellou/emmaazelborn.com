@@ -20,9 +20,6 @@
       </div>
       <nav class="mobile-nav-menu">
         {% include "./includes/site-nav.njk" %}
-        <div class="mobile-footer-links">
-            {% include "./includes/footer-links.njk" %}
-        </div>
       </nav>
     </div>
 
@@ -45,6 +42,11 @@
         {{ content | safe }}
       {% endblock %}
     </main>
+    <footer class="mobile-footer">
+        <div class="mobile-footer-links">
+            {% include "./includes/footer-links.njk" %}
+        </div>
+    </footer>
   </div>
 
   <script>
