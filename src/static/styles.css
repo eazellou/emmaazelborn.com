@@ -505,7 +505,17 @@ blockquote {
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    .layout-grid {
+        grid-template-columns: max(30rem, 33.333vw) auto;
+      }
+
+  .sidebar h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
   /* Hide desktop sidebar and show mobile nav */
   .sidebar {
     display: none;
