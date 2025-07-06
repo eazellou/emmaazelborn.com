@@ -515,7 +515,7 @@ blockquote {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* Hide desktop sidebar and show mobile nav */
   .sidebar {
     display: none;
