@@ -393,7 +393,7 @@ blockquote {
   flex-direction: column;
   justify-content: space-around;
   width: 3rem;
-  height: 3rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -434,7 +434,7 @@ blockquote {
   z-index: 999;
   display: flex;
   flex-direction: column;
-  padding-top: 8rem;
+  margin-top: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
