@@ -38,9 +38,14 @@
       </footer>
     </aside>
     <main class="page-content">
+        <div class="main-content">
       {% block content %}
         {{ content | safe }}
       {% endblock %}
+      </div>
+      <div class="secondary-content">
+        {% block secondary_content %}{% endblock %}
+      </div>
     </main>
     <footer class="mobile-footer">
         <div class="mobile-footer-links">

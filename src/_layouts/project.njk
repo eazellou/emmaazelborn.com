@@ -31,11 +31,14 @@
             </div>
         </div>
         {{ content | safe }}
-        {% if credits %}
+        
+    </div>
+</div>
+{% endblock %}
+{% block secondary_content %}
+    {% if credits %}
         <div class="credits">
             {{ credits | markdown | safe }}
         </div>
-        {% endif %}
-    </div>
-</div>
+    {% endif %}
 {% endblock %}

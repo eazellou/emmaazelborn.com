@@ -323,11 +323,33 @@ body {
 }
 
 .page-content {
-  padding: 2rem 4rem;
   background: var(--color-light-purple);
   height: 100vh;
   overflow-y: auto;
   box-sizing: border-box;
+}
+
+.main-content {
+    padding: 2rem 4rem;
+}
+
+.secondary-content {
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+}
+
+.secondary-content > * {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+.credits p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .project-content .side-by-side {
