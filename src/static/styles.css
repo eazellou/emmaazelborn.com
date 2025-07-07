@@ -234,7 +234,6 @@ body {
     color: inherit;
     padding: 1rem;
     background-color: var(--color-white);
-    transition: background-color 0.2s ease;
 }
 
 .project-item a:hover {
