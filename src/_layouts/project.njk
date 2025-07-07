@@ -10,24 +10,25 @@
             <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
             {% endif %}
             <div >
-                <a href="{{ songLink }}" class="button stream-button">Stream {{ title }}</a>
+                {% if songLink %}
+                    <a href="{{ songLink }}" class="button stream-button">Stream {{ title }}</a>
+                {% endif %}
                 {% if songs %}
-            <ol>
-                {% for song in songs %}
-                <li>
-                    {% if song.lyricsUrl %}
-                    <a href="{{ song.lyricsUrl }}">
-                        {{ song.title }}
-                    </a>
-                    {% else %}
-                    {{ song.title }}
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ol>
-            {% endif %}
+                    <ol>
+                        {% for song in songs %}
+                        <li>
+                            {% if song.lyricsUrl %}
+                            <a href="{{ song.lyricsUrl }}">
+                                {{ song.title }}
+                            </a>
+                            {% else %}
+                            {{ song.title }}
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
             </div>
-            
         </div>
         {{ content | safe }}
         {% if credits %}
