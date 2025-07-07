@@ -521,6 +521,13 @@ blockquote {
   }
 }
 
+
+@media (max-width: 800px) {
+    .project-item a {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* mobile */
 @media (max-width: 640px) {
   /* Hide desktop sidebar and show mobile nav */
