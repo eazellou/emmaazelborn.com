@@ -8,7 +8,7 @@ No there's no need to fear
 I'm all cooped up over here  
 No matter what I do  
 
-chorus   
+_chorus:_   
 I am hen house ghost  
 I am hen house ghost  
 I can't get away   
