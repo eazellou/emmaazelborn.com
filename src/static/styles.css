@@ -482,6 +482,7 @@ blockquote {
 
 .mobile-footer {
     display: none;
+    background: var(--color-white);
 }
 
 .footer-links {
@@ -546,6 +547,8 @@ blockquote {
     margin-left: 0;
     width: 100vw;
     padding-top: 8rem; /* Account for mobile header */
+    height: auto;
+    overflow-y: visible;
   }
   
   .layout-grid {
