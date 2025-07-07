@@ -5,7 +5,7 @@ title: Contact
 
 <div class="contact-container">
     <div class="contact-image">
-    <img src="/static/images/house-show.jpg" alt="Emma performing at a house show">
+    <img src="/static/images/house-show.jpg" alt="Emma performing at a house show" eleventy:widths="1000">
     </div>
     <div class="contact-details">
     <p>email: <a href="mailto:music@emmaazelborn.com">music@emmaazelborn.com</a></p>

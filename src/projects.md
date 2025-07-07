@@ -12,8 +12,7 @@ layout: page.njk
                         class="project-image"
                         src="{{ project.data.image }}"
                         alt="{{ project.data.title }}"
-                        eleventy:widths="400"
-                        eleventy:heights="400"
+                        eleventy:widths="800"
                     />
                 </div>
                 <div class="project-details">
