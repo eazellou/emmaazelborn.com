@@ -22,4 +22,27 @@ songs:
   lyricsUrl: /songs/midnight-pizza
 - title: Legacy Code
   lyricsUrl: /songs/legacy-code
+credits: |
+    Social Singing by:  
+    Elias Cardoso  
+    Amelia Green  
+    Jimmy Joe  
+    Helen Kuhar  
+    Harris Lapiroff  
+    Tommy Linden  
+    Becca Mandel  
+    Ian McGullam  
+    Julian Anna Nowogrodzki  
+    Paul Ogilby  
+    Daniel Raine  
+    Laurie Tupper  
+    Micah Walter  
+    Kurt James Werner  
+
+    Recorded by [Jack Tarricone](https://jacktarricone.com/)  
+    Edited by Emma Azelborn  
+    Mixed by Emma Azelborn  
+    Mastered by [Everest Witman](https://everestwitman.com/)  
+
+    Album Artwork by [MaryCate Azelborn](https://maryazelborn.com/)  
 ---
