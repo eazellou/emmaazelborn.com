@@ -3,8 +3,8 @@ title: Hen House Ghost
 composer: Emma Azelborn
 ---
 
-Everybody gather round for I can't come to you  
-No there's no need to fear  
+Everybody gather round 'cause I can't come to you  
+No, there's no need to fear  
 I'm all cooped up over here  
 No matter what I do  
 
@@ -29,3 +29,8 @@ You gotta try my deviled eggs, I add oregano
 They're over there beside the corn   
 They're good enough to die for   
 Believe me, I would know  
+
+<audio controls>
+    <source src="/static/audio/hen house ghost memo.m4a" type="audio/mp4">
+    Your browser does not support the audio player.
+</audio>
