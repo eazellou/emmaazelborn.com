@@ -4,7 +4,7 @@
 <div class="stripe-content">
     <div class="project-content">
         <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
+        <p>{{ description | markdown | safe }}</p>
         <div class="side-by-side">
             {% if bandcampID and bandcampUrl %}
                 <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
