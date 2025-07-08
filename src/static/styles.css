@@ -270,6 +270,14 @@ body {
     line-height: 1.4;
 }
 
+.song-list {
+    padding-top: 1.5rem;
+}
+
+.song-item {
+    padding-bottom: 0.5rem;
+}
+
 .song-lyrics p {
     padding-top: 1rem;
     padding-bottom: 1rem;
