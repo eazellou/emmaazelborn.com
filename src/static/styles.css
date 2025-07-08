@@ -5,15 +5,9 @@
     --color-white: #fff;
     --color-black: #000;
     --color-dark-purple: #444161;
-    --color-semi-dark-purple: #cdcae2;
-    --color-purple:#8580A6;
-    --color-semi-light-purple: #afaad0;
+    --color-semi-dark-purple: #afaad0;
     --color-light-purple:#BEBAD9;
-    --color-light-green: #AFB96A;
-    --color-green: #535922;
-    /* --color-dark-green: #42471B; */
-    --color-dark-green: #62733D;
-    --color-tan: #E1DBCB;
+    --color-extra-light-purple: #cdcae2;
     --font-family-headings: 'miller-banner', serif;
     --font-family-primary: 'minion-pro', serif;
 
@@ -66,20 +60,20 @@ a {
     color: inherit;
     text-decoration: none;
     &:hover {
-        background-color: var(--color-semi-light-purple);
+        background-color: var(--color-semi-dark-purple);
     }
 }
 
 p a {
-    background-color: var(--color-semi-dark-purple);
+    background-color: var(--color-extra-light-purple);
 }
 
 ol a {
-    background-color: var(--color-semi-dark-purple);
+    background-color: var(--color-extra-light-purple);
 }
 
 li a {
-    background-color: var(--color-semi-dark-purple);
+    background-color: var(--color-extra-light-purple);
 }
 
 .back-to-songs {
@@ -383,7 +377,7 @@ blockquote {
   margin-right: 8rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  border-left: 4px solid var(--color-purple);
+  border-left: 4px solid var(--color-dark-purple);
   font-style: italic;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -520,7 +514,7 @@ blockquote {
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--color-purple);
+    background: var(--color-light-purple);
     opacity: 0;
     pointer-events: none;
     border-radius: 50%;
