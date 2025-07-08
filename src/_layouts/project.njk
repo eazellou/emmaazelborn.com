@@ -5,33 +5,34 @@
     <div class="project-content">
         <h2>{{ title }}</h2>
         <p>{{ description | markdown | safe }}</p>
-        <div class="side-by-side">
-            {% if bandcampID and bandcampUrl %}
-                <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
-            {% endif %}
-            <div >
-                {% if songLink %}
-                    <a href="{{ songLink }}" class="button stream-button">Stream {{ title }}</a>
+        {% if bandcampID and bandcampUrl or songLink or songs %}
+            <div class="side-by-side">
+                {% if bandcampID and bandcampUrl %}
+                    <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
                 {% endif %}
-                {% if songs %}
-                    <ol>
-                        {% for song in songs %}
-                        <li>
-                            {% if song.lyricsUrl %}
-                            <a href="{{ song.lyricsUrl }}">
+                <div >
+                    {% if songLink %}
+                        <a href="{{ songLink }}" class="button stream-button">Stream {{ title }}</a>
+                    {% endif %}
+                    {% if songs %}
+                        <ol>
+                            {% for song in songs %}
+                            <li>
+                                {% if song.lyricsUrl %}
+                                <a href="{{ song.lyricsUrl }}">
+                                    {{ song.title }}
+                                </a>
+                                {% else %}
                                 {{ song.title }}
-                            </a>
-                            {% else %}
-                            {{ song.title }}
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ol>
-                {% endif %}
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
             </div>
-        </div>
+        {% endif %}
         {{ content | safe }}
-        
     </div>
 </div>
 {% endblock %}
