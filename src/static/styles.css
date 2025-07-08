@@ -518,6 +518,23 @@ blockquote {
     }
 }
 
+.footer-links a::after,
+.mobile-footer-links a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-purple);
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+}
+
+.footer-links a:hover::after,
+.mobile-footer-links a:hover::after {
+    opacity: 0.5;
+}
+
 .mobile-footer {
     display: none;
     background: var(--color-white);
