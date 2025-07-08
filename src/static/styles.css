@@ -42,6 +42,7 @@ h1 {
     font-weight: inherit;
     &:hover {
         text-decoration: inherit;
+        background-color: inherit;
     }
 }
 
@@ -181,6 +182,7 @@ body {
     color: inherit;
     font-family: var(--font-family-primary);
     font-weight: 400;
+    background-color: inherit;
 }
 
 .highlighted-project-item > a:hover {
@@ -510,6 +512,10 @@ blockquote {
 
 .footer-links a, .mobile-footer-links a {
     padding-left: 0;
+    &:hover {
+        text-decoration: none;
+        background-color: inherit;
+    }
 }
 
 .mobile-footer {
