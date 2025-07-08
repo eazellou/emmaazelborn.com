@@ -156,7 +156,6 @@ body {
 }
 
 .stream-button {
-    margin-left: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -379,6 +378,7 @@ body {
   flex-direction: row;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  gap: 2rem;
 }
 
 blockquote {
@@ -576,6 +576,17 @@ blockquote {
   .sidebar h1 {
     font-size: 6rem;
   }
+}
+
+@media (max-width: 950px) {
+    .project-content .side-by-side {
+        flex-direction: column;
+      }
+
+      blockquote {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
 }
 
 
