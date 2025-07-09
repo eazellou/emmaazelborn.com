@@ -1,7 +1,7 @@
 ---
 title: Test Post
 date: 2025-06-16
-image: singingatthehag.jpeg
+image: /static/images/many-miles.jpg
 ---
 
 The gentle breeze rustled through the autumn leaves as I sat on my front porch, contemplating the changing seasons. It's remarkable how nature signals these transitions with such subtle grace, painting the world in new colors and bringing fresh perspectives. The morning air carried a crispness that reminded me of childhood memories spent jumping in leaf piles and sipping hot apple cider.
