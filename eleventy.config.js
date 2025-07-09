@@ -8,7 +8,7 @@ import  markdownIt  from 'markdown-it'
 export default async function (eleventyConfig) {
     // Add a collection for posts
     eleventyConfig.addCollection("posts", (collection) => {
-        return collection.getFilteredByGlob("src/blog/*.md")
+        return collection.getFilteredByGlob("src/writing/*.md")
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     })
 
