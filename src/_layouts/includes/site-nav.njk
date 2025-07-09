@@ -2,6 +2,8 @@
     <a class="button" href="/">Home</a>
     <a class="button" href="/projects">Projects</a>
     <a class="button" href="/songs">Songs</a>
-    <a class="button" href="/writing">Writing</a>
+    {% if collections.posts.length > 0 %}
+        <a class="button" href="/writing">Writing</a>
+    {% endif %}
     <a class="button" href="/contact">Contact</a>
 </nav>
