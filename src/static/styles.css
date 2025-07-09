@@ -49,7 +49,7 @@ h2 {
 h3 {
     font-family: var(--font-family-headings);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .page-title {
@@ -562,6 +562,17 @@ blockquote {
     height: 4rem;
     padding: 0.5rem;
     display: inline-block;
+}
+
+.home-posts {
+    margin-top: 4rem;
+}
+
+.home-post-item {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem; 
+    border-bottom: 2px solid var(--color-semi-dark-purple);
 }
 
 .post-side-by-side {
