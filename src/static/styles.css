@@ -378,13 +378,6 @@ body {
   gap: 2rem;
 }
 
-.home-post-image {
-    max-height: 300px;
-    min-width: 200px;
-    object-fit: cover;
-    object-position: top;
-}
-
 blockquote {
   background: var(--color-white);
   padding: 2rem;
@@ -567,9 +560,46 @@ blockquote {
 .footer picture, .mobile-footer picture {
     width: 4rem;
     height: 4rem;
-    padding: 1rem;
+    padding: 0.5rem;
     display: inline-block;
 }
+
+.post-side-by-side {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .post-side-by-side .home-post-image {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+  }
+  
+  .post-side-by-side p {
+    flex: 1 1 200px;
+    min-width: 0;
+    margin: 0;
+  }
+  
+  .post-wrap {
+    overflow: hidden; /* Clear floats */
+  }
+  
+  .post-wrap .home-post-image {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  
+  .post-wrap p {
+    margin: 0;
+  }
 
 /* tablet */
 @media (max-width: 1120px) {
@@ -583,7 +613,14 @@ blockquote {
 }
 
 @media (max-width: 950px) {
-    .side-by-side {
+    .sidebar h1 {
+        font-size: 4rem;
+    }
+    .layout-grid {
+        grid-template-columns: 23rem auto;
+    }
+
+    .post-side-by-side {
         flex-direction: column;
       }
 
