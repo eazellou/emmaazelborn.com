@@ -38,6 +38,7 @@ permalink: /
     </div>
 </section>
 
+{% if collections.posts.length > 0 %}
 <section class="full-width-stripe home-posts">
     <div class="stripe-content">
         <h2>Recent Writing</h2>
@@ -59,4 +60,5 @@ permalink: /
         <a class="button" href="/writing">View all posts »</a>
     </div>
 </section>
+{% endif %}
 
