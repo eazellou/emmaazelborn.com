@@ -529,7 +529,11 @@ blockquote {
 .mobile-footer-links a::after {
     content: "";
     position: absolute;
-    inset: 0;
+    top: calc(50% - 0.25rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    height: 6rem;
     background: var(--color-light-purple);
     opacity: 0;
     pointer-events: none;
