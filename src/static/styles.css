@@ -300,6 +300,9 @@ body {
 .sidebar {
   height: 100vh;
   background: var(--color-white);
+  background-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/p-2.png');
+  background-repeat: repeat;
+  background-size: 500px 500px;
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -327,7 +330,7 @@ body {
   text-align: left;
   padding-left: 4rem;
   box-sizing: border-box;
-  background-color: var(--color-white);
+  background-color: transparent;
 }
 
 .nav-bar .button:hover {
