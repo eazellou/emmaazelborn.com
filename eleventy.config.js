@@ -9,6 +9,7 @@ export default async function (eleventyConfig) {
     // Add a collection for posts
     eleventyConfig.addCollection("posts", (collection) => {
         return collection.getFilteredByGlob("src/blog/*.md")
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     })
 
     // Add a collection for projects
