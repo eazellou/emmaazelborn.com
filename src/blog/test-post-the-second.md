@@ -1,7 +1,7 @@
 ---
 title: Test Post the Second
-date: 2025-06-16
-image: singingatthehag.jpeg
+date: 2025-06-25
+image: /static/images/singingatthehag.jpeg
 ---
 
 I recently had the incredible experience of recording my latest album in an old converted barn studio nestled in the Vermont countryside. The space itself was magical - worn wooden beams stretching up into shadowy rafters, sunlight streaming through dusty windows, and the occasional curious chicken peering in from outside. We set up our instruments in a circle, trying to capture that intimate feel of playing music together in someone's living room.
