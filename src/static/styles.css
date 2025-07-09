@@ -83,7 +83,15 @@ li a {
 
 .back-to-songs a {
     padding: 0.5rem 1rem;
-    background-color: var(--color-semi-dark-purple);
+}
+
+.back-to-writing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-to-writing a {
+    padding: 0.5rem 1rem;
 }
 
 picture, img {
