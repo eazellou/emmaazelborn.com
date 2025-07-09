@@ -378,6 +378,13 @@ body {
   gap: 2rem;
 }
 
+.home-post-image {
+    max-height: 300px;
+    min-width: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
 blockquote {
   background: var(--color-white);
   padding: 2rem;
@@ -576,7 +583,7 @@ blockquote {
 }
 
 @media (max-width: 950px) {
-    .project-content .side-by-side {
+    .side-by-side {
         flex-direction: column;
       }
 
