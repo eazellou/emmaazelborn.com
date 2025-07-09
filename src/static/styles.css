@@ -585,7 +585,7 @@ blockquote {
 
 .home-posts h2 {
     border-top: 2px solid var(--color-semi-dark-purple);
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 .home-post-item:not(:last-child) {
