@@ -566,12 +566,21 @@ blockquote {
 
 .home-posts {
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .home-post-item {
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem; 
+}
+
+.home-posts h2 {
+    border-top: 2px solid var(--color-semi-dark-purple);
+    padding-top: 2rem;
+}
+
+.home-post-item:not(:last-child) {
     border-bottom: 2px solid var(--color-semi-dark-purple);
 }
 
