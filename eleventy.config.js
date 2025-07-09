@@ -20,6 +20,7 @@ export default async function (eleventyConfig) {
     // Add a collection for songs
     eleventyConfig.addCollection("songs", (collection) => {
         return collection.getFilteredByGlob("src/songs/*.md")
+            .sort((a, b) => a.data.title.localeCompare(b.data.title))
     })
 
     // Add a filter to format dates using date-fns
