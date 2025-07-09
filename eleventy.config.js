@@ -45,6 +45,16 @@ export default async function (eleventyConfig) {
         return md.render(content);
     })
 
+    // "---" is the read more separator. page.excerpt will have everything before this
+    eleventyConfig.setFrontMatterParsingOptions({
+		excerpt: true,
+        excerpt_separator: "---",
+	});
+
+    eleventyConfig.addFilter("log", (value) => {
+        console.log(value);
+      });
+
     // Add RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
         type: "atom",

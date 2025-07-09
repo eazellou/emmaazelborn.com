@@ -370,7 +370,7 @@ body {
     font-weight: 300;
 }
 
-.project-content .side-by-side {
+.side-by-side {
   display: flex;
   flex-direction: row;
   padding-top: 2rem;
