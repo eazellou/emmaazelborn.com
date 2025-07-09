@@ -556,6 +556,11 @@ blockquote {
     flex-wrap: wrap;
 }
 
+.footer-link-pair {
+    display: flex;
+    gap: 1rem;
+}
+
 .footer img, .mobile-footer img {
     display: inline-block;
 }
