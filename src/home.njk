@@ -47,6 +47,11 @@ permalink: /
                         {{ post.data.title }}
                         <em>{{ post.data.date | date("LLLL d, yyyy") }}</em>
                     </a>
+                    <div class="home-post-side-by-side">
+                        <img class="home-post-image" src="{{ post.data.image }}" alt="{{ post.data.title }}" />
+                        <p>{{ post.page.excerpt | safe }}</p>
+                    </div>
+                    <a href="{{ post.url }}">Read more »</a>
                 </li>
             {% endfor %}
         </ul>
