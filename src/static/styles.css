@@ -537,6 +537,8 @@ blockquote {
 .mobile-footer {
     display: none;
     background: var(--color-white);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .footer-links {
@@ -551,6 +553,7 @@ blockquote {
 .footer-links, .mobile-footer-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .footer img, .mobile-footer img {
