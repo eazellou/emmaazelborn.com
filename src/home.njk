@@ -38,17 +38,19 @@ permalink: /
     </div>
 </section>
 
-<!-- <section>
-    recent posts
-    <ul>
-        {% for post in collections.posts %}
-            <li>
-                <a href="{{ post.url }}">
-                    {{ post.data.title }}
-                    <em>{{ post.data.date | date("LLLL d, yyyy") }}</em>
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</section> -->
+<section class="full-width-stripe home-posts">
+    <div class="stripe-content">
+        <ul>
+            {% for post in collections.posts %}
+                <li>
+                    <a href="{{ post.url }}">
+                        {{ post.data.title }}
+                        <em>{{ post.data.date | date("LLLL d, yyyy") }}</em>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a class="button" href="/posts">View all posts »</a>
+    </div>
+</section>
 
