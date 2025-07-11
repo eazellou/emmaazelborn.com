@@ -90,7 +90,7 @@ export default async function (eleventyConfig) {
         widths: ['auto', 400, 800],
         // optional, attributes assigned on <img> override these values.
         defaultAttributes: {
-            loading: 'lazy',
+            // loading: 'lazy',
             sizes: '100vw',
             decoding: 'async',
         },
