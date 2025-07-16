@@ -719,6 +719,10 @@ blockquote {
         grid-template-columns: 23rem auto;
     }
 
+    .side-by-side {
+        flex-direction: column;
+    }
+
     .post-side-by-side {
         flex-direction: column;
       }
