@@ -35,7 +35,7 @@ they all went down in flames
 
 we are the glinting gilded girls who heard the calling sea  
 and now we are defenders who keep kilpatrick free  
-to any who would challenge, may you hear a warning cry:  
+to any who would challenge, may you hear our warning cry:  
 if you should try to hurt them, then be prepared to die  
 then be prepared to die   
 
