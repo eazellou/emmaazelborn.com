@@ -21,5 +21,9 @@
         <div class="song-lyrics">
             {{ content | safe }}
         </div>
+        {% if bandcampTrackId %}
+            {% set project = collections.projects | getProjectByName(released[0]) %}
+            <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ project.bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track={{ bandcampTrackId }}/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ project.bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
+        {% endif %}
     </div>
 {% endblock %}

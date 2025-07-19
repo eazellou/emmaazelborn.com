@@ -2,6 +2,7 @@
 title: A Different Sea
 released: [magnolia-sun]
 composer: Emma Azelborn
+bandcampTrackId: "1499190375"
 ---
 
 I've been thinking of you lately, my friend  
