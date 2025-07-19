@@ -2,6 +2,7 @@
 title: Getting Easier
 released: [magnolia-sun]
 composer: Emma Azelborn
+bandcampTrackId: "1873695983"
 ---
 
 it's been getting harder to sing  

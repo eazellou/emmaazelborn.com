@@ -2,6 +2,7 @@
 title: Almost Here
 released: [magnolia-sun]
 composer: Emma Azelborn
+bandcampTrackId: "3891230108"
 ---
 
 you sang a song to me when I cried on the phone  
