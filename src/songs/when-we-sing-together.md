@@ -2,6 +2,7 @@
 title: When We Sing Together
 released: [magnolia-sun, circle-songs]
 composer: Emma Azelborn
+bandcampTrackId: "3431417359"
 ---
 
 my friends we have traveled far to gather here today  

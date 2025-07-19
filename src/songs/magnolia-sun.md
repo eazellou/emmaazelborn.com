@@ -2,6 +2,7 @@
 title: Magnolia Sun
 released: [magnolia-sun]
 composer: Emma Azelborn
+bandcampTrackId: "1765836546"
 ---
 
 I miss her  
