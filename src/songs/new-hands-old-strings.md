@@ -1,6 +1,7 @@
 ---
 title: New Hands, Old Strings
-released: [lucy-goose]
+released:
+  - project: lucy-goose
 composer: Emma Azelborn
 ---
 

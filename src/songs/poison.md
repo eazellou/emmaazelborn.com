@@ -1,6 +1,7 @@
 ---
 title: Poison
-released: [lucy-goose]
+released:
+  - project: lucy-goose
 composer: Emma Azelborn
 ---
 
