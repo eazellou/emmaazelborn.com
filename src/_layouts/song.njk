@@ -10,8 +10,8 @@
         <div class="song-projects">
             <strong>Appears in:</strong>
             <ul>
-            {% for project in released %}
-                <li><a href="/projects/{{ project }}/">{{ project | replace('-', ' ') | title }}</a></li>
+            {% for rel in released %}
+                <li><a href="/projects/{{ rel.project }}/">{{ rel.project | replace('-', ' ') | title }}</a></li>
             {% endfor %}
             </ul>
         </div>
@@ -21,9 +21,13 @@
         <div class="song-lyrics">
             {{ content | safe }}
         </div>
-        {% if bandcampTrackId %}
-            {% set project = collections.projects | getProjectByName(released[0]) %}
-            <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ project.bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track={{ bandcampTrackId }}/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ project.bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
+        {% if released %}
+          {% for rel in released %}
+            {% if rel.bandcampTrackId %}
+              {% set project = collections.projects | getProjectByName(rel.project) %}
+              <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ project.bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track={{ rel.bandcampTrackId }}/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ project.bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
+            {% endif %}
+          {% endfor %}
         {% endif %}
     </div>
 {% endblock %}

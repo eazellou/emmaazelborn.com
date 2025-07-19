@@ -1,8 +1,11 @@
 ---
 title: When We Sing Together
-released: [magnolia-sun, circle-songs]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "3431417359"
+  - project: circle-songs
+    bandcampTrackId: "3062141228"
 composer: Emma Azelborn
-bandcampTrackId: "3431417359"
 ---
 
 my friends we have traveled far to gather here today  
