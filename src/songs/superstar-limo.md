@@ -1,8 +1,9 @@
 ---
 title: Superstar Limo
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "700160905"
 composer: Emma Azelborn
-bandcampTrackId: "700160905"
 ---
 
 _chorus:_  
