@@ -286,6 +286,10 @@ body {
     padding-bottom: 0.5rem;
 }
 
+.song-lyrics {
+    padding-bottom: 3rem;
+}
+
 .song-lyrics p {
     padding-top: 1rem;
     padding-bottom: 1rem;
