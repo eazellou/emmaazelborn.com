@@ -6,6 +6,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import  markdownIt  from 'markdown-it'
 
 export default async function (eleventyConfig) {
+    let projectsCollection = [];
     // Add a collection for posts
     eleventyConfig.addCollection("posts", (collection) => {
         return collection.getFilteredByGlob("src/writing/*.md")
@@ -14,8 +15,9 @@ export default async function (eleventyConfig) {
 
     // Add a collection for projects
     eleventyConfig.addCollection("projects", (collection) => {
-        return collection.getFilteredByGlob("src/projects/*.md")
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+        projectsCollection = collection.getFilteredByGlob("src/projects/*.md")
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+        return projectsCollection;
     })
 
     // Add a collection for songs
@@ -23,6 +25,11 @@ export default async function (eleventyConfig) {
         return collection.getFilteredByGlob("src/songs/*.md")
             .sort((a, b) => a.data.title.localeCompare(b.data.title))
     })
+
+    // Add a filter to get a project by fileSlug
+    eleventyConfig.addFilter("getProjectByName", function(projects, name) {
+        return projects.find(project => project.fileSlug === name).data;
+    });
 
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(

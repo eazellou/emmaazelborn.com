@@ -1,6 +1,8 @@
 ---
 title: Almost Here
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "3891230108"
 composer: Emma Azelborn
 ---
 

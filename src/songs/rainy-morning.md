@@ -1,6 +1,8 @@
 ---
 title: Rainy Morning
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "2666113275"
 composer: Emma Azelborn
 ---
 

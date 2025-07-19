@@ -1,6 +1,8 @@
 ---
 title: The Hall Remembers
-released: [circle-songs]
+released:
+  - project: circle-songs
+    bandcampTrackId: "4096891367"
 composer: Emma Azelborn
 ---
 

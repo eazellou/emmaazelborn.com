@@ -1,6 +1,8 @@
 ---
 title: Legacy Code
-released: [circle-songs]
+released:
+  - project: circle-songs
+    bandcampTrackId: "1536210937"
 composer: Emma Azelborn
 ---
 

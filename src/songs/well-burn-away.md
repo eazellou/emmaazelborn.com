@@ -1,6 +1,8 @@
 ---
 title: We'll Burn Away
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "4276324639"
 composer: Emma Azelborn
 ---
 
