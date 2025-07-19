@@ -2,6 +2,7 @@
 title: New Hands, Old Strings
 released:
   - project: lucy-goose
+    bandcampTrackId: "1422606781"
 composer: Emma Azelborn
 ---
 

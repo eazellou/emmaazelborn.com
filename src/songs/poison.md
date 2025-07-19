@@ -2,6 +2,7 @@
 title: Poison
 released:
   - project: lucy-goose
+    bandcampTrackId: "1259949644"
 composer: Emma Azelborn
 ---
 
