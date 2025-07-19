@@ -1,6 +1,8 @@
 ---
 title: Magnolia Sun
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "1765836546"
 composer: Emma Azelborn
 ---
 

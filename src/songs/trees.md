@@ -1,6 +1,8 @@
 ---
 title: Trees
-released: [magnolia-sun]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "3139554436"
 composer: Emma Azelborn
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: Sea Creature of Greenland
-released: [circle-songs]
+released:
+  - project: circle-songs
+    bandcampTrackId: "1768018580"
 composer: Emma Azelborn
 ---
 

@@ -1,6 +1,10 @@
 ---
 title: When We Sing Together
-released: [magnolia-sun, circle-songs]
+released:
+  - project: magnolia-sun
+    bandcampTrackId: "3431417359"
+  - project: circle-songs
+    bandcampTrackId: "3062141228"
 composer: Emma Azelborn
 ---
 
