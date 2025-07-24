@@ -295,6 +295,15 @@ body {
     padding-bottom: 1rem;
 }
 
+.song-lyrics .stanza p {
+    white-space: pre-line;
+    text-wrap: pretty;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-indent: -2rem;
+    margin-left: 2rem;
+}
+
 .layout-grid {
   display: grid;
   grid-template-columns: max(40rem, 33.333vw) auto;
