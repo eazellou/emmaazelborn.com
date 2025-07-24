@@ -293,6 +293,7 @@ body {
 .song-lyrics p {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    white-space: pre-line;
 }
 
 .layout-grid {
