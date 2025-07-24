@@ -52,6 +52,26 @@ export default async function (eleventyConfig) {
         return md.render(content);
     })
 
+    // Replace the old 'lyrics' filter with one that handles HTML input
+    const stanzaHtmlToDivs = (lyricsHtml) => {
+      // Match all <p>...</p> blocks (stanzas)
+      const stanzaRegex = /<p>([\s\S]*?)<\/p>/g;
+      let result = '';
+      let match;
+      while ((match = stanzaRegex.exec(lyricsHtml)) !== null) {
+        // Split stanza into lines by <br> or newline
+        const lines = match[1]
+          .split(/<br\s*\/?>(?:\s*)?|\n/)
+          .map(line => line.trim())
+          .filter(line => line.length > 0);
+        result += `<div class="stanza">` +
+          lines.map(line => `<p>${line}</p>`).join('') +
+          `</div>`;
+      }
+      return result;
+    };
+    eleventyConfig.addFilter("lyrics", stanzaHtmlToDivs);
+
     // "---" is the read more separator. page.excerpt will have everything before this
     eleventyConfig.setFrontMatterParsingOptions({
 		excerpt: true,
