@@ -28,6 +28,11 @@
               <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ project.bandcampID }}/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track={{ rel.bandcampTrackId }}/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com{{ project.bandcampUrl }}">{{ title }} by Emma Azelborn</a></iframe>
             {% endif %}
           {% endfor %}
+        {% elif voiceMemo %}
+          <audio controls>
+            <source src="/static/audio/{{ voiceMemo }}" type="audio/mp4">
+            Your browser does not support the audio player.
+          </audio>
         {% endif %}
     </div>
 {% endblock %}

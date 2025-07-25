@@ -1,6 +1,7 @@
 ---
 title: Royal Potatoes
 composer: Emma Azelborn
+voiceMemo: royal potatoes memo.m4a
 ---
 
 have you heard the latest news that's been going all around?
@@ -28,8 +29,3 @@ there are lots of yummy recipes that you should never try
 you could mash them, or roast them, or chop them into fries
 and potato bread's delicious! but remember this one thing:
 all these tons and tons and tons and tons and tons and tons of potatoes are only for the king
-
-<audio controls>
-    <source src="/static/audio/royal potatoes memo.m4a" type="audio/mp4">
-    Your browser does not support the audio player.
-</audio>

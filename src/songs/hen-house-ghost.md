@@ -1,6 +1,7 @@
 ---
 title: Hen House Ghost
 composer: Emma Azelborn
+voiceMemo: hen house ghost memo.m4a
 ---
 
 Everybody gather round 'cause I can't come to you
@@ -29,8 +30,3 @@ You gotta try my deviled eggs, I add oregano
 They're over there beside the corn
 They're good enough to die for
 Believe me, I would know
-
-<audio controls>
-    <source src="/static/audio/hen house ghost memo.m4a" type="audio/mp4">
-    Your browser does not support the audio player.
-</audio>

@@ -1,6 +1,7 @@
 ---
 title: Dragons of Kilpatrick
 composer: Emma Azelborn
+voiceMemo: dragons of Kilpatrick at the Armory.m4a
 ---
 
 we are the glinting gilded girls who heard the calling sea
@@ -38,8 +39,3 @@ and now we are defenders who keep kilpatrick free
 to any who would challenge, may you hear our warning cry:
 if you should try to hurt them, then be prepared to die
 then be prepared to die 
-
-<audio controls>
-    <source src="/static/audio/dragons of Kilpatrick at the Armory.m4a" type="audio/mp4">
-    Your browser does not support the audio player.
-</audio>
