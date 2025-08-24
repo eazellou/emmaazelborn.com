@@ -41,7 +41,6 @@ permalink: /
 {% if collections.posts.length > 0 %}
 <section class="full-width-stripe home-posts">
     <div class="stripe-content">
-        <h2>Recent Writing</h2>
         <ul>
             {% for post in collections.posts %}
                 <li class="home-post-item">
@@ -53,7 +52,7 @@ permalink: /
                         <img eleventy:pictureattr:class="home-post-image" src="{{ post.data.image }}" alt="{{ post.data.title }}" />
                         <p>{{ post.page.excerpt | safe }}</p>
                     </div>
-                    <a href="{{ post.url }}">Read more »</a>
+                    <a href="{{ post.url }}">Keep reading »</a>
                 </li>
             {% endfor %}
         </ul>

@@ -667,7 +667,7 @@ blockquote {
     padding-bottom: 2rem; 
 }
 
-.home-posts h2 {
+.home-posts ul {
     border-top: 2px solid var(--color-semi-dark-purple);
     padding-top: 3rem;
 }
