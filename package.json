@@ -17,6 +17,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@date-fns/utc": "^2.1.0",
     "date-fns": "^4.1.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "markdown-it-footnote": "^4.0.0"
   }
 }

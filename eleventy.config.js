@@ -4,6 +4,7 @@ import yaml from 'js-yaml'
 import { feedPlugin } from '@11ty/eleventy-plugin-rss'
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import  markdownIt  from 'markdown-it'
+import markdownItFootnote from 'markdown-it-footnote'
 
 export default async function (eleventyConfig) {
     let projectsCollection = [];
@@ -43,13 +44,19 @@ export default async function (eleventyConfig) {
         (contents) => yaml.load(contents)
     )
 
+    // Configure markdown-it with footnotes plugin
+    const markdownItOptions = {
+        html: true,
+        linkify: true,
+        typographer: true
+    };
+    
+    const markdownLib = markdownIt(markdownItOptions).use(markdownItFootnote);
+    eleventyConfig.setLibrary("md", markdownLib);
+
     // add a markdown filter
     eleventyConfig.addFilter("markdown", (content) => {
-        const md = new markdownIt({
-          html: true
-        });
-      
-        return md.render(content);
+        return markdownLib.render(content);
     })
 
     // Replace the old 'lyrics' filter with one that handles HTML input
@@ -132,9 +139,8 @@ export const config = {
         // for simplicity
         layouts: "_layouts",
         includes: "_layouts",
-        // Switch Markdown and HTML template engines to Nunjucks
-        // (otherwise, the default is Liquid)
-        markdownTemplateEngine: "njk",
+        // Use markdown-it for markdown processing (with footnotes support)
+        // HTML template engine remains Nunjucks
         htmlTemplateEngine: "njk",
     },
 }
