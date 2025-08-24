@@ -8,5 +8,8 @@
         <h2>{{ title }}</h2>
         <time>{{ date | date("LLLL d, yyyy") }}</time>
         {{ content | safe }}
+        <p class="back-to-writing">
+            <a href="/writing/">« All Writing</a>
+        </p>
     </div>
 {% endblock %}
