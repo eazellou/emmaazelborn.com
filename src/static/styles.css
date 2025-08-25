@@ -94,6 +94,10 @@ li a {
     padding: 0.5rem 1rem;
 }
 
+.post-content {
+  max-width: 800px;
+}
+
 picture, img {
     max-width: 100%;
     height: auto;
