@@ -4,6 +4,7 @@ date: 2025-08-24
 image: /static/images/no-teapot-hold.jpg
 ---
 I think the teapot hold is the most dangerous basic contra dancing figure, so I've been avoiding it. While it might seem innocuous, the teapot hold requires one dancer to connect with their hand in the small of their back. This rotates the shoulder to a less stable position where it's less supported by muscles and more likely to be injured if tugged. When I realized I could avoid putting my shoulder into this vulnerable position, my contra dancing immediately felt safer.
+---
 
 ## What is the Teapot Hold
 In a teapot hold, sometimes called a "courtesy turn hold", two dancers connect right-hand in right-hand and left-hand in left-hand and stand side-by-side. One dancer places a hand behind themselves in the small of their back, and one in front, and the other dancer connects with them as shown below [^1]. In New England, where I dance most often, the teapot hold is used both for the courtesy turn, where the couple rotates to face the opposite direction, and also in promenade, where the couple walks forward. Elsewhere, promenade might default to skater's or butterfly.
