@@ -1,12 +1,15 @@
 {% extends "./base.njk" %}
 
 {% block content %}
-    <div class="stripe-content">
+    <div class="stripe-content post-content">
         <p class="back-to-writing">
             <a href="/writing/">« All Writing</a>
         </p>
         <h2>{{ title }}</h2>
         <time>{{ date | date("LLLL d, yyyy") }}</time>
         {{ content | safe }}
+        <p class="back-to-writing">
+            <a href="/writing/">« All Writing</a>
+        </p>
     </div>
 {% endblock %}
