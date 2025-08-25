@@ -44,7 +44,6 @@ export default async function (eleventyConfig) {
         (contents) => yaml.load(contents)
     )
 
-    // Configure markdown-it with footnotes plugin
     const markdownItOptions = {
         html: true,
         linkify: true,
@@ -100,7 +99,7 @@ export default async function (eleventyConfig) {
         metadata: {
             language: "en",
             title: "Emma Azelborn",
-            subtitle: "This is a longer description about your blog.",
+            subtitle: "Thoughts on social singing, contra dancing, and other things.",
             base: "https://emmaazelborn.com",
             author: {
                 name: "Emma Azelborn",
@@ -139,8 +138,9 @@ export const config = {
         // for simplicity
         layouts: "_layouts",
         includes: "_layouts",
-        // Use markdown-it for markdown processing (with footnotes support)
-        // HTML template engine remains Nunjucks
+        // Switch Markdown and HTML template engines to Nunjucks
+        // (otherwise, the default is Liquid)
         htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
     },
 }
