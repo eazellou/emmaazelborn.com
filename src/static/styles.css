@@ -94,6 +94,11 @@ li a {
     padding: 0.5rem 1rem;
 }
 
+.post-content {
+  max-width: 800px;
+  margin-left: 4rem;
+}
+
 picture, img {
     max-width: 100%;
     height: auto;
@@ -667,7 +672,7 @@ blockquote {
     padding-bottom: 2rem; 
 }
 
-.home-posts h2 {
+.home-posts ul {
     border-top: 2px solid var(--color-semi-dark-purple);
     padding-top: 3rem;
 }
@@ -803,5 +808,10 @@ blockquote {
   
   .project-content ol {
     padding-left: 2rem;
+  }
+
+  .post-content {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
