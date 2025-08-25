@@ -96,6 +96,7 @@ li a {
 
 .post-content {
   max-width: 800px;
+  margin-left: 4rem;
 }
 
 picture, img {
@@ -807,5 +808,10 @@ blockquote {
   
   .project-content ol {
     padding-left: 2rem;
+  }
+
+  .post-content {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
