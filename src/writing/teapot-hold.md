@@ -12,7 +12,7 @@ In a teapot hold, sometimes called a "courtesy turn hold", two dancers connect r
 
 ## Why I don't like the Teapot Hold
 
-### It puts your shoulder in an unsupported position, vulnerable to injury
+### It puts your shoulder in an unsupported position
 There's no way to guarantee you won't get injured while social dancing, but there's a lot you can do as a dancer to minimize risk. One big one is to dance in such a way that you keep your joints aligned and supported by the musculature surrounding them. Part of this is keeping shoulders stably seated in the socket by avoiding over-extending arms or twisting into positions where the arm is supported mostly by connective tissue rather than muscle. This helps keep the shoulder supported and dynamic, with muscles able to absorb an unexpected tug or push. 
 
 In every basic contra figure except for the teapot hold, it's possible for all of the dancers to keep their arms in front of them. Unfortunately, the teapot hold requires twisting the arm around and losing a lot of that support. If someone tugs your arm while it's in this position, there's not much you can do to protect yourself from injury.
