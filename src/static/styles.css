@@ -283,6 +283,11 @@ body {
     line-height: 1.4;
 }
 
+.footnotes-list {
+  list-style: decimal;
+  padding-left: 4rem;
+}
+
 .song-list {
     padding-top: 1.5rem;
 }
