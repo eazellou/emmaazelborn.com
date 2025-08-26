@@ -23,7 +23,7 @@ Many dancers – especially older dancers and dancers with shoulder injuries –
 The small of the back is an intimate location. There are people I'm comfortable placing their hand on my shoulderblade, who I would not want feeling my lower back. In theory, the teapot hold is hand-to-hand, but I've frequently had someone reach for my hand and miss, even though I currently have full range of motion. It probably happens even more for folks who struggle to put their hand there. Ideally, upon not catching the hand would float behind the back, unconnected, but in reality, unwanted lower back touches do happen. 
 
 ## Replacing the Teapot Hold
-I've spent the last few months avoiding the teapot hold, offering skater's everywhere, and it's gone really well.
+I've spent the last few months avoiding the teapot hold, offering skater's during promenades and courtesy turns, and it's gone really well.
 
 In teapot hold, the most important connection point is *the hands in front*. That connection is unchanged when switching to skater's - the hands in front are in the same place as before. Because this is the most crucial connection mechanically, where weight is primarily shared, the location of the secondary hands is less impactful on the success of the overall figure. If it connects, great! If it doesn't, no biggie, you are still dancing. And in my experience, offering skater's clearly in front usually connects just fine.
 
