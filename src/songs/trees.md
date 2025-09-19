@@ -8,7 +8,7 @@ composer: Emma Azelborn
 
 you walk down broken tree-lined streets
 piles of bark and branches up to your ears
-your neighbor's roof has fallen in
+the neighbor's roof has fallen in
 no one spared from damage, it's more than you feared
 
 _chorus:_
