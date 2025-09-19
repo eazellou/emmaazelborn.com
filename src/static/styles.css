@@ -96,7 +96,6 @@ li a {
 
 .post-content {
   max-width: 800px;
-  margin-left: 4rem;
 }
 
 picture, img {
@@ -385,7 +384,7 @@ body {
   }
 
 .main-content {
-    padding: 2rem 4rem;
+    padding: 2rem 8rem;
 }
 
 .secondary-content {
@@ -396,7 +395,7 @@ body {
 .secondary-content > * {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-left: 4rem;
+    margin-left: 8rem;
     margin-right: 4rem;
 }
 
@@ -784,6 +783,17 @@ blockquote {
     padding-top: 8rem; /* Account for mobile header */
     height: auto;
     overflow-y: visible;
+  }
+
+  .main-content {
+    padding: 2rem 4rem;
+  }
+
+  .secondary-content > * {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
   }
   
   .layout-grid {
