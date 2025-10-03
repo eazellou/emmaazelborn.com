@@ -27,7 +27,7 @@ export default async function (eleventyConfig) {
             .sort((a, b) => {
                 const getSortKey = (title) => {
                     // Remove common articles from the beginning
-                    const articles = /^(the|a|an)\s+/i;
+                    const articles = /^(the|a|an|o)\s+/i;
                     return title.replace(articles, '').trim();
                 };
                 
