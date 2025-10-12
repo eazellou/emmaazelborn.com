@@ -313,6 +313,21 @@ body {
     margin-left: 2rem;
 }
 
+.paper-plane-band-photo {
+    width: 50%;
+    height: auto;
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.project-insta {
+    display: inline-block;
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) invert(1);
+}
+
 .layout-grid {
   display: grid;
   grid-template-columns: max(40rem, 33.333vw) auto;
