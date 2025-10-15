@@ -8,9 +8,15 @@ credits: |
   <a class="project-insta" href="https://www.instagram.com/paperplane.contra/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram">@paperplane.contra</a>  
   paperplanecontra@gmail.com
 ---
-<img class="paper-plane-band-photo" alt="paper plane arm in arm" src="/static/images/paper-plane-cozy-square.jpeg">
+
+<div style="width: 100%; margin-bottom: 1rem">
+  <div style="position: relative; padding-top: 56.25%;"> <!-- 16:9 aspect ratio (9/16 * 100) -->
+    <iframe src="https://www.youtube.com/embed/ut8soYf2L8o" frameborder="0" title="The Holly Bush Set" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
+</div>
 
 Rohan Weeden: Guitar, Accordion, Fiddle  
 Daniel Raine: Cittern, Mandolin, Guitar, Feet  
-Emma Azelborn: Whistle, Vocals  
+Emma Azelborn: Whistle, Vocals
 
+<img class="paper-plane-band-photo" alt="paper plane arm in arm" src="/static/images/paper-plane-cozy-square.jpeg">
