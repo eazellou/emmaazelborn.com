@@ -11,7 +11,8 @@
             <strong>Appears in:</strong>
             <ul>
             {% for rel in released %}
-                <li><a href="/projects/{{ rel.project }}/">{{ rel.project | replace('-', ' ') | title }}</a></li>
+                {% set project = collections.projects | getProjectByName(rel.project) %}
+                <li><a href="/projects/{{ rel.project }}/">{{ project.title }}</a></li>
             {% endfor %}
             </ul>
         </div>
