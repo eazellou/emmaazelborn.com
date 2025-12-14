@@ -1,7 +1,9 @@
 ---
 title: Royal Potatoes
 composer: Emma Azelborn
-voiceMemo: royal potatoes memo.m4a
+released:
+  - project: circle-songs-vol-ii
+    bandcampTrackId: ""
 ---
 
 have you heard the latest news that's been going all around?

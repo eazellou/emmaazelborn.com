@@ -1,7 +1,9 @@
 ---
 title: Hen House Ghost
 composer: Emma Azelborn
-voiceMemo: hen house ghost memo.m4a
+released:
+  - project: circle-songs-vol-ii
+    bandcampTrackId: ""
 ---
 
 Everybody gather round 'cause I can't come to you

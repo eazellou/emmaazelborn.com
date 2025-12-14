@@ -1,7 +1,9 @@
 ---
 title: Dragons of Kilpatrick
 composer: Emma Azelborn
-voiceMemo: dragons of Kilpatrick at the Armory.m4a
+released:
+  - project: circle-songs-vol-ii
+    bandcampTrackId: ""
 ---
 
 we are the glinting gilded girls who heard the calling sea
