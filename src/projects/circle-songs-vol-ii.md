@@ -22,62 +22,62 @@ songs:
 - title: Dragons Of Kilpatrick
   lyricsUrl: /songs/dragons-of-kilpatrick
 credits: |
-  Lead Vocals: Emma Azelborn  
+  Lead Vocals: Emma&nbsp;Azelborn  
 
   Social Singing:  
-  Alex Bittle,
-  Annaleah Ernst,
-  Becca Mandel,
-  Bret Casey,
-  Clara Stefanov-Wagner,
-  Colin Morgan,
-  Copper Santiago,
-  Corinne Holroyd,
-  Daniel Raine,
-  David Kessler,
-  Erica Werner,
-  Fern Poling,
-  Fiona Imami,
-  Greer Doble,
-  Ian Teare-Thomas,
-  Isaac Sarek Banner,
-  Justin Parish,
-  Kevin O'Hara,
-  Kielan Donahue,
-  Kurt James Werner,
-  Lorraine Fryer,
-  Mel Novner,
-  Melissa Kagen,
-  Mikhail Naumov,
-  Mo Brachfeld,
-  Myfanwy Callahan,
-  Neight Banx,
-  Paul Ogilby,
-  Rebecca Jones,
-  Red Kovatch,
-  Sam Asuque,
-  Sarah Mamlet,
-  Tim Sullivan,
-  Zara Barryte  
+  Alex&nbsp;Bittle,
+  Annaleah&nbsp;Ernst,
+  Becca&nbsp;Mandel,
+  Bret&nbsp;Casey,
+  Clara&nbsp;Stefanov-Wagner,
+  Colin&nbsp;Morgan,
+  Copper&nbsp;Santiago,
+  Corinne&nbsp;Holroyd,
+  Daniel&nbsp;Raine,
+  David&nbsp;Kessler,
+  Erica&nbsp;Werner,
+  Fern&nbsp;Poling,
+  Fiona&nbsp;Imami,
+  Greer&nbsp;Doble,
+  Ian&nbsp;Teare-Thomas,
+  Isaac&nbsp;Sarek&nbsp;Banner,
+  Justin&nbsp;Parish,
+  Kevin&nbsp;O'Hara,
+  Kielan&nbsp;Donahue,
+  Kurt&nbsp;James&nbsp;Werner,
+  Lorraine&nbsp;Fryer,
+  Mel&nbsp;Novner,
+  Melissa&nbsp;Kagen,
+  Mikhail&nbsp;Naumov,
+  Mo&nbsp;Brachfeld,
+  Myfanwy&nbsp;Callahan,
+  Neight&nbsp;Banx,
+  Paul&nbsp;Ogilby,
+  Rebecca&nbsp;Jones,
+  Red&nbsp;Kovatch,
+  Sam&nbsp;Asuque,
+  Sarah&nbsp;Mamlet,
+  Tim&nbsp;Sullivan,
+  Zara&nbsp;Barryte  
   
-  Songwriter: Emma Azelborn  
+  Songwriter: Emma&nbsp;Azelborn  
   
-  Producer: Emma Azelborn  
-  Pre-production Engineer: Emma Azelborn  
-  Recording Engineers: Steven Bluestein and Abe Joyner-Meyers  
-  Mixing Engineer: Emma Azelborn  
-  Mastering Engineer: Lena Sutter  
+  Producer: Emma&nbsp;Azelborn  
+  Pre-production Engineer: Emma&nbsp;Azelborn  
+  Recording Engineers: Steven&nbsp;Bluestein and Abe&nbsp;Joyner-Meyers  
+  Mixing Engineer: Emma&nbsp;Azelborn  
+  Mastering Engineer: Lena&nbsp;Sutter  
   
-  Album Artwork Artist: Wesley Mills  
+  Album Artwork Artist: Wesley&nbsp;Mills  
 
-  Lyrics for Who Has Seen the Wind? adapted from Who Has Seen the Wind?, a poem by Christina Rossetti  
+  Lyrics for Who Has Seen the Wind? adapted from Who Has Seen the Wind?, a poem by Christina&nbsp;Rossetti  
   
   Special Thanks to:  
   
-  Harris Lapiroff  
-  Kurt Werner  
-  Melissa Kagen  
-  Annaleah Ernst  
-  Neight Banx  
-  Alex Bittle  
+  Harris&nbsp;Lapiroff  
+  Kurt&nbsp;James&nbsp;Werner  
+  Melissa&nbsp;Kagen  
+  Annaleah&nbsp;Ernst  
+  Neight&nbsp;Banx  
+  Alex&nbsp;Bittle  
 ---
