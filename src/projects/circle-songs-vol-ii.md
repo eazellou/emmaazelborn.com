@@ -25,39 +25,39 @@ credits: |
   Lead Vocals: Emma Azelborn  
 
   Social Singing:  
-  Alex Bittle  
-  Annaleah Ernst  
-  Becca Mandel  
-  Bret Casey  
-  Clara Stefanov-Wagner  
-  Colin Morgan  
-  Copper Santiago  
-  Corinne Holroyd  
-  Daniel Raine  
-  David Kessler  
-  Erica Werner  
-  Fern Poling  
-  Fiona Imami  
-  Greer Doble  
-  Ian Teare-Thomas  
-  Isaac Sarek Banner  
-  Justin Parish  
-  Kevin O'Hara  
-  Kielan Donahue  
-  Kurt James Werner  
-  Lorraine Fryer  
-  Mel Novner  
-  Melissa Kagen  
-  Mikhail Naumov  
-  Mo Brachfeld  
-  Myfanwy Callahan  
-  Neight Banx  
-  Paul Ogilby  
-  Rebecca Jones  
-  Red Kovatch  
-  Sam Asuque  
-  Sarah Mamlet  
-  Tim Sullivan  
+  Alex Bittle,
+  Annaleah Ernst,
+  Becca Mandel,
+  Bret Casey,
+  Clara Stefanov-Wagner,
+  Colin Morgan,
+  Copper Santiago,
+  Corinne Holroyd,
+  Daniel Raine,
+  David Kessler,
+  Erica Werner,
+  Fern Poling,
+  Fiona Imami,
+  Greer Doble,
+  Ian Teare-Thomas,
+  Isaac Sarek Banner,
+  Justin Parish,
+  Kevin O'Hara,
+  Kielan Donahue,
+  Kurt James Werner,
+  Lorraine Fryer,
+  Mel Novner,
+  Melissa Kagen,
+  Mikhail Naumov,
+  Mo Brachfeld,
+  Myfanwy Callahan,
+  Neight Banx,
+  Paul Ogilby,
+  Rebecca Jones,
+  Red Kovatch,
+  Sam Asuque,
+  Sarah Mamlet,
+  Tim Sullivan,
   Zara Barryte  
   
   Songwriter: Emma Azelborn  
