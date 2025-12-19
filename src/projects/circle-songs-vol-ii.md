@@ -3,7 +3,7 @@ title: Circle Songs Vol. II
 date: 2025-12-19
 image: /static/images/CircleSongs_II_AlbumArt.jpeg
 summary: "A second collection of songs written for singing together"
-description: "This September, I gathered a group of friends and recorded us all singing a collection of my songs written for social singing. We filled the room with improvised harmonies, laughter, and a feeling of community I am so glad to be part of. This is the second installment of my Circle Songs series, where I record my songs as they are written to be sung - improvisationally, with friends, with mistakes, and above all with heart. I hope this record captures a bit of that feeling of connection through music and song."
+description: "This is the second installment of my Circle Songs series, where I record my songs as they are written to be sung - improvisationally, with friends, with mistakes, and above all with heart. I gathered a group of friends and we filled the room with improvised harmonies, laughter, and community.  I hope this record captures a bit of that feeling of connection through music and song."
 bandcampID: "3577763146"
 bandcampUrl: "/album/circle-songs-vol-ii"
 songLink: "https://album.link/s/1c7ZGw6BkSAdpTlrMtomRG"
