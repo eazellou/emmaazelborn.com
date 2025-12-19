@@ -3,7 +3,7 @@ title: Royal Potatoes
 composer: Emma Azelborn
 released:
   - project: circle-songs-vol-ii
-    bandcampTrackId: ""
+    bandcampTrackId: "849002684"
 ---
 
 have you heard the latest news that's been going all around?

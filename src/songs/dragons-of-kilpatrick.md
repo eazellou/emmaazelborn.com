@@ -3,7 +3,7 @@ title: Dragons of Kilpatrick
 composer: Emma Azelborn
 released:
   - project: circle-songs-vol-ii
-    bandcampTrackId: ""
+    bandcampTrackId: "4247583798"
 ---
 
 we are the glinting gilded girls who heard the calling sea
