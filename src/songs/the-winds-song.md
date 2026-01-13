@@ -2,6 +2,7 @@
 title: The Wind's Song
 composer: Emma Azelborn
 voiceMemo: oh winds 4 part memo.mp3
+score: /static/scores/o winds that blow oer the sea.pdf
 ---
 oh winds that blow o'er the sea
 tell the story that you bring
