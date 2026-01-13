@@ -1,5 +1,5 @@
 ---
-title: The Wind's Song
+title: O Winds That Blow O'er The Sea
 composer: Emma Azelborn
 voiceMemo: oh winds 4 part memo.mp3
 score: /static/scores/o winds that blow oer the sea.pdf
