@@ -4,9 +4,6 @@
 <div class="stripe-content">
     <div class="project-content">
         <h2>{{ title }}</h2>
-        {% if description %}
-            <p>{{ description | markdown | safe }}</p>
-        {% endif %}
         {% if bandcampID and bandcampUrl or songLink or songs %}
             <div class="side-by-side">
                 {% if bandcampID and bandcampUrl %}
@@ -33,6 +30,9 @@
                     {% endif %}
                 </div>
             </div>
+        {% endif %}
+        {% if description %}
+            <p>{{ description | markdown | safe }}</p>
         {% endif %}
         {{ content | safe }}
     </div>
