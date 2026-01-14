@@ -46,6 +46,21 @@ export default async function (eleventyConfig) {
         (date, formatStr = "MMMM d, yyyy") => format(new UTCDate(date), formatStr)
     )
 
+    // Add a filter to get MIME type from audio filename
+    eleventyConfig.addFilter("audioMimeType", (filename) => {
+        if (!filename) return "audio/mpeg";
+        const ext = filename.split('.').pop().toLowerCase();
+        const mimeTypes = {
+            'mp3': 'audio/mpeg',
+            'mp4': 'audio/mp4',
+            'm4a': 'audio/mp4',
+            'ogg': 'audio/ogg',
+            'wav': 'audio/wav',
+            'webm': 'audio/webm'
+        };
+        return mimeTypes[ext] || 'audio/mpeg';
+    })
+
     // Add YAML as an acceptable data file format
     eleventyConfig.addDataExtension(
         "yml,yaml",

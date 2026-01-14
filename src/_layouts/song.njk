@@ -31,7 +31,7 @@
           {% endfor %}
         {% elif voiceMemo %}
           <audio controls>
-            <source src="/static/audio/{{ voiceMemo }}" type="audio/mp4">
+            <source src="/static/audio/{{ voiceMemo }}" type="{{ voiceMemo | audioMimeType }}">
             Your browser does not support the audio player.
           </audio>
         {% endif %}
