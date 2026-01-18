@@ -334,6 +334,12 @@ body {
     padding-bottom: 1rem;
 }
 
+.song-lyrics .stanza-empty {
+    min-height: calc(1 * var(--line-height-base-rem));
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .song-lyrics .stanza p {
     white-space: pre-line;
     text-wrap: pretty;
