@@ -2,6 +2,7 @@
 title: It's Always Been About That
 composer: Emma Azelborn
 voiceMemo: its-always-been-about-that-providence.mp4
+voiceMemoCaption: voice memo recorded at the Providence sing on Feb 9 2026
 ---
 you say it's all about keeping us safe
 **no, it's not about keeping us safe**
