@@ -13,7 +13,6 @@ we are here and we are **[rising]**
 we are **[rising]**, we hold on
 
 _repeat stanza with:_ 
-**rising** 
 **marching** 
 **determined** 
 **angry** 
