@@ -6,6 +6,7 @@ released:
   - project: circle-songs
     bandcampTrackId: "3062141228"
 composer: Emma Azelborn
+score: /static/scores/when we sing together.pdf
 ---
 
 my friends we have traveled far to gather here today
