@@ -61,6 +61,17 @@ export default async function (eleventyConfig) {
         return mimeTypes[ext] || 'audio/mpeg';
     })
 
+    // Extract YouTube video ID from URL or return as-is if already an ID
+    eleventyConfig.addFilter("youtubeEmbedId", (url) => {
+        if (!url || typeof url !== "string") return "";
+        const trimmed = url.trim();
+        const shortMatch = trimmed.match(/(?:youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+        if (shortMatch) return shortMatch[1];
+        const longMatch = trimmed.match(/(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
+        if (longMatch) return longMatch[1];
+        return trimmed.length === 11 ? trimmed : "";
+    })
+
     // Add YAML as an acceptable data file format
     eleventyConfig.addDataExtension(
         "yml,yaml",

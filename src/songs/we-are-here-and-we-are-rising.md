@@ -1,7 +1,7 @@
 ---
 title: We Are Here & We Are Rising
 composer: Emma Azelborn
-voiceMemo: we-are-here-and-we-are-rising.mp4
+youtube: https://youtu.be/Botv3X6XZks
 ---
 we are here and we are **[rising]**
 we are here and we are strong
