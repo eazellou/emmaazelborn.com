@@ -72,6 +72,17 @@ export default async function (eleventyConfig) {
         return trimmed.length === 11 ? trimmed : "";
     })
 
+    // Escape and normalize caption text (HTML-escape + newlines to <br>)
+    eleventyConfig.addFilter("captionSafe", (text) => {
+        if (!text || typeof text !== "string") return "";
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/\n/g, "<br>");
+    })
+
     // Add YAML as an acceptable data file format
     eleventyConfig.addDataExtension(
         "yml,yaml",
