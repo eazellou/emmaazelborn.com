@@ -1,3 +1,4 @@
+import Fetch from '@11ty/eleventy-fetch';
 import ical from 'node-ical';
 
 const CALENDAR_ICAL_URL =
@@ -21,7 +22,11 @@ export default async function () {
   sixMonthsLater.setUTCMonth(sixMonthsLater.getUTCMonth() + 6);
 
   try {
-    const data = await ical.async.fromURL(CALENDAR_ICAL_URL);
+    const icsText = await Fetch(CALENDAR_ICAL_URL, {
+      duration: '1d',
+      type: 'text',
+    });
+    const data = ical.sync.parseICS(icsText);
     const instances = [];
 
     for (const key of Object.keys(data)) {
