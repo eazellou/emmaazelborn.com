@@ -94,6 +94,15 @@ li a {
     padding: 0.5rem 1rem;
 }
 
+.back-to-events {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-to-events a {
+    padding: 0.5rem 1rem;
+}
+
 .post-content {
   max-width: 800px;
 }
