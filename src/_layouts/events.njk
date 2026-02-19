@@ -4,7 +4,19 @@
     <div class="stripe-content">
         <h2 class="page-title">{{ title }}</h2>
         <ul class="event-list">
-            {# Upcoming events will be listed here #}
+            {% for event in calendarEvents %}
+                <li class="event-item">
+                    <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
+                        {{ event.start | date("EEE, MMM d, yyyy") }}{% if not event.isFullDay %} at {{ event.start | date("h:mm a") }}{% endif %}
+                    </time>
+                    <span class="event-title">{{ event.title }}</span>
+                    {% if event.location %}
+                        <span class="event-location">{{ event.location }}</span>
+                    {% endif %}
+                </li>
+            {% else %}
+                <li class="events-empty">No upcoming events at the moment.</li>
+            {% endfor %}
         </ul>
         {{ content | safe }}
     </div>
