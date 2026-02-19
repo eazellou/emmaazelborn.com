@@ -3,6 +3,8 @@ import ical from 'node-ical';
 
 const CALENDAR_ICAL_URL =
   'https://calendar.google.com/calendar/ical/2ee6f899173bf6d69fe65d129ec875d2fe2877771d621d81712603b6ac477c5e%40group.calendar.google.com/public/basic.ics';
+// Identifier for this calendar (Violet Folk Sings); use in CSS and to filter events per project
+const CALENDAR_ID = 'violet-folk-sings';
 
 function getVal(value) {
   if (value == null) return '';
@@ -44,6 +46,7 @@ export default async function () {
         });
         for (const inst of expanded) {
           instances.push({
+            calendar: CALENDAR_ID,
             title: getVal(inst.summary),
             start: inst.start,
             end: inst.end,
@@ -62,6 +65,7 @@ export default async function () {
           component.datetype === 'date' ||
           (component.start && component.start.dateOnly);
         instances.push({
+          calendar: CALENDAR_ID,
           title: getVal(component.summary),
           start,
           end,

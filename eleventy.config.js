@@ -40,6 +40,12 @@ export default async function (eleventyConfig) {
         return projects.find(project => project.fileSlug === name).data;
     });
 
+    // Filter calendar events by calendar id (e.g. for project pages that show their events)
+    eleventyConfig.addFilter("eventsForCalendar", function(events, calendarId) {
+        if (!Array.isArray(events)) return [];
+        return events.filter(e => e.calendar === calendarId);
+    });
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",

@@ -35,6 +35,25 @@
             <p>{{ description | markdown | safe }}</p>
         {% endif %}
         {{ content | safe }}
+        {% if calendarId %}
+            {% set projectEvents = calendarEvents | eventsForCalendar(calendarId) %}
+            {% if projectEvents.length %}
+                <h3>Upcoming events</h3>
+                <ul class="event-list event-list--project">
+                    {% for event in projectEvents %}
+                        <li class="event-item event-item--{{ event.calendar }}">
+                            <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
+                                {{ event.start | date("EEE, MMM d, yyyy") }}{% if not event.isFullDay %} at {{ event.start | date("h:mm a") }}{% endif %}
+                            </time>
+                            <span class="event-title">{{ event.title }}</span>
+                            {% if event.location %}
+                                <span class="event-location">{{ event.location }}</span>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
     </div>
 </div>
 {% endblock %}
