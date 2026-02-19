@@ -1,0 +1,11 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <div class="stripe-content">
+        <h2 class="page-title">{{ title }}</h2>
+        <ul class="event-list">
+            {# Upcoming events will be listed here #}
+        </ul>
+        {{ content | safe }}
+    </div>
+{% endblock %}
