@@ -85,12 +85,15 @@ export default async function () {
 
   const allInstances = [];
 
+  const isProd = process.env.PROD === '1';
   for (const { id, url } of CALENDARS) {
     try {
-      const icsText = await Fetch(url, {
-        duration: '1d',
+      const raw = await Fetch(url, {
+        duration: isProd ? '1d' : '0s',
         type: 'text',
       });
+      // Cache may return a Buffer; node-ical expects a string
+      const icsText = typeof raw === 'string' ? raw : (raw?.toString?.('utf8') ?? String(raw));
       allInstances.push(...parseCalendar(icsText, id, from, oneYearLater));
     } catch (err) {
       console.warn(`Calendar fetch failed (${id}):`, err.message);
