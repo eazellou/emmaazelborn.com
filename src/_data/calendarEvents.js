@@ -11,6 +11,10 @@ const CALENDARS = [
     id: 'paper-plane',
     url: 'https://calendar.google.com/calendar/ical/5b06a18463f6f333ed3564e67000574cd27300424afbcbe6d38d0153ebb6de8c%40group.calendar.google.com/public/basic.ics',
   },
+  {
+    id: 'emma',
+    url: 'https://calendar.google.com/calendar/ical/7cb021302629cd50724edd13d6aee91c9602e8554c6b6b355eb2f8f7dbf7e8ab%40group.calendar.google.com/public/basic.ics',
+  },
 ];
 
 function getVal(value) {
