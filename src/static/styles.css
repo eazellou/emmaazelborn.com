@@ -158,6 +158,22 @@ a.event-location:hover {
     opacity: 1;
 }
 
+.events-subscribe {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-dark-purple);
+    opacity: 0.85;
+}
+
+.events-subscribe a {
+    background: none;
+}
+
+.events-subscribe a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
 .event-description,
 .event-item .event-description {
     font-size: 1.6rem;

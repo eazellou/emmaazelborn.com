@@ -48,7 +48,7 @@ export default async function (eleventyConfig) {
 
     // Human-readable name for event calendar (for labels/badges)
     eleventyConfig.addFilter("calendarDisplayName", function(calendarId) {
-        const names = { "violet-folk-sings": "Violet Folk Sings", "paper-plane": "Paper Plane", "emma": "Emma" };
+        const names = { "violet-folk-sings": "Violet Folk Sings", "paper-plane": "Paper Plane", "emma": "Emma Azelborn" };
         return names[calendarId] || calendarId;
     });
 
