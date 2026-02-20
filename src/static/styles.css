@@ -300,9 +300,6 @@ a.event-location:hover {
     opacity: 0.8;
 }
 
-.event-description-toggle[aria-expanded="true"] {
-    display: none;
-}
 
 .events-empty {
     padding: 2rem 0;
