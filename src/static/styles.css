@@ -125,28 +125,10 @@ li a {
 }
 
 .event-calendar {
-    display: inline-block;
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 0.2em 0.6em;
-    margin-bottom: 0.15rem;
-    width: fit-content;
-    border-radius: 0.2em;
-}
-
-.event-item--violet-folk-sings .event-calendar {
-    background-color: var(--color-extra-light-purple);
+    font-size: 1.35rem;
+    font-weight: 400;
     color: var(--color-dark-purple);
-}
-
-.event-item--paper-plane .event-calendar {
-    background-color: var(--color-light-purple);
-    color: var(--color-dark-purple);
-}
-
-.event-item--emma .event-calendar {
-    background-color: var(--color-semi-dark-purple);
-    color: var(--color-white);
+    opacity: 0.75;
 }
 
 .event-date {
@@ -188,7 +170,7 @@ li a {
 
 .event-description-wrap.event-description--truncated {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -226,6 +208,82 @@ li a {
 
 .event-list--project .event-item {
     padding: 0.75rem 0;
+}
+
+/* ----- Events list (cards) ----- */
+.event-list--cards {
+    display: grid;
+    gap: 2rem;
+    max-width: 52rem;
+}
+
+.event-list--cards .event-item {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: 0 2rem;
+    align-items: start;
+    padding: 1.5rem;
+    border: none;
+    background-color: var(--color-white);
+}
+
+.event-list--cards .event-item:last-child {
+    border: none;
+}
+
+.event-list--cards .event-date {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: start;
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* Match title’s first-line height (2rem × 1.35) so date and title align at top */
+    line-height: 1.8;
+    color: var(--color-dark-purple);
+    padding-right: 0.5rem;
+    min-width: 0;
+}
+
+.event-list--cards .event-title-line {
+    grid-column: 2;
+    line-height: 1.35;
+}
+
+.event-list--cards .event-title {
+    font-size: 2rem;
+    line-height: 1.35;
+}
+
+.event-list--cards .event-location {
+    grid-column: 2;
+    font-size: 1.5rem;
+}
+
+.event-list--cards .event-description-wrap,
+.event-list--cards .event-description,
+.event-list--cards .event-description-toggle {
+    grid-column: 2;
+}
+
+.event-list--cards .events-empty {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 500px) {
+    .event-list--cards .event-item {
+        grid-template-columns: 1fr;
+    }
+    .event-list--cards .event-date {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .event-list--cards .event-title-line,
+    .event-list--cards .event-location,
+    .event-list--cards .event-description-wrap,
+    .event-list--cards .event-description,
+    .event-list--cards .event-description-toggle {
+        grid-column: 1;
+    }
 }
 
 .post-content {

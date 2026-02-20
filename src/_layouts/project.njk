@@ -44,14 +44,14 @@
                         <li class="event-item event-item--{{ event.calendar }}">
                             <span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>
                             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
-                                {{ event.start | dateEastern("date") }}{% if not event.isFullDay %} at {{ event.start | dateEastern("time") }}{% endif %}
+                                {{ event.start | dateEastern("date") }}{% if not event.isFullDay %}<br>{{ event.start | dateEastern("time") }}{% endif %}
                             </time>
                             <span class="event-title">{{ event.title }}</span>
                             {% if event.location %}
                                 <span class="event-location">{{ event.location }}</span>
                             {% endif %}
                             {% if event.description %}
-                                {% if event.description.length > 250 %}
+                                {% if event.description.length > 400 %}
                                     <div class="event-description-wrap event-description--truncated">
                                         <div class="event-description">{{ event.description | safe }}</div>
                                     </div>
