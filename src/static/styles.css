@@ -158,6 +158,83 @@ a.event-location:hover {
     opacity: 1;
 }
 
+/* Recurring events section (next occurrence + link to project or calendar) */
+.events-recurring-section {
+    margin-top: 2.5rem;
+    max-width: 64rem;
+}
+
+.events-recurring-heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.events-recurring-intro {
+    font-size: 1.5rem;
+    color: var(--color-dark-purple);
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.events-recurring-frequency {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-dark-purple);
+    opacity: 0.85;
+    margin-bottom: 0.2rem;
+}
+
+.events-recurring-links {
+    margin-top: 0.35rem;
+}
+
+.events-recurring-link-sep {
+    margin: 0 0.35em;
+    opacity: 0.7;
+}
+
+.events-recurring-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.events-recurring-item {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: 0 2rem;
+    align-items: start;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--color-white);
+}
+
+.events-recurring-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.events-recurring-details .event-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.events-recurring-link {
+    margin-top: 0.25rem;
+    font-size: 1.4rem;
+    background: none;
+}
+
+.events-recurring-link:hover {
+    background: none;
+    text-decoration: underline;
+}
+
 .events-subscribe {
     margin-top: 2rem;
     font-size: 1.5rem;
@@ -201,6 +278,10 @@ a.event-location:hover {
     overflow: hidden;
 }
 
+.event-description-wrap.event-description--recurring {
+    -webkit-line-clamp: 2;
+}
+
 .event-description-wrap.event-description--expanded {
     -webkit-line-clamp: unset;
     display: block;
@@ -236,6 +317,10 @@ a.event-location:hover {
     padding: 0.75rem 0;
 }
 
+.event-list--project .event-item--recurring {
+    opacity: 0.88;
+}
+
 /* ----- Events list (cards) ----- */
 .event-list--cards {
     display: grid;
@@ -255,6 +340,18 @@ a.event-location:hover {
 
 .event-list--cards .event-item:last-child {
     border: none;
+}
+
+/* Recurring (e.g. monthly) events: subtle gray tint so they’re distinct but not loud */
+.event-list--cards .event-item.event-item--recurring {
+    background-color: #f5f5f5 !important;
+}
+
+.event-recurring-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark-purple);
+    opacity: 0.7;
 }
 
 .event-list--cards .event-date {

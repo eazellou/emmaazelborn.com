@@ -1,15 +1,20 @@
 <ul class="event-list event-list--{{ design }}">
     {% for event in calendarEvents %}
-        <li class="event-item event-item--{{ event.calendar }}">
+        <li class="event-item event-item--{{ event.calendar }}{% if event.isRecurring %} event-item--recurring{% endif %}">
             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
                 {{ event.start | dateEastern("date") }}{% if not event.isFullDay %}<br>{{ event.start | dateEastern("time") }}{% endif %}
             </time>
-            <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} <span class="event-calendar">· {{ event.calendar | calendarDisplayName }}</span>{% endif %}</span>
+            <span class="event-title-line">{% if event.isRecurring %}<span class="event-recurring-label">Monthly</span> {% endif %}<span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} <span class="event-calendar">· {{ event.calendar | calendarDisplayName }}</span>{% endif %}</span>
             {% if event.location %}
                 <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
             {% endif %}
             {% if event.description %}
-                {% if event.description.length > 400 %}
+                {% if event.isRecurring and event.description.length > 150 %}
+                    <div class="event-description-wrap event-description--truncated event-description--recurring">
+                        <div class="event-description">{{ event.description | safe }}</div>
+                    </div>
+                    <button type="button" class="event-description-toggle" aria-expanded="false">···</button>
+                {% elif not event.isRecurring and event.description.length > 400 %}
                     <div class="event-description-wrap event-description--truncated">
                         <div class="event-description">{{ event.description | safe }}</div>
                     </div>

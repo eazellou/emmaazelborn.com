@@ -3,8 +3,39 @@
 {% block content %}
     <div class="stripe-content">
         <h2 class="page-title">{{ title }}</h2>
+        {% set oneOffEvents = calendarEvents.oneOff %}
+        {% set recurringEvents = calendarEvents.recurring %}
+        {% set calendarEvents = oneOffEvents %}
         {% set design = 'cards' %}
         {% include "includes/events-list.njk" %}
+        {% if recurringEvents.length %}
+        <section class="events-recurring-section" aria-labelledby="recurring-heading">
+            <h3 id="recurring-heading" class="events-recurring-heading">Recurring events</h3>
+            <ul class="events-recurring-list">
+                {% for event in recurringEvents %}
+                <li class="events-recurring-item">
+                    <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
+                        {{ event.start | dateEastern("date") }}{% if not event.isFullDay %}<br>{{ event.start | dateEastern("time") }}{% endif %}
+                    </time>
+                    <div class="events-recurring-details">
+                        <span class="events-recurring-frequency">{{ event.recurrenceLabel or 'Recurring' }}</span>
+                        <span class="event-title">{{ event.title }}</span>
+                        {% if event.location %}
+                            <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
+                        {% endif %}
+                        <span class="events-recurring-links">
+                            {% if event.linkText %}
+                            <a class="events-recurring-link" href="{{ event.linkUrl }}">{{ event.linkText }}</a>
+                            <span class="events-recurring-link-sep">·</span>
+                            {% endif %}
+                            <a class="events-recurring-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
+                        </span>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
         <p class="events-subscribe">
             Add to your calendar:
             {% for cal in calendars %}

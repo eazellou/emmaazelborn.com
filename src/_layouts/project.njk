@@ -36,11 +36,13 @@
         {% endif %}
         {{ content | safe }}
         {% if calendarId %}
-            {% set projectEvents = calendarEvents | eventsForCalendar(calendarId) %}
-            {% if projectEvents.length %}
+            {% set projectOneOff = calendarEvents.oneOff | eventsForCalendar(calendarId) %}
+            {% set projectRecurring = calendarEvents.recurring | eventsForCalendar(calendarId) %}
+            {% if projectOneOff.length or projectRecurring.length %}
+                {% if projectOneOff.length %}
                 <h3>Upcoming events</h3>
                 <ul class="event-list event-list--project">
-                    {% for event in projectEvents %}
+                    {% for event in projectOneOff %}
                         <li class="event-item event-item--{{ event.calendar }}">
                             <span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>
                             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
@@ -63,6 +65,30 @@
                         </li>
                     {% endfor %}
                 </ul>
+                {% endif %}
+                {% if projectRecurring.length %}
+                <h3>Recurring events</h3>
+                <p class="events-recurring-intro">Next occurrence below; see full calendar for all dates.</p>
+                <ul class="events-recurring-list">
+                    {% for event in projectRecurring %}
+                    <li class="events-recurring-item">
+                        <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
+                            {{ event.start | dateEastern("date") }}{% if not event.isFullDay %}<br>{{ event.start | dateEastern("time") }}{% endif %}
+                        </time>
+                        <div class="events-recurring-details">
+                            <span class="events-recurring-frequency">{{ event.recurrenceLabel or 'Recurring' }}</span>
+                            <span class="event-title">{{ event.title }}</span>
+                            {% if event.location %}
+                                <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
+                            {% endif %}
+                            <span class="events-recurring-links">
+                                <a class="events-recurring-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
+                            </span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
                 <p class="back-to-events">
                     <a href="/events/">All Events</a>
                 </p>

@@ -7,6 +7,15 @@ function getVal(value) {
   return typeof value === 'string' ? value : (value.val ?? '');
 }
 
+function getRecurrenceLabel(rrule) {
+  if (rrule == null) return 'Recurring';
+  const str = typeof rrule === 'string' ? rrule : (rrule.toString?.() ?? String(rrule));
+  const match = str.match(/FREQ=([A-Z]+)/i);
+  const freq = match ? match[1].toLowerCase() : '';
+  const labels = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', yearly: 'Yearly' };
+  return labels[freq] || 'Recurring';
+}
+
 function parseCalendar(icsText, calendarId, from, oneYearLater) {
   const data = ical.sync.parseICS(icsText);
   const instances = [];
@@ -23,7 +32,9 @@ function parseCalendar(icsText, calendarId, from, oneYearLater) {
         from,
         to: oneYearLater,
       });
-      for (const inst of expanded) {
+      // Only show next 3 occurrences so the list doesn’t become a long scroll of the same event
+      const inst = expanded[0];
+      if (inst) {
         instances.push({
           calendar: calendarId,
           title: getVal(inst.summary),
@@ -32,6 +43,8 @@ function parseCalendar(icsText, calendarId, from, oneYearLater) {
           location: getVal(component.location),
           description: getVal(component.description),
           isFullDay: inst.isFullDay,
+          isRecurring: true,
+          recurrenceLabel: getRecurrenceLabel(component.rrule),
         });
       }
     } else {
@@ -50,6 +63,7 @@ function parseCalendar(icsText, calendarId, from, oneYearLater) {
         location: getVal(component.location),
         description: getVal(component.description),
         isFullDay: !!isFullDay,
+        isRecurring: false,
       });
     }
   }
@@ -86,5 +100,22 @@ export default async function () {
   }
 
   allInstances.sort((a, b) => new Date(a.start) - new Date(b.start));
-  return allInstances;
+
+  // Show recurring: at least 3 per series, or all that fall within the list’s date range (so we don’t imply they stop before other events)
+  const oneOff = allInstances.filter((e) => !e.isRecurring).sort((a, b) => new Date(a.start) - new Date(b.start));
+  const recurring = allInstances
+    .filter((e) => e.isRecurring)
+    .sort((a, b) => new Date(a.start) - new Date(b.start))
+    .map((ev) => {
+      const cal = calendars.find((c) => c.id === ev.calendar);
+      const calendarUrl = cal?.webUrl || '#';
+      return {
+        ...ev,
+        linkUrl: cal?.projectPath || calendarUrl,
+        linkText: cal?.projectPath ? 'View project' : null,
+        calendarUrl,
+      };
+    });
+
+  return { oneOff, recurring };
 }
