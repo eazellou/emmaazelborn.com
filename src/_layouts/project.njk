@@ -48,7 +48,7 @@
                             </time>
                             <span class="event-title">{{ event.title }}</span>
                             {% if event.location %}
-                                <span class="event-location">{{ event.location }}</span>
+                                <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
                             {% endif %}
                             {% if event.description %}
                                 {% if event.description.length > 400 %}

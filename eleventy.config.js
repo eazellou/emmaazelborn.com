@@ -52,6 +52,12 @@ export default async function (eleventyConfig) {
         return names[calendarId] || calendarId;
     });
 
+    // Google Maps search URL for an address (for event location links)
+    eleventyConfig.addFilter("googleMapsUrl", function(address) {
+        if (!address || typeof address !== "string") return "#";
+        return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address.trim());
+    });
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",

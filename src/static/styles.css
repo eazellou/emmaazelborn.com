@@ -148,6 +148,16 @@ li a {
     opacity: 0.9;
 }
 
+a.event-location {
+    background: none;
+}
+
+a.event-location:hover {
+    background: none;
+    text-decoration: underline;
+    opacity: 1;
+}
+
 .event-description,
 .event-item .event-description {
     font-size: 1.6rem;
