@@ -214,7 +214,7 @@ li a {
 .event-list--cards {
     display: grid;
     gap: 2rem;
-    max-width: 52rem;
+    max-width: 64rem;
 }
 
 .event-list--cards .event-item {
