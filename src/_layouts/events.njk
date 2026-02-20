@@ -11,32 +11,29 @@
         {% if recurringEvents.length %}
         <section class="events-recurring-section" aria-labelledby="recurring-heading">
             <h3 id="recurring-heading" class="events-recurring-heading">Recurring events</h3>
-            <ul class="events-recurring-list">
+            <ul class="event-list event-list--cards">
                 {% for event in recurringEvents %}
-                <li class="events-recurring-item">
+                <li class="event-item event-item--recurring">
                     <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
                         {{ event.start | dateEastern("date") }}{% if not event.isFullDay %}<br>{{ event.start | dateEastern("time") }}{% endif %}
                     </time>
-                    <div class="events-recurring-details">
-                        <span class="events-recurring-frequency">{{ event.recurrenceLabel or 'Recurring' }}</span>
-                        <span class="event-title">{{ event.title }}</span>
-                        {% if event.location %}
-                            <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
-                        {% endif %}
-                        {% if event.description %}
-                        <div class="event-description-wrap event-description--truncated">
-                            <div class="event-description">{{ event.description | safe }}</div>
-                        </div>
-                        <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">∨</button>
-                        {% endif %}
-                        <span class="events-recurring-links">
-                            {% if event.linkText %}
-                            <a class="events-recurring-link" href="{{ event.linkUrl }}">{{ event.linkText }}</a>
-                            <span class="events-recurring-link-sep">·</span>
-                            {% endif %}
-                            <a class="events-recurring-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
-                        </span>
+                    <span class="event-title-line"><span class="event-recurring-label">{{ event.recurrenceLabel or 'Recurring' }}</span> <span class="event-title">{{ event.title }}</span></span>
+                    {% if event.location %}
+                        <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
+                    {% endif %}
+                    {% if event.description %}
+                    <div class="event-description-wrap event-description--truncated">
+                        <div class="event-description">{{ event.description | safe }}</div>
                     </div>
+                    <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">∨</button>
+                    {% endif %}
+                    <span class="event-links">
+                        {% if event.linkText %}
+                        <a class="event-link" href="{{ event.linkUrl }}">{{ event.linkText }}</a>
+                        <span class="event-link-sep">·</span>
+                        {% endif %}
+                        <a class="event-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
+                    </span>
                 </li>
                 {% endfor %}
             </ul>
