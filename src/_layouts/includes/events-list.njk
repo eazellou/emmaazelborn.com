@@ -9,19 +9,10 @@
                 <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
             {% endif %}
             {% if event.description %}
-                {% if event.isRecurring and event.description.length > 150 %}
-                    <div class="event-description-wrap event-description--truncated event-description--recurring">
-                        <div class="event-description">{{ event.description | safe }}</div>
-                    </div>
-                    <button type="button" class="event-description-toggle" aria-expanded="false">···</button>
-                {% elif not event.isRecurring and event.description.length > 400 %}
-                    <div class="event-description-wrap event-description--truncated">
-                        <div class="event-description">{{ event.description | safe }}</div>
-                    </div>
-                    <button type="button" class="event-description-toggle" aria-expanded="false">···</button>
-                {% else %}
+                <div class="event-description-wrap event-description--truncated">
                     <div class="event-description">{{ event.description | safe }}</div>
-                {% endif %}
+                </div>
+                <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">···</button>
             {% endif %}
         </li>
     {% else %}

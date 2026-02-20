@@ -93,6 +93,18 @@
           }
         });
       });
+
+      // Only show expand button when description actually overflows 2 lines
+      document.querySelectorAll('.event-description-wrap.event-description--truncated').forEach(wrap => {
+        const btn = wrap.nextElementSibling;
+        if (btn && btn.classList.contains('event-description-toggle')) {
+          if (wrap.scrollHeight <= wrap.clientHeight + 2) {
+            wrap.classList.remove('event-description--truncated');
+            wrap.classList.add('event-description--expanded');
+            btn.style.display = 'none';
+          }
+        }
+      });
     });
   </script>
 </body>
