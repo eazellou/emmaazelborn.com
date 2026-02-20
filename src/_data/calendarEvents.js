@@ -18,7 +18,7 @@ function getVal(value) {
   return typeof value === 'string' ? value : (value.val ?? '');
 }
 
-function parseCalendar(icsText, calendarId, from, sixMonthsLater) {
+function parseCalendar(icsText, calendarId, from, oneYearLater) {
   const data = ical.sync.parseICS(icsText);
   const instances = [];
 
@@ -32,7 +32,7 @@ function parseCalendar(icsText, calendarId, from, sixMonthsLater) {
     if (component.rrule) {
       const expanded = ical.expandRecurringEvent(component, {
         from,
-        to: sixMonthsLater,
+        to: oneYearLater,
       });
       for (const inst of expanded) {
         instances.push({
@@ -46,7 +46,7 @@ function parseCalendar(icsText, calendarId, from, sixMonthsLater) {
         });
       }
     } else {
-      if (start > sixMonthsLater) continue;
+      if (start > oneYearLater) continue;
       if (component.end && new Date(component.end) < from) continue;
       if (start < from) continue;
       const end = component.end ? new Date(component.end) : start;
@@ -76,8 +76,8 @@ export default async function () {
   } else {
     from = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
   }
-  const sixMonthsLater = new Date(from);
-  sixMonthsLater.setUTCMonth(sixMonthsLater.getUTCMonth() + 6);
+  const oneYearLater = new Date(from);
+  oneYearLater.setUTCFullYear(oneYearLater.getUTCFullYear() + 1);
 
   const allInstances = [];
 
@@ -87,7 +87,7 @@ export default async function () {
         duration: '1d',
         type: 'text',
       });
-      allInstances.push(...parseCalendar(icsText, id, from, sixMonthsLater));
+      allInstances.push(...parseCalendar(icsText, id, from, oneYearLater));
     } catch (err) {
       console.warn(`Calendar fetch failed (${id}):`, err.message);
     }
