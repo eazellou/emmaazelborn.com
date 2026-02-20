@@ -6,6 +6,7 @@
         <ul class="event-list">
             {% for event in calendarEvents %}
                 <li class="event-item event-item--{{ event.calendar }}">
+                    <span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>
                     <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
                         {{ event.start | dateEastern("date") }}{% if not event.isFullDay %} at {{ event.start | dateEastern("time") }}{% endif %}
                     </time>

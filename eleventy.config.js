@@ -46,6 +46,12 @@ export default async function (eleventyConfig) {
         return events.filter(e => e.calendar === calendarId);
     });
 
+    // Human-readable name for event calendar (for labels/badges)
+    eleventyConfig.addFilter("calendarDisplayName", function(calendarId) {
+        const names = { "violet-folk-sings": "Violet Folk Sings", "paper-plane": "Paper Plane", "emma": "Emma" };
+        return names[calendarId] || calendarId;
+    });
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",
