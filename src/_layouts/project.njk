@@ -77,6 +77,12 @@
                             {% if event.location %}
                                 <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
                             {% endif %}
+                            {% if event.description %}
+                            <div class="event-description-wrap event-description--truncated">
+                                <div class="event-description">{{ event.description | safe }}</div>
+                            </div>
+                            <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">···</button>
+                            {% endif %}
                             <span class="events-recurring-links">
                                 <a class="events-recurring-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
                             </span>
