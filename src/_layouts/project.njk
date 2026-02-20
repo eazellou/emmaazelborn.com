@@ -50,6 +50,16 @@
                             {% if event.location %}
                                 <span class="event-location">{{ event.location }}</span>
                             {% endif %}
+                            {% if event.description %}
+                                {% if event.description.length > 250 %}
+                                    <div class="event-description-wrap event-description--truncated">
+                                        <div class="event-description">{{ event.description | safe }}</div>
+                                    </div>
+                                    <button type="button" class="event-description-toggle" aria-expanded="false">…</button>
+                                {% else %}
+                                    <div class="event-description">{{ event.description | safe }}</div>
+                                {% endif %}
+                            {% endif %}
                         </li>
                     {% endfor %}
                 </ul>

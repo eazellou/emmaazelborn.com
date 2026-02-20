@@ -166,6 +166,59 @@ li a {
     opacity: 0.9;
 }
 
+.event-description,
+.event-item .event-description {
+    font-size: 1.6rem;
+    line-height: 1.45;
+    margin-top: 0.5rem;
+    max-width: 52rem;
+}
+
+.event-description p {
+    margin: 0 0 0.5em 0;
+}
+
+.event-description p:last-child {
+    margin-bottom: 0;
+}
+
+.event-description-wrap {
+    margin-top: 0.5rem;
+}
+
+.event-description-wrap.event-description--truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-description-wrap.event-description--expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
+.event-description-toggle {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0;
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: var(--color-dark-purple);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.event-description-toggle:hover {
+    opacity: 0.8;
+}
+
+.event-description-toggle[aria-expanded="true"] {
+    display: none;
+}
+
 .events-empty {
     padding: 2rem 0;
     font-size: 1.8rem;

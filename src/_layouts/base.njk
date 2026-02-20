@@ -81,6 +81,18 @@
           mobileNav.classList.remove('active');
         });
       });
+
+      // Expand truncated event descriptions
+      document.querySelectorAll('.event-description-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const wrap = this.previousElementSibling;
+          if (wrap && wrap.classList.contains('event-description-wrap')) {
+            wrap.classList.remove('event-description--truncated');
+            wrap.classList.add('event-description--expanded');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
     });
   </script>
 </body>
