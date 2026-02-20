@@ -52,6 +52,22 @@ export default async function (eleventyConfig) {
         (date, formatStr = "MMMM d, yyyy") => format(new UTCDate(date), formatStr)
     )
 
+    // Format a date in Eastern time (for event listings). Use formatType: 'date' (e.g. "Wed, Feb 19, 2025"), 'time' (e.g. "3:00 PM"), or 'datetime'.
+    const easternTz = "America/New_York";
+    eleventyConfig.addFilter("dateEastern", (date, formatType = "date") => {
+        if (!date) return "";
+        const d = new Date(date);
+        if (formatType === "time") {
+            return new Intl.DateTimeFormat("en-US", { timeZone: easternTz, hour: "numeric", minute: "2-digit", hour12: true }).format(d);
+        }
+        if (formatType === "datetime") {
+            const dateStr = new Intl.DateTimeFormat("en-US", { timeZone: easternTz, weekday: "short", month: "short", day: "numeric", year: "numeric" }).format(d);
+            const timeStr = new Intl.DateTimeFormat("en-US", { timeZone: easternTz, hour: "numeric", minute: "2-digit", hour12: true }).format(d);
+            return `${dateStr} at ${timeStr}`;
+        }
+        return new Intl.DateTimeFormat("en-US", { timeZone: easternTz, weekday: "short", month: "short", day: "numeric", year: "numeric" }).format(d);
+    });
+
     // Add a filter to get MIME type from audio filename
     eleventyConfig.addFilter("audioMimeType", (filename) => {
         if (!filename) return "audio/mpeg";
