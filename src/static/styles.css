@@ -1111,14 +1111,14 @@ blockquote {
     }
 
     .main-content {
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
 
     .secondary-content > * {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .layout-grid {
