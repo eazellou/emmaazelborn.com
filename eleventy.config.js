@@ -59,6 +59,13 @@ export default async function (eleventyConfig) {
         return cal?.projectPath ?? null;
     });
 
+    // Google Calendar web URL for a calendar (from calendars data). For "full calendar" links.
+    eleventyConfig.addFilter("calendarWebUrl", function(calendarId, calendars) {
+        if (!Array.isArray(calendars)) return "#";
+        const cal = calendars.find((c) => c.id === calendarId);
+        return cal?.webUrl ?? "#";
+    });
+
     // Google Maps search URL for an address (for event location links)
     eleventyConfig.addFilter("googleMapsUrl", function(address) {
         if (!address || typeof address !== "string") return "#";

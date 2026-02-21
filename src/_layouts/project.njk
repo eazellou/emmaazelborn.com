@@ -47,7 +47,7 @@
                 {% endif %}
                 {% if projectRecurring.length %}
                 <h3>Recurring events</h3>
-                <p class="events-recurring-intro">Next occurrence below; see full calendar for all dates.</p>
+                <p class="events-recurring-intro">See <a href="{{ calendarId | calendarWebUrl(calendars) }}" target="_blank" rel="noopener noreferrer">full calendar</a> for all dates.</p>
                 {% set recurringEvents = projectRecurring %}
                 {% include "includes/events-recurring-list.njk" %}
                 {% endif %}

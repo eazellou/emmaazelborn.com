@@ -189,6 +189,15 @@ a.event-location:hover {
     margin-bottom: 0.75rem;
 }
 
+.events-recurring-intro a {
+    background: none;
+}
+
+.events-recurring-intro a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
 /* Link row at bottom of event card (e.g. “View project” · “See full calendar”) */
 
 .events-subscribe {
