@@ -4,7 +4,7 @@
         <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
             {{ event.start | dateEastern("date") }}{% if not event.isFullDay %} · {{ event.start | dateEastern("time") }}{% endif %} · <span class="event-recurring-label">{{ event.recurrenceLabel or 'Recurring' }}</span>
         </time>
-        <span class="event-title-line"><span class="event-title">{{ event.title }}</span></span>
+        <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} {% set projectPath = event.calendar | calendarProjectPath(calendars) %}{% if projectPath %}<a class="event-calendar" href="{{ projectPath }}">{{ event.calendar | calendarDisplayName }}</a>{% else %}<span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>{% endif %}{% endif %}</span>
         {% if event.location %}
             <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
         {% endif %}
@@ -14,13 +14,6 @@
         </div>
         <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">∨</button>
         {% endif %}
-        <span class="event-links">
-            {% if event.linkText %}
-            <a class="event-link" href="{{ event.linkUrl }}">{{ event.linkText }}</a>
-            <span class="event-link-sep">·</span>
-            {% endif %}
-            <a class="event-link" href="{{ event.calendarUrl }}" target="_blank" rel="noopener noreferrer">See full calendar</a>
-        </span>
     </li>
     {% endfor %}
 </ul>

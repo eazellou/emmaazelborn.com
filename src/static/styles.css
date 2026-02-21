@@ -190,24 +190,6 @@ a.event-location:hover {
 }
 
 /* Link row at bottom of event card (e.g. “View project” · “See full calendar”) */
-.event-links {
-    margin-top: 0.35rem;
-    font-size: 1.4rem;
-}
-
-.event-link-sep {
-    margin: 0 0.35em;
-    opacity: 0.7;
-}
-
-.event-item .event-link {
-    background: none;
-}
-
-.event-item .event-link:hover {
-    background: none;
-    text-decoration: underline;
-}
 
 .events-subscribe {
     margin-top: 2rem;
