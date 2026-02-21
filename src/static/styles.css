@@ -130,6 +130,7 @@ li a {
     font-weight: 400;
     color: var(--color-dark-purple);
     opacity: 0.75;
+    white-space: nowrap;
 }
 
 .event-date {
