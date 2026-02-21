@@ -16,6 +16,33 @@ function getRecurrenceLabel(rrule) {
   return labels[freq] || 'Recurring';
 }
 
+function toRecurringInstance(component, inst, calendarId) {
+  return {
+    calendar: calendarId,
+    title: getVal(inst.summary),
+    start: inst.start,
+    end: inst.end,
+    location: getVal(component.location),
+    description: getVal(component.description),
+    isFullDay: inst.isFullDay,
+    isRecurring: true,
+    recurrenceLabel: getRecurrenceLabel(component.rrule),
+  };
+}
+
+function toOneOffInstance(component, start, end, isFullDay, calendarId) {
+  return {
+    calendar: calendarId,
+    title: getVal(component.summary),
+    start,
+    end,
+    location: getVal(component.location),
+    description: getVal(component.description),
+    isFullDay: !!isFullDay,
+    isRecurring: false,
+  };
+}
+
 function parseCalendar(icsText, calendarId, from, oneYearLater) {
   const data = ical.sync.parseICS(icsText);
   const instances = [];
@@ -28,24 +55,10 @@ function parseCalendar(icsText, calendarId, from, oneYearLater) {
     if (!start) continue;
 
     if (component.rrule) {
-      const expanded = ical.expandRecurringEvent(component, {
-        from,
-        to: oneYearLater,
-      });
-      // Only show next 3 occurrences so the list doesn’t become a long scroll of the same event
+      const expanded = ical.expandRecurringEvent(component, { from, to: oneYearLater });
       const inst = expanded[0];
       if (inst) {
-        instances.push({
-          calendar: calendarId,
-          title: getVal(inst.summary),
-          start: inst.start,
-          end: inst.end,
-          location: getVal(component.location),
-          description: getVal(component.description),
-          isFullDay: inst.isFullDay,
-          isRecurring: true,
-          recurrenceLabel: getRecurrenceLabel(component.rrule),
-        });
+        instances.push(toRecurringInstance(component, inst, calendarId));
       }
     } else {
       if (start > oneYearLater) continue;
@@ -53,45 +66,47 @@ function parseCalendar(icsText, calendarId, from, oneYearLater) {
       if (start < from) continue;
       const end = component.end ? new Date(component.end) : start;
       const isFullDay =
-        component.datetype === 'date' ||
-        (component.start && component.start.dateOnly);
-      instances.push({
-        calendar: calendarId,
-        title: getVal(component.summary),
-        start,
-        end,
-        location: getVal(component.location),
-        description: getVal(component.description),
-        isFullDay: !!isFullDay,
-        isRecurring: false,
-      });
+        component.datetype === 'date' || (component.start && component.start.dateOnly);
+      instances.push(toOneOffInstance(component, start, end, isFullDay, calendarId));
     }
   }
 
   return instances;
 }
 
-export default async function () {
+function getDateRange() {
   const now = new Date();
-  let from;
-  if (process.env.CALENDAR_FROM_DATE) {
-    from = new Date(process.env.CALENDAR_FROM_DATE + 'T00:00:00.000Z');
-  } else {
-    from = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-  }
+  const from = process.env.CALENDAR_FROM_DATE
+    ? new Date(process.env.CALENDAR_FROM_DATE + 'T00:00:00.000Z')
+    : new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
   const oneYearLater = new Date(from);
   oneYearLater.setUTCFullYear(oneYearLater.getUTCFullYear() + 1);
+  return { from, oneYearLater };
+}
 
+function enrichRecurringWithCalendar(events) {
+  return events.map((ev) => {
+    const cal = calendars.find((c) => c.id === ev.calendar);
+    const calendarUrl = cal?.webUrl || '#';
+    return {
+      ...ev,
+      linkUrl: cal?.projectPath || calendarUrl,
+      linkText: cal?.projectPath ? 'View project' : null,
+      calendarUrl,
+    };
+  });
+}
+
+const sortByStart = (a, b) => new Date(a.start) - new Date(b.start);
+
+export default async function () {
+  const { from, oneYearLater } = getDateRange();
   const allInstances = [];
-
   const isProd = process.env.PROD === '1';
+
   for (const { id, url } of calendars) {
     try {
-      const raw = await Fetch(url, {
-        duration: isProd ? '1d' : '0s',
-        type: 'text',
-      });
-      // Cache may return a Buffer; node-ical expects a string
+      const raw = await Fetch(url, { duration: isProd ? '1d' : '0s', type: 'text' });
       const icsText = typeof raw === 'string' ? raw : (raw?.toString?.('utf8') ?? String(raw));
       allInstances.push(...parseCalendar(icsText, id, from, oneYearLater));
     } catch (err) {
@@ -99,23 +114,12 @@ export default async function () {
     }
   }
 
-  allInstances.sort((a, b) => new Date(a.start) - new Date(b.start));
+  allInstances.sort(sortByStart);
 
-  // Show recurring: at least 3 per series, or all that fall within the list’s date range (so we don’t imply they stop before other events)
-  const oneOff = allInstances.filter((e) => !e.isRecurring).sort((a, b) => new Date(a.start) - new Date(b.start));
-  const recurring = allInstances
-    .filter((e) => e.isRecurring)
-    .sort((a, b) => new Date(a.start) - new Date(b.start))
-    .map((ev) => {
-      const cal = calendars.find((c) => c.id === ev.calendar);
-      const calendarUrl = cal?.webUrl || '#';
-      return {
-        ...ev,
-        linkUrl: cal?.projectPath || calendarUrl,
-        linkText: cal?.projectPath ? 'View project' : null,
-        calendarUrl,
-      };
-    });
+  const oneOff = allInstances.filter((e) => !e.isRecurring).sort(sortByStart);
+  const recurring = enrichRecurringWithCalendar(
+    allInstances.filter((e) => e.isRecurring).sort(sortByStart)
+  );
 
   return { oneOff, recurring };
 }

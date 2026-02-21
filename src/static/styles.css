@@ -1,3 +1,20 @@
+/*
+ * Table of contents
+ * 1. Variables & reset
+ * 2. Base typography & links
+ * 3. Back links (songs, writing, events)
+ * 4. Events (lists, cards, recurring, subscribe)
+ * 5. Content (post, images, lists, home intro)
+ * 6. Layout (body, grid, sidebar, page-content)
+ * 7. Components (buttons, projects, contact, etc.)
+ * 8. Songs (lyrics, score)
+ * 9. Layout continued (credits, side-by-side, blockquote)
+ * 10. Mobile navigation
+ * 11. Footer
+ * 12. Writing / home posts
+ * 13. Media queries (tablet, mobile)
+ */
+
 :root {
     --font-size-base: 2.4rem;
     --line-height-base: 1.5;
@@ -105,7 +122,7 @@ li a {
     padding: 0.5rem 1rem;
 }
 
-/* Event list */
+/* --- 4. Events --- */
 .event-list {
     margin-top: 1.5rem;
     display: flex;
@@ -199,7 +216,7 @@ a.event-location:hover {
     text-decoration: underline;
 }
 
-/* Link row at bottom of event card (e.g. “View project” · “See full calendar”) */
+/* Add to your calendar links (events page) */
 
 .events-subscribe {
     margin-top: 2rem;
@@ -559,7 +576,6 @@ body {
         height: 70vh;
         min-height: 450px;
     }
-}
 }
 
 .song-lyrics .stanza {

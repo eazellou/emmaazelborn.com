@@ -1,25 +1,24 @@
 {% extends "base.njk" %}
 
 {% block content %}
-    <div class="stripe-content">
-        <h2 class="page-title">{{ title }}</h2>
-        {% set oneOffEvents = calendarEvents.oneOff %}
-        {% set recurringEvents = calendarEvents.recurring %}
-        {% set calendarEvents = oneOffEvents %}
-        {% set design = 'cards' %}
-        {% include "includes/events-list.njk" %}
-        {% if recurringEvents.length %}
-        <section class="events-recurring-section" aria-labelledby="recurring-heading">
-            <h3 id="recurring-heading" class="events-recurring-heading">Recurring events</h3>
-            {% include "includes/events-recurring-list.njk" %}
-        </section>
-        {% endif %}
-        <p class="events-subscribe">
-            Add to your calendar:
-            {% for cal in calendars %}
-            <a href="{{ cal.webUrl }}" target="_blank" rel="noopener noreferrer">{{ cal.displayName }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-        </p>
-        {{ content | safe }}
-    </div>
+<div class="stripe-content">
+    <h2 class="page-title">{{ title }}</h2>
+
+    {# Upcoming one-off events: include expects `calendarEvents` and `design` #}
+    {% set oneOffEvents = calendarEvents.oneOff %}
+    {% set recurringEvents = calendarEvents.recurring %}
+    {% set calendarEvents = oneOffEvents %}
+    {% set design = 'cards' %}
+    {% include "includes/events-list.njk" %}
+
+    {% if recurringEvents.length %}
+    <section class="events-recurring-section" aria-labelledby="recurring-heading">
+        <h3 id="recurring-heading" class="events-recurring-heading">Recurring events</h3>
+        {% include "includes/events-recurring-list.njk" %}
+    </section>
+    {% endif %}
+
+    {% include "includes/events-subscribe-links.njk" %}
+    {{ content | safe }}
+</div>
 {% endblock %}

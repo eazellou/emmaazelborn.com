@@ -1,0 +1,6 @@
+<p class="events-subscribe">
+    Add to your calendar:
+    {% for cal in calendars %}
+    <a href="{{ cal.webUrl }}" target="_blank" rel="noopener noreferrer">{{ cal.displayName }}</a>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+</p>
