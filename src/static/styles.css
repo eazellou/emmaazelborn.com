@@ -133,6 +133,16 @@ li a {
     white-space: nowrap;
 }
 
+a.event-calendar {
+    background: none;
+}
+
+a.event-calendar:hover {
+    background: none;
+    text-decoration: underline;
+    opacity: 1;
+}
+
 .event-date {
     font-size: 1.8rem;
     color: var(--color-dark-purple);

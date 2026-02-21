@@ -4,7 +4,7 @@
             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
                 {{ event.start | dateEastern("date") }}{% if not event.isFullDay %} · {{ event.start | dateEastern("time") }}{% endif %}{% if event.isRecurring %} · <span class="event-recurring-label">{{ event.recurrenceLabel or 'Recurring' }}</span>{% endif %}
             </time>
-            <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} <span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>{% endif %}</span>
+            <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} {% set projectPath = event.calendar | calendarProjectPath(calendars) %}{% if projectPath %}<a class="event-calendar" href="{{ projectPath }}">{{ event.calendar | calendarDisplayName }}</a>{% else %}<span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>{% endif %}{% endif %}</span>
             {% if event.location %}
                 <a class="event-location" href="{{ event.location | googleMapsUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>
             {% endif %}

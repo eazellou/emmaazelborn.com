@@ -52,6 +52,13 @@ export default async function (eleventyConfig) {
         return names[calendarId] || calendarId;
     });
 
+    // Project page URL for a calendar (from calendars data). Returns null if calendar has no projectPath.
+    eleventyConfig.addFilter("calendarProjectPath", function(calendarId, calendars) {
+        if (!Array.isArray(calendars)) return null;
+        const cal = calendars.find((c) => c.id === calendarId);
+        return cal?.projectPath ?? null;
+    });
+
     // Google Maps search URL for an address (for event location links)
     eleventyConfig.addFilter("googleMapsUrl", function(address) {
         if (!address || typeof address !== "string") return "#";

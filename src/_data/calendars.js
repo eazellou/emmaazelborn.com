@@ -13,7 +13,7 @@ export default [
     url: 'https://calendar.google.com/calendar/ical/5b06a18463f6f333ed3564e67000574cd27300424afbcbe6d38d0153ebb6de8c%40group.calendar.google.com/public/basic.ics',
     webUrl: 'https://calendar.google.com/calendar/render?cid=5b06a18463f6f333ed3564e67000574cd27300424afbcbe6d38d0153ebb6de8c%40group.calendar.google.com',
     displayName: 'Paper Plane',
-    projectPath: null,
+    projectPath: '/projects/paper-plane/',
   },
   {
     id: 'emma',
