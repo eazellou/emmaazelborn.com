@@ -5,6 +5,7 @@ summary: "Hosting social folk singing events with Annaleah Ernst"
 description: |
     I host social folk singing events with my friend [Annaleah Ernst](https://www.instagram.com/annaleahdoesart/) under the name [Violet Folk Sings](https://www.violetfolksings.org/). Singing together in community is such a joy. Annaleah and I are passionate about creating welcoming and friendly singing spaces.
 date: 2025-02-09
+calendarId: violet-folk-sings
 ---
 <a href="https://www.violetfolksings.org/" class="button">Violet Folk Sings Website</a>
 

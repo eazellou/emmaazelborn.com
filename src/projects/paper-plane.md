@@ -3,6 +3,7 @@ title: Paper Plane
 date: 2025-10-12
 image: /static/images/paper-plane-cozy-square.jpeg
 summary: "A soaring trio composed of multi-instrumentalists Daniel Raine, Emma Azelborn, and Rohan Weeden"
+calendarId: paper-plane
 credits: |
   <a class="project-insta" href="https://www.instagram.com/paperplane.contra/"><img src="/static/images/Instagram_Glyph_Black.png" alt="instagram">@paperplane.contra</a>  
   paperplanecontra@gmail.com

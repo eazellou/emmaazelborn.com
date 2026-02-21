@@ -81,6 +81,45 @@
           mobileNav.classList.remove('active');
         });
       });
+
+      // Expand/collapse event descriptions (toggle: read more… / show less)
+      document.querySelectorAll('.event-description-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const wrap = this.previousElementSibling;
+          if (!wrap || !wrap.classList.contains('event-description-wrap')) return;
+          const isExpanded = wrap.classList.contains('event-description--expanded');
+          if (isExpanded) {
+            wrap.classList.remove('event-description--expanded');
+            wrap.classList.add('event-description--truncated');
+            this.setAttribute('aria-expanded', 'false');
+            this.setAttribute('aria-label', 'Expand description');
+            this.textContent = 'read more…';
+          } else {
+            wrap.classList.remove('event-description--truncated');
+            wrap.classList.add('event-description--expanded');
+            this.setAttribute('aria-expanded', 'true');
+            this.setAttribute('aria-label', 'Collapse description');
+            this.textContent = 'show less';
+          }
+        });
+      });
+
+      // Only show expand button when description actually overflows 2 lines (run after layout)
+      function hideUnneededExpandButtons() {
+        document.querySelectorAll('.event-description-wrap.event-description--truncated').forEach(wrap => {
+          const btn = wrap.nextElementSibling;
+          if (btn && btn.classList.contains('event-description-toggle')) {
+            if (wrap.scrollHeight <= wrap.clientHeight + 2) {
+              wrap.classList.remove('event-description--truncated');
+              wrap.classList.add('event-description--expanded');
+              btn.style.display = 'none';
+            }
+          }
+        });
+      }
+      requestAnimationFrame(function() {
+        requestAnimationFrame(hideUnneededExpandButtons);
+      });
     });
   </script>
 </body>

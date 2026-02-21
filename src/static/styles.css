@@ -1,3 +1,20 @@
+/*
+ * Table of contents
+ * 1. Variables & reset
+ * 2. Base typography & links
+ * 3. Back links (songs, writing, events)
+ * 4. Events (lists, cards, recurring, subscribe)
+ * 5. Content (post, images, lists, home intro)
+ * 6. Layout (body, grid, sidebar, page-content)
+ * 7. Components (buttons, projects, contact, etc.)
+ * 8. Songs (lyrics, score)
+ * 9. Layout continued (credits, side-by-side, blockquote)
+ * 10. Mobile navigation
+ * 11. Footer
+ * 12. Writing / home posts
+ * 13. Media queries (tablet, mobile)
+ */
+
 :root {
     --font-size-base: 2.4rem;
     --line-height-base: 1.5;
@@ -8,6 +25,7 @@
     --color-semi-dark-purple: #afaad0;
     --color-light-purple:#BEBAD9;
     --color-extra-light-purple: #cdcae2;
+    --color-event-recurring-bg: #f5f5f5;
     --font-family-headings: 'miller-banner', serif;
     --font-family-primary: 'minion-pro', serif;
 
@@ -53,7 +71,8 @@ h3 {
 }
 
 .page-title {
-    padding-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 a {
@@ -93,6 +112,236 @@ li a {
 .back-to-writing a {
     padding: 0.5rem 1rem;
 }
+
+.back-to-events {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-to-events a {
+    padding: 0.5rem 1rem;
+}
+
+/* --- 4. Events --- */
+.event-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 52rem;
+}
+
+.event-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-extra-light-purple);
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-calendar {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--color-dark-purple);
+    opacity: 0.75;
+    white-space: nowrap;
+}
+
+a.event-calendar {
+    background: none;
+}
+
+a.event-calendar:hover {
+    background: none;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.event-date {
+    font-size: 1.8rem;
+    color: var(--color-dark-purple);
+}
+
+.event-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.event-location {
+    font-size: 1.6rem;
+    color: var(--color-dark-purple);
+    opacity: 0.9;
+}
+
+a.event-location {
+    background: none;
+}
+
+a.event-location:hover {
+    background: none;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Recurring events section (next occurrence + link to project or calendar) */
+.events-recurring-section {
+    margin-top: 2rem;
+    max-width: 64rem;
+}
+
+.events-recurring-heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.events-recurring-intro {
+    font-size: 1.5rem;
+    color: var(--color-dark-purple);
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+}
+
+.events-recurring-intro a {
+    background: none;
+}
+
+.events-recurring-intro a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+/* Add to your calendar links (events page) */
+
+.events-subscribe {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-dark-purple);
+    opacity: 0.85;
+}
+
+.events-subscribe a {
+    background: none;
+}
+
+.events-subscribe a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.event-description,
+.event-item .event-description {
+    font-size: 1.6rem;
+    line-height: 1.45;
+    margin-top: 0.5rem;
+    max-width: 52rem;
+}
+
+.event-description p {
+    margin: 0 0 0.5em 0;
+}
+
+.event-description p:last-child {
+    margin-bottom: 0;
+}
+
+.event-description-wrap {
+    margin-top: 0.5rem;
+}
+
+.event-description-wrap.event-description--truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-description-wrap.event-description--expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
+.event-description-toggle {
+    display: inline-block;
+    margin-top: 0.35rem;
+    padding: 0;
+    font-size: 1.45rem;
+    font-family: inherit;
+    color: var(--color-dark-purple);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.event-description-toggle:hover {
+    text-decoration: underline;
+}
+
+
+.events-empty {
+    padding: 2rem 0;
+    font-size: 1.8rem;
+}
+
+/* ----- Events list (cards) ----- */
+.event-list--cards {
+    display: grid;
+    gap: 2rem;
+    max-width: 64rem;
+}
+
+.event-list--cards .event-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.25rem;
+    border: none;
+    background-color: var(--color-white);
+}
+
+.event-list--cards .event-item:last-child {
+    border: none;
+}
+
+/* Recurring (e.g. monthly) events: subtle gray tint so they’re distinct but not loud */
+.event-list--cards .event-item.event-item--recurring {
+    background-color: var(--color-event-recurring-bg);
+}
+
+.event-recurring-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark-purple);
+    opacity: 0.7;
+}
+
+.event-list--cards .event-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* Match title’s first-line height (2rem × 1.35) so date and title align at top */
+    line-height: 1.4;
+    color: var(--color-dark-purple);
+}
+
+.event-list--cards .event-title-line {
+    line-height: 1.35;
+}
+
+.event-list--cards .event-title {
+    font-size: 2rem;
+    line-height: 1.35;
+}
+
+.event-list--cards .event-location {
+    font-size: 1.5rem;
+}
+
 
 .post-content {
   max-width: 800px;
@@ -327,7 +576,6 @@ body {
         height: 70vh;
         min-height: 450px;
     }
-}
 }
 
 .song-lyrics .stanza {

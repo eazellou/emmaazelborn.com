@@ -2,11 +2,17 @@ import { format } from 'date-fns'
 import { UTCDate } from '@date-fns/utc'
 import yaml from 'js-yaml'
 import { feedPlugin } from '@11ty/eleventy-plugin-rss'
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import  markdownIt  from 'markdown-it'
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import markdownIt from 'markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
+import calendarFilters from './eleventy/filters/calendar.js'
+import eventFilters from './eleventy/filters/events.js'
+import lyricsFilter from './eleventy/filters/lyrics.js'
 
 export default async function (eleventyConfig) {
+    calendarFilters(eleventyConfig)
+    eventFilters(eleventyConfig)
+    lyricsFilter(eleventyConfig)
     let projectsCollection = [];
     // Add a collection for posts
     eleventyConfig.addCollection("posts", (collection) => {
@@ -103,68 +109,7 @@ export default async function (eleventyConfig) {
         return markdownLib.render(content);
     })
 
-    // Lyrics filter that processes HTML and preserves empty lines between stanzas
-    const stanzaHtmlToDivs = (lyricsHtml) => {
-      // Handle empty paragraphs (markdown empty lines become empty <p></p> tags)
-      let normalized = lyricsHtml.replace(/<p>\s*<\/p>/g, '<p class="empty-stanza-marker"></p>');
-      
-      // Extract all paragraphs
-      const paragraphs = [];
-      const paraRegex = /<p[^>]*>([\s\S]*?)<\/p>/g;
-      let match;
-      
-      while ((match = paraRegex.exec(normalized)) !== null) {
-        const isMarker = match[0].includes('empty-stanza-marker');
-        const content = match[1].trim();
-        
-        if (isMarker || content.length === 0) {
-          paragraphs.push({ type: 'empty' });
-        } else {
-          paragraphs.push({ type: 'content', content: content });
-        }
-      }
-      
-      // Build result: each paragraph becomes a stanza
-      // When markdown has empty lines between stanzas, markdown-it creates separate paragraphs
-      // but no empty paragraph tags. We add empty stanzas between content paragraphs to preserve spacing.
-      let result = '';
-      
-      for (let i = 0; i < paragraphs.length; i++) {
-        const para = paragraphs[i];
-        const prevPara = i > 0 ? paragraphs[i - 1] : null;
-        
-        if (para.type === 'empty') {
-          // Explicit empty paragraph from markdown - add empty stanza
-          if (!prevPara || prevPara.type !== 'empty') {
-            result += `<div class="stanza stanza-empty"></div>`;
-          }
-        } else {
-          // Content paragraph: add empty stanza before it if previous was also content
-          // This preserves spacing from empty lines in markdown (which create separate paragraphs)
-          if (prevPara && prevPara.type === 'content') {
-            result += `<div class="stanza stanza-empty"></div>`;
-          }
-          
-          // Process content stanza: split into lines
-          const lines = para.content
-            .split(/<br\s*\/?>(?:\s*)?|\n/)
-            .map(line => line.trim())
-            .filter(line => line.length > 0);
-          
-          if (lines.length > 0) {
-            result += `<div class="stanza">` +
-              lines.map(line => `<p>${line}</p>`).join('') +
-              `</div>`;
-          }
-        }
-      }
-      
-      return result;
-    };
-    
-    eleventyConfig.addFilter("lyrics", stanzaHtmlToDivs);
-
-    // "---" is the read more separator. page.excerpt will have everything before this
+    // "---" is the read more separator; page.excerpt gets everything before it
     eleventyConfig.setFrontMatterParsingOptions({
 		excerpt: true,
         excerpt_separator: "---",
@@ -194,22 +139,13 @@ export default async function (eleventyConfig) {
         },
     })
 
-    // Copy static files without processing
-    // We could add ESBuild later if you wanted more
-    // sophisticated javascript/CSS compilation
     eleventyConfig.addPassthroughCopy("src/static")
 
-    // optimize image sizes: https://www.11ty.dev/docs/plugins/image/#html-transform
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-        // which file extensions to process
         extensions: 'html',
-        // optional, output image formats
         formats: ['jpg', 'webp'],
-        // optional, output image widths
         widths: ['auto', 400, 800],
-        // optional, attributes assigned on <img> override these values.
         defaultAttributes: {
-            // loading: 'lazy',
             sizes: '100vw',
             decoding: 'async',
         },
