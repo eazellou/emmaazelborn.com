@@ -270,14 +270,6 @@ a.event-location:hover {
     font-size: 1.8rem;
 }
 
-.event-list--project .event-item {
-    padding: 0.75rem 0;
-}
-
-.event-list--project .event-item--recurring {
-    opacity: 0.88;
-}
-
 /* ----- Events list (cards) ----- */
 .event-list--cards {
     display: grid;
