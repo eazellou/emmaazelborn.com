@@ -1,8 +1,8 @@
 ---
 title: Almost Here
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "3891230108"
+    - project: magnolia-sun
+      bandcampTrackId: '3891230108'
 composer: Emma Azelborn
 ---
 
@@ -26,4 +26,4 @@ you sang a song to me when I felt so alone
 I heard as you played from a thousand miles away
 you sang a song
 you sang a song
-you sang a song to me  
+you sang a song to me

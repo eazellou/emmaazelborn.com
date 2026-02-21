@@ -2,8 +2,8 @@
 title: Dragons of Kilpatrick
 composer: Emma Azelborn
 released:
-  - project: circle-songs-vol-ii
-    bandcampTrackId: "4247583798"
+    - project: circle-songs-vol-ii
+      bandcampTrackId: '4247583798'
 ---
 
 we are the glinting gilded girls who heard the calling sea
@@ -40,4 +40,4 @@ we are the glinting gilded girls who heard the calling sea
 and now we are defenders who keep kilpatrick free
 to any who would challenge, may you hear our warning cry:
 if you should try to hurt them, then be prepared to die
-then be prepared to die 
+then be prepared to die

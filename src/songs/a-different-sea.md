@@ -1,8 +1,8 @@
 ---
 title: A Different Sea
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "1499190375"
+    - project: magnolia-sun
+      bandcampTrackId: '1499190375'
 composer: Emma Azelborn
 ---
 

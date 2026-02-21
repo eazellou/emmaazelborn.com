@@ -1,8 +1,8 @@
 ---
 title: Midnight Pizza
 released:
-  - project: circle-songs
-    bandcampTrackId: "3449868315"
+    - project: circle-songs
+      bandcampTrackId: '3449868315'
 composer: Emma Azelborn
 ---
 

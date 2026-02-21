@@ -1,8 +1,8 @@
 ---
 title: Sea Creature of Greenland
 released:
-  - project: circle-songs
-    bandcampTrackId: "1768018580"
+    - project: circle-songs
+      bandcampTrackId: '1768018580'
 composer: Emma Azelborn
 ---
 
@@ -32,4 +32,4 @@ And then old Willie whaler caught wind of the tale
 Old Willie he knew what the whales would do
 When they'd see a whale they wanted to woo
 They'd float on their backs, put it all on display
-Oh yes, inviting that whale to play  
+Oh yes, inviting that whale to play

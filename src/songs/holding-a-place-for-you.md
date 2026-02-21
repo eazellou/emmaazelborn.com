@@ -2,8 +2,8 @@
 title: Holding a Place for You
 composer: Emma Azelborn
 released:
-  - project: circle-songs-vol-ii
-    bandcampTrackId: "3803581021"
+    - project: circle-songs-vol-ii
+      bandcampTrackId: '3803581021'
 ---
 
 I'm holding a place for you

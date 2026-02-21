@@ -15,7 +15,7 @@ and corn will grow, and peaches redden for you to eat,
 **When the South begins to blow.**
 
 Which is the Wind that brings the rain?
-**The East-Wind! The East-Wind!** 
+**The East-Wind! The East-Wind!**
 and farmers know that cows come shivering up the lane
 **When the East begins to blow.**
 

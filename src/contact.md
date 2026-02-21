@@ -20,6 +20,7 @@ title: Contact
 
     github: [@eazellou](https://github.com/eazellou)
 
-    linkedin: [@emmaazelborn](https://www.linkedin.com/in/emmaazelborn/)  
+    linkedin: [@emmaazelborn](https://www.linkedin.com/in/emmaazelborn/)
     </div>
+
 </div>
