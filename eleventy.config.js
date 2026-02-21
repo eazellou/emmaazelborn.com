@@ -58,6 +58,24 @@ export default async function (eleventyConfig) {
         return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address.trim());
     });
 
+    // Event description: preserve line breaks. If calendar sends HTML (e.g. Google), pass through; otherwise escape and convert \n to <br>.
+    eleventyConfig.addFilter("descriptionToHtml", function(str) {
+        if (str == null || str === "") return "";
+        const s = String(str)
+            .replace(/\r\n/g, "\n")
+            .replace(/\r/g, "\n");
+        const looksLikeHtml = /<[a-z][^>]*>/i.test(s);
+        if (looksLikeHtml) {
+            return s;
+        }
+        const escaped = s
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        return escaped.replace(/\n/g, "<br>");
+    });
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter(
         "date",
