@@ -13,6 +13,11 @@ export default [
                 ...globals.node,
             },
         },
+        rules: {
+            'max-lines': ['error', { max: 400 }],
+            'max-lines-per-function': ['error', { max: 150 }],
+            complexity: ['error', { max: 15 }],
+        },
     },
     eslintConfigPrettier,
 ]
