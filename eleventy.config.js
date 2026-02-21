@@ -65,6 +65,19 @@ export default async function (eleventyConfig) {
         return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address.trim());
     });
 
+    // Return a Maps URL only when the location looks like an address; otherwise null (so we don’t link "Zoom Livestream", "Online", etc.)
+    eleventyConfig.addFilter("locationLinkUrl", function(location) {
+        if (!location || typeof location !== "string") return null;
+        const s = location.trim().toLowerCase();
+        const nonAddressPatterns = [
+            /^zoom\b/i, /\bzoom\b/i, /\blivestream\b/i, /\blive\s*stream\b/i,
+            /\bonline\b/i, /\bvirtual\b/i, /^tbd$/i, /\bwebinar\b/i,
+            /\blink\s+will\s+be\s+sent\b/i, /\bto\s+be\s+announced\b/i,
+        ];
+        if (nonAddressPatterns.some((re) => re.test(s))) return null;
+        return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(location.trim());
+    });
+
     // Event description: preserve line breaks. If calendar sends HTML (e.g. Google), pass through; otherwise escape and convert \n to <br>.
     eleventyConfig.addFilter("descriptionToHtml", function(str) {
         if (str == null || str === "") return "";

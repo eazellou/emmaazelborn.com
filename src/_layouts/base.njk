@@ -82,7 +82,7 @@
         });
       });
 
-      // Expand/collapse event descriptions (toggle: ∨ expand, ∧ collapse)
+      // Expand/collapse event descriptions (toggle: read more… / show less)
       document.querySelectorAll('.event-description-toggle').forEach(btn => {
         btn.addEventListener('click', function() {
           const wrap = this.previousElementSibling;
@@ -93,13 +93,13 @@
             wrap.classList.add('event-description--truncated');
             this.setAttribute('aria-expanded', 'false');
             this.setAttribute('aria-label', 'Expand description');
-            this.textContent = '∨';
+            this.textContent = 'read more…';
           } else {
             wrap.classList.remove('event-description--truncated');
             wrap.classList.add('event-description--expanded');
             this.setAttribute('aria-expanded', 'true');
             this.setAttribute('aria-label', 'Collapse description');
-            this.textContent = '∧';
+            this.textContent = 'show less';
           }
         });
       });
