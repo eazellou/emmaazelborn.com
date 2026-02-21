@@ -41,6 +41,9 @@
             {% if projectOneOff.length or projectRecurring.length %}
                 {% if projectOneOff.length %}
                 <h3>Upcoming events</h3>
+                <p class="back-to-events">
+                    <a href="{{ calendarId | calendarWebUrl(calendars) }}" target="_blank" rel="noopener noreferrer">Add to your calendar</a>
+                </p>
                 {# Include expects calendarEvents and design; set locally for this include only #}
                 {% set calendarEvents = projectOneOff %}
                 {% set design = 'cards' %}
