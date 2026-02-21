@@ -46,10 +46,11 @@ export default async function (eleventyConfig) {
         return events.filter(e => e.calendar === calendarId);
     });
 
-    // Human-readable name for event calendar (for labels/badges)
-    eleventyConfig.addFilter("calendarDisplayName", function(calendarId) {
-        const names = { "violet-folk-sings": "Violet Folk Sings", "paper-plane": "Paper Plane", "emma": "Emma Azelborn" };
-        return names[calendarId] || calendarId;
+    // Human-readable name for event calendar (for labels/badges). Uses calendars data as single source of truth.
+    eleventyConfig.addFilter("calendarDisplayName", function(calendarId, calendars) {
+        if (!Array.isArray(calendars)) return calendarId;
+        const cal = calendars.find((c) => c.id === calendarId);
+        return cal?.displayName ?? calendarId;
     });
 
     // Project page URL for a calendar (from calendars data). Returns null if calendar has no projectPath.

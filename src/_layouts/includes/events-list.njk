@@ -4,14 +4,14 @@
             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
                 {{ event.start | dateEastern("date") }}{% if not event.isFullDay %} · {{ event.start | dateEastern("time") }}{% endif %}{% if event.isRecurring %} · <span class="event-recurring-label">{{ event.recurrenceLabel or 'Recurring' }}</span>{% endif %}
             </time>
-            <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} {% set projectPath = event.calendar | calendarProjectPath(calendars) %}{% if projectPath %}<a class="event-calendar" href="{{ projectPath }}">{{ event.calendar | calendarDisplayName }}</a>{% else %}<span class="event-calendar">{{ event.calendar | calendarDisplayName }}</span>{% endif %}{% endif %}</span>
+            <span class="event-title-line"><span class="event-title">{{ event.title }}</span>{% if event.calendar != 'emma' %} {% set projectPath = event.calendar | calendarProjectPath(calendars) %}{% if projectPath %}<a class="event-calendar" href="{{ projectPath }}">{{ event.calendar | calendarDisplayName(calendars) }}</a>{% else %}<span class="event-calendar">{{ event.calendar | calendarDisplayName(calendars) }}</span>{% endif %}{% endif %}</span>
             {% if event.location %}
                 {% set locationUrl = event.location | locationLinkUrl %}
                 {% if locationUrl %}<a class="event-location" href="{{ locationUrl }}" target="_blank" rel="noopener noreferrer">{{ event.location }}</a>{% else %}<span class="event-location">{{ event.location }}</span>{% endif %}
             {% endif %}
             {% if event.description %}
                 <div class="event-description-wrap event-description--truncated">
-                    <div class="event-description">{{ event.description | safe }}</div>
+                    <div class="event-description">{{ event.description | descriptionToHtml | safe }}</div>
                 </div>
                 <button type="button" class="event-description-toggle" aria-expanded="false" aria-label="Expand description">read more…</button>
             {% endif %}

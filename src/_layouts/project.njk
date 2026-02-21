@@ -41,6 +41,7 @@
             {% if projectOneOff.length or projectRecurring.length %}
                 {% if projectOneOff.length %}
                 <h3>Upcoming events</h3>
+                {# Include expects calendarEvents and design; set locally for this include only #}
                 {% set calendarEvents = projectOneOff %}
                 {% set design = 'cards' %}
                 {% include "includes/events-list.njk" %}
