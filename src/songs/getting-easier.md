@@ -1,8 +1,8 @@
 ---
 title: Getting Easier
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "1873695983"
+    - project: magnolia-sun
+      bandcampTrackId: '1873695983'
 composer: Emma Azelborn
 ---
 

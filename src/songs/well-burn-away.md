@@ -1,8 +1,8 @@
 ---
 title: We'll Burn Away
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "4276324639"
+    - project: magnolia-sun
+      bandcampTrackId: '4276324639'
 composer: Emma Azelborn
 ---
 
@@ -29,4 +29,4 @@ stuck in the sludge of our hopeful lies
 
 she was brilliance
 starlight searing
-stained by rose and strawberry streaming  
+stained by rose and strawberry streaming

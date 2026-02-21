@@ -1,8 +1,8 @@
 ---
 title: Trees
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "3139554436"
+    - project: magnolia-sun
+      bandcampTrackId: '3139554436'
 composer: Emma Azelborn
 ---
 
@@ -19,4 +19,4 @@ but trees have to grow
 the linden tree in your backyard
 fell in wind and thunder onto your home
 it gave you shade, it held your swing
-it stood for generations, and now it is gone  
+it stood for generations, and now it is gone

@@ -1,8 +1,8 @@
 ---
 title: Something Growing
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "1026509064"
+    - project: magnolia-sun
+      bandcampTrackId: '1026509064'
 composer: Emma Azelborn
 ---
 

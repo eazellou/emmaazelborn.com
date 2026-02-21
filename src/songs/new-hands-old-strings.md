@@ -1,8 +1,8 @@
 ---
 title: New Hands, Old Strings
 released:
-  - project: lucy-goose
-    bandcampTrackId: "1422606781"
+    - project: lucy-goose
+      bandcampTrackId: '1422606781'
 composer: Emma Azelborn
 ---
 
@@ -14,4 +14,4 @@ You help them see
 _Giving a chance to find where their place is_
 How they can sing
 _Under the lights they shine again_
-You listen and guide them to who they could be  
+You listen and guide them to who they could be

@@ -1,8 +1,8 @@
 ---
 title: Superstar Limo
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "700160905"
+    - project: magnolia-sun
+      bandcampTrackId: '700160905'
 composer: Emma Azelborn
 ---
 
@@ -26,4 +26,4 @@ cocoa-sweet sweat
 let's rev our rotary drive
 
 if you ever wanna you gotta you gotta
-if you ever wanna go go go  
+if you ever wanna go go go

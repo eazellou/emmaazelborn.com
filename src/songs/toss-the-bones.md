@@ -1,8 +1,8 @@
 ---
 title: Toss the Bones
 released:
-  - project: circle-songs
-    bandcampTrackId: "1739601537"
+    - project: circle-songs
+      bandcampTrackId: '1739601537'
 composer: Emma Azelborn
 ---
 

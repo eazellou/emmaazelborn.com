@@ -8,4 +8,4 @@ layout: post.njk
 # use this line instead:
 #
 # permalink: "{{ page.date | date:'yyyy/MM' }}/{{ page.fileSlug }}/"
-permalink: "p/{{ page.fileSlug }}/"
+permalink: 'p/{{ page.fileSlug }}/'

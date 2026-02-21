@@ -2,8 +2,8 @@
 title: Royal Potatoes
 composer: Emma Azelborn
 released:
-  - project: circle-songs-vol-ii
-    bandcampTrackId: "849002684"
+    - project: circle-songs-vol-ii
+      bandcampTrackId: '849002684'
 ---
 
 have you heard the latest news that's been going all around?
@@ -20,7 +20,7 @@ for potatoes are the fanciest of foods
 now you may want these potatoes that we are guarding here
 but we're of the highest caliber, so let us be clear
 don't ever try to bribe us! by the way, we love our wine
-and we'd never look the other way if you slipped in at night 
+and we'd never look the other way if you slipped in at night
 
 now you may think the potato will make you really sick
 after all, it's been illegal since you were just a kid

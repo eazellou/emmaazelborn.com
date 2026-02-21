@@ -1,8 +1,8 @@
 ---
 title: Magnolia Sun
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "1765836546"
+    - project: magnolia-sun
+      bandcampTrackId: '1765836546'
 composer: Emma Azelborn
 ---
 
@@ -42,4 +42,4 @@ her magnolia sun still shining
 she was more than her divining
 her magnolia sun still shining
 
-we're not each others people anymore  
+we're not each others people anymore

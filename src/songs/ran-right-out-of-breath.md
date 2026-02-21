@@ -1,8 +1,8 @@
 ---
 title: Ran Right Out of Breath
 released:
-  - project: magnolia-sun
-    bandcampTrackId: "1048893496"
+    - project: magnolia-sun
+      bandcampTrackId: '1048893496'
 composer: Emma Azelborn
 ---
 

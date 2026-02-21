@@ -9,7 +9,7 @@ voiceMemo: the north wind.mp4
 **And what will** the robin, **the robin do then, Poor thing?**
 He'll sit in a barn,
 And keep himself warm,
-And hide his head under his wing, 
+And hide his head under his wing,
 **And hide his head under his wing, Poor thing!**
 
 **The north wind doth blow,**
@@ -17,7 +17,7 @@ And hide his head under his wing,
 **And what will** the swallow, **the swallow do then, Poor thing?**
 Oh, do you not know
 That he's off long ago,
-To a country where he will find spring, 
+To a country where he will find spring,
 **A country where he will find spring, Poor thing!**
 
 **The north wind doth blow,**
@@ -25,7 +25,7 @@ To a country where he will find spring,
 **And what will** the dormouse, **the dormouse do then, Poor thing?**
 Roll'd up like a ball
 In his nest snug and small
-He'll sleep till warm weather comes in, 
+He'll sleep till warm weather comes in,
 **He'll sleep till warm weather comes in, Poor thing!**
 
 **The north wind doth blow,**
@@ -33,7 +33,7 @@ He'll sleep till warm weather comes in,
 **And what will** the honey-bee, **the honey-bee do then, Poor thing?**
 In his hive he will stay
 Till the cold is away
-And then he'll come out in the spring, 
+And then he'll come out in the spring,
 **And then he'll come out in the spring, Poor thing!**
 
 **The north wind doth blow,**

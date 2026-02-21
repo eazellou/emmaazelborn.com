@@ -1,8 +1,8 @@
 ---
 title: This Old Floor
 released:
-  - project: circle-songs
-    bandcampTrackId: "2755393290"
+    - project: circle-songs
+      bandcampTrackId: '2755393290'
 composer: Emma Azelborn
 ---
 
@@ -32,4 +32,4 @@ Their daughter's granddaughter is here next to me
 
 We're laying down a new floor today, adding marks near those from before
 So take a knife, and carve your name
-It'll help hold us all for a hundred years more  
+It'll help hold us all for a hundred years more

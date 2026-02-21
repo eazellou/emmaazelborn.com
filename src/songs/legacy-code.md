@@ -1,8 +1,8 @@
 ---
 title: Legacy Code
 released:
-  - project: circle-songs
-    bandcampTrackId: "1536210937"
+    - project: circle-songs
+      bandcampTrackId: '1536210937'
 composer: Emma Azelborn
 ---
 
@@ -47,4 +47,4 @@ Down, down, down
 We might think that we are different
 We've gotta go
 Tomorrow our code will be legacy too
-Down, down, down  
+Down, down, down

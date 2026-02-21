@@ -1,25 +1,38 @@
 {
-  "name": "emmaazelborn.com",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "PROD=0 eleventy --serve",
-    "build": "PROD=1 eleventy",
-    "blog": "node scripts/blog.mjs"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@11ty/eleventy": "^3.1.1",
-    "@11ty/eleventy-fetch": "^5.1.1",
-    "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-plugin-rss": "^2.0.4",
-    "@date-fns/utc": "^2.1.0",
-    "date-fns": "^4.1.0",
-    "js-yaml": "^4.1.0",
-    "markdown-it-footnote": "^4.0.0",
-    "node-ical": "^0.25.3"
-  }
+    "name": "emmaazelborn.com",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "serve": "PROD=0 eleventy --serve",
+        "build": "PROD=1 eleventy",
+        "blog": "node scripts/blog.mjs",
+        "lint": "npm run lint:js && npm run lint:md",
+        "lint:js": "eslint .",
+        "lint:md": "markdownlint .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "globals": "^15.12.0",
+        "markdownlint-cli": "^0.41.0",
+        "prettier": "^3.3.3"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^3.1.1",
+        "@11ty/eleventy-fetch": "^5.1.1",
+        "@11ty/eleventy-img": "^6.0.4",
+        "@11ty/eleventy-plugin-rss": "^2.0.4",
+        "@date-fns/utc": "^2.1.0",
+        "date-fns": "^4.1.0",
+        "js-yaml": "^4.1.0",
+        "markdown-it-footnote": "^4.0.0",
+        "node-ical": "^0.25.3"
+    }
 }

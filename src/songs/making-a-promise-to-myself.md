@@ -2,8 +2,8 @@
 title: Making A Promise To Myself
 composer: Emma Azelborn
 released:
-  - project: circle-songs-vol-ii
-    bandcampTrackId: "3623366432"
+    - project: circle-songs-vol-ii
+      bandcampTrackId: '3623366432'
 ---
 
 I am making a promise to myself

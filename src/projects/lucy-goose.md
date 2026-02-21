@@ -1,7 +1,7 @@
 ---
 title: Lucy Goose
 image: /static/images/lucy-goose.jpg
-summary: "Emma, Regan, and Lena love singing together"
+summary: 'Emma, Regan, and Lena love singing together'
 date: 2021-07-01
 description: |
     Lucy Goose is Emma Azelborn, [Lena Sutter][], and Regan Wang.  
@@ -13,20 +13,20 @@ description: |
     Emma Azelborn - Vocals, Uke, Winds  
     [Lena Sutter][] - Vocals, Guitar, Bass, Banjo, Fiddle, Shaker  
     Regan Wang - Vocals, Guitar, Bass, Fiddle, Cajon 
-    
+
     [Lena Sutter]: https://lenasutter.com/
-bandcampID: "3966217537"
-bandcampUrl: "/album/many-miles"
-songLink: "https://album.link/i/1710103597"
+bandcampID: '3966217537'
+bandcampUrl: '/album/many-miles'
+songLink: 'https://album.link/i/1710103597'
 songs:
-- title: Unchosen Lives
-- title: Poison
-  lyricsUrl: /songs/poison
-- title: In Between Places
-- title: New Hands, Old Strings
-  lyricsUrl: /songs/new-hands-old-strings
-- title: Deja Vu
-- title: Many Miles
+    - title: Unchosen Lives
+    - title: Poison
+      lyricsUrl: /songs/poison
+    - title: In Between Places
+    - title: New Hands, Old Strings
+      lyricsUrl: /songs/new-hands-old-strings
+    - title: Deja Vu
+    - title: Many Miles
 credits: |
     Composed, Recorded, and Edited by Lucy Goose  
     Mixed by [Jack Tarricone](https://jacktarricone.com/)   
@@ -34,4 +34,3 @@ credits: |
 
     _released October 4th, 2023_
 ---
-

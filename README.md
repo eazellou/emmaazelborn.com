@@ -6,7 +6,7 @@ A personal website and blog built with [Eleventy](https://www.11ty.dev/), a stat
 
 The site is built using the following structure:
 
-```
+```text
 src/
 ├── _layouts/          # Nunjucks templates
 │   ├── base.njk      # Base layout with common HTML structure
@@ -23,9 +23,10 @@ src/
 
 1. Clone the repository
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+    ```bash
+     npm install
+    ```
 
 ### Running Locally
 
