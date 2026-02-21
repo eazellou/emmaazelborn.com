@@ -303,6 +303,8 @@ a.event-location:hover {
     display: grid;
     gap: 2rem;
     max-width: 64rem;
+    width: 100%;
+    min-width: 0; /* Allow grid to shrink on narrow viewports */
 }
 
 .event-list--cards .event-item {
@@ -312,6 +314,8 @@ a.event-location:hover {
     padding: 1.25rem;
     border: none;
     background-color: var(--color-white);
+    min-width: 0; /* Allow cards to shrink below content size on mobile */
+    overflow-wrap: break-word;
 }
 
 .event-list--cards .event-item:last-child {
@@ -340,6 +344,8 @@ a.event-location:hover {
 
 .event-list--cards .event-title-line {
     line-height: 1.35;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .event-list--cards .event-title {
@@ -349,6 +355,11 @@ a.event-location:hover {
 
 .event-list--cards .event-location {
     font-size: 1.5rem;
+    overflow-wrap: break-word;
+}
+
+.event-list--cards .event-description-wrap {
+    min-width: 0;
 }
 
 .post-content {
@@ -1100,14 +1111,14 @@ blockquote {
     }
 
     .main-content {
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
 
     .secondary-content > * {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .layout-grid {
