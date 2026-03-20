@@ -28,7 +28,7 @@ for we've built this song together and we'll sing it once again
 no matter how much we try this moment cannot stay
 our songs will turn to silence and we'll go our separate ways
 the heartache it will have us as it ever has before
-cause we cannot know where we will go or when we'll meet once more
+for we cannot know where we will go or when we'll meet once more
 
 and now when we're in the world, the little things we see
 can bring to mind our times gone by, the ghosts of harmony
