@@ -6,7 +6,7 @@
             <a href="/songs/">« All Songs</a>
         </p>
         <h2>{{ title }}</h2>
-        {% set releasedWithProjects = released | selectattr("project") | list %}
+        {% set releasedWithProjects = (released or []) | selectattr("project") | list %}
         {% if releasedWithProjects | length %}
         <div class="song-projects">
             <strong>Appears in:</strong>
