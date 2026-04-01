@@ -1,6 +1,8 @@
 ---
 title: We Are Here & We Are Rising
 composer: Emma Azelborn
+released:
+    - bandcampTrackId: '3446077536'
 youtube: https://youtu.be/Botv3X6XZks
 youtubeCaption: |
     Premiering We Are Here & We Are Rising with Windborne at Flurry Festival 2026
