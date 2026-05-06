@@ -3,3 +3,4 @@ _site
 dist
 .cache
 *.min.js
+.claude
