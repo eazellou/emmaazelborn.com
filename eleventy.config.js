@@ -106,10 +106,10 @@ export default async function (eleventyConfig) {
         return markdownLib.render(content)
     })
 
-    // "---" is the read more separator; page.excerpt gets everything before it
+    // "+++" is the read more separator; page.excerpt gets everything before it
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
-        excerpt_separator: '---',
+        excerpt_separator: '+++',
     })
 
     eleventyConfig.addFilter('log', (value) => {

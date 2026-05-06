@@ -4,8 +4,8 @@ date: 2025-08-25
 image: /static/images/no-teapot-hold.jpg
 description: The teapot hold is the most dangerous common contra dancing figure, so I've been avoiding it.
 ---
-
-## The teapot hold is the most dangerous common contra dancing figure, so I've been avoiding it. The teapot hold, sometimes called a "courtesy turn hold,” requires one dancer to connect with their hand behind their back. When I realized I could avoid putting my shoulder into this vulnerable position, my contra dancing felt safer.
+The teapot hold is the most dangerous common contra dancing figure, so I've been avoiding it. The teapot hold, sometimes called a “courtesy turn hold,” requires one dancer to connect with their hand behind their back. When I realized I could avoid putting my shoulder into this vulnerable position, my contra dancing felt safer.
++++
 
 ![Diagram of promenade holds](/static/images/promenade-hand-positions-big.png)
 
