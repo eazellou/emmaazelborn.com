@@ -13,6 +13,8 @@ npm run format     # Auto-format with Prettier
 
 No test suite — verify changes by running `serve` and checking the browser.
 
+Always run `npm run lint` before finalizing any changes.
+
 ## Architecture
 
 This is an [Eleventy](https://www.11ty.dev/) static site. Source is in `src/`, output goes to `dist/`. Templates use Nunjucks (`.njk`); Markdown also runs through Nunjucks. Layouts and includes are both in `src/_layouts/`.
@@ -30,6 +32,7 @@ Each collection directory has a `<dir>.yaml` file (e.g. `songs.yaml`) that sets 
 ### Song frontmatter
 
 Songs are Markdown files with lyrics as body content. Key frontmatter fields:
+
 - `released`: array of `{ project, bandcampTrackId }` — links song to a project for the "Appears in" section and Bandcamp embed. If `project` is omitted but `bandcampTrackId` is present, embeds a standalone track player.
 - `voiceMemo` / `voiceMemoCaption`: filename in `src/static/audio/` for an audio player (shown only when not released)
 - `youtube` / `youtubeCaption`: YouTube URL or 11-char video ID
@@ -41,6 +44,7 @@ The `lyrics` Nunjucks filter (`eleventy/filters/lyrics.js`) converts the rendere
 ### Project frontmatter
 
 Projects link to Bandcamp albums, list track songs, and optionally show upcoming calendar events.
+
 - `bandcampID` + `bandcampUrl`: renders a Bandcamp album embed
 - `songLink`: streaming link (Apple Music, etc.)
 - `songs`: array of `{ title, lyricsUrl }` — tracklist with optional links to song pages
@@ -57,6 +61,7 @@ Projects link to Bandcamp albums, list track songs, and optionally show upcoming
 `src/_data/calendars.js` defines Google Calendar feeds (iCal URLs + metadata). `src/_data/calendarEvents.js` fetches those feeds at build time, parses them with `node-ical`, and exposes `{ oneOff, recurring }` as global data. During dev (`PROD=0`), calendar data is never cached; in production it caches for 1 day.
 
 Events filters are in `eleventy/filters/` (three files registered in `eleventy.config.js`):
+
 - `calendar.js` — filter events by calendar ID, look up display names
 - `events.js` — format dates in Eastern time, linkify locations to Google Maps, convert plain-text descriptions to HTML
 - `lyrics.js` — stanza rendering for song pages
@@ -70,6 +75,7 @@ Events filters are in `eleventy/filters/` (three files registered in `eleventy.c
 ### Static assets
 
 `src/static/` is passed through as-is to `dist/static/`. It contains:
+
 - `styles.css` — single stylesheet
 - `audio/` — voice memos and recordings referenced by song frontmatter
 - `images/` — photos and album art
