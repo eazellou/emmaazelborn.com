@@ -38,6 +38,16 @@ npm run serve
 
 The site will be available at `http://localhost:8080`
 
+#### Previewing Claude worktree branches
+
+Claude Code manages changes in git worktrees under `.claude/worktrees/`. To preview a worktree branch without checking it out, use the `serve-worktree` shell function (defined in `~/.bash_profile`):
+
+```bash
+serve-worktree claude/cranky-grothendieck-ec31fa
+```
+
+Each worktree gets a deterministic port in the 3000–9999 range based on its branch name, so multiple can run at once.
+
 ### Building for Production
 
 Generate a production build:
