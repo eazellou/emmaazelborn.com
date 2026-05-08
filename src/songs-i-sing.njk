@@ -1,0 +1,14 @@
+---
+title: Songs I Sing
+layout: page.njk
+---
+
+<ul class="song-list">
+    {% for song in collections.songsISing %}
+        <li class="song-item">
+            <a href="{{ song.url }}">
+                {{ song.data.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

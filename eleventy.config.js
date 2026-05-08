@@ -42,6 +42,18 @@ export default async function (eleventyConfig) {
         })
     })
 
+    // Add a collection for songs I sing (not original songs)
+    eleventyConfig.addCollection('songsISing', (collection) => {
+        return collection.getFilteredByGlob('src/songs-i-sing/*.md').sort((a, b) => {
+            const getSortKey = (title) => {
+                const articles = /^(the|a|an|o)\s+/i
+                return title.replace(articles, '').trim()
+            }
+
+            return getSortKey(a.data.title).localeCompare(getSortKey(b.data.title))
+        })
+    })
+
     // Add a filter to get a project by fileSlug
     eleventyConfig.addFilter('getProjectByName', function (projects, name) {
         return projects.find((project) => project.fileSlug === name).data
