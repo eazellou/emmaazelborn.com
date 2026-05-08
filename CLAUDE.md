@@ -15,6 +15,10 @@ No test suite — verify changes by running `serve` and checking the browser.
 
 Always run `npm run lint` before finalizing any changes.
 
+## URL stability — never break deployed URLs
+
+**Once a URL has been deployed, it must never change.** This applies to all content: posts (`p/<slug>/`), songs, projects, and static assets. Renaming files, changing slugs, restructuring directories, or altering permalink patterns are all high-risk operations. If a structural change is unavoidable, add Eleventy redirects rather than removing the old URL.
+
 ## Architecture
 
 This is an [Eleventy](https://www.11ty.dev/) static site. Source is in `src/`, output goes to `dist/`. Templates use Nunjucks (`.njk`); Markdown also runs through Nunjucks. Layouts and includes are both in `src/_layouts/`.
