@@ -1,18 +1,17 @@
 /*
  * Table of contents
- * 1. Variables & reset
- * 2. Base typography & links
- * 3. Back links (songs, writing, events)
- * 4. Events (lists, cards, recurring, subscribe)
- * 5. Content (post, images, lists, home intro)
- * 6. Layout (body, grid, sidebar, page-content)
- * 7. Components (buttons, projects, contact, etc.)
- * 8. Songs (lyrics, score)
- * 9. Layout continued (credits, side-by-side, blockquote)
- * 10. Mobile navigation
- * 11. Footer
- * 12. Writing / home posts
- * 13. Media queries (tablet, mobile)
+ *  1. Variables & reset
+ *  2. Base typography & links
+ *  3. Back links
+ *  4. Events (lists, cards, recurring, subscribe)
+ *  5. Content (post, images, lists, home intro)
+ *  6. Layout (body, grid, sidebar, page-content, credits, side-by-side, blockquote)
+ *  7. Components (buttons, projects, contact, etc.)
+ *  8. Songs (lyrics, score)
+ *  9. Mobile navigation
+ * 10. Footer
+ * 11. Writing / home posts
+ * 12. Media queries (tablet, mobile)
  */
 
 :root {
@@ -28,6 +27,8 @@
     --color-event-recurring-bg: #f5f5f5;
     --font-family-headings: 'miller-banner', serif;
     --font-family-primary: 'minion-pro', serif;
+
+    --floral-bg-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/purple-floral-print-550.png');
 
     font-size: 10px;
     font-family: var(--font-family-primary);
@@ -93,42 +94,18 @@ a {
     }
 }
 
-p a {
-    background-color: var(--color-extra-light-purple);
-}
-
-ol a {
-    background-color: var(--color-extra-light-purple);
-}
-
+p a,
+ol a,
 li a {
     background-color: var(--color-extra-light-purple);
 }
 
-.back-to-songs {
+.back-link {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.back-to-songs a {
-    padding: 0.5rem 1rem;
-}
-
-.back-to-writing {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.back-to-writing a {
-    padding: 0.5rem 1rem;
-}
-
-.back-to-events {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.back-to-events a {
+.back-link a {
     padding: 0.5rem 1rem;
 }
 
@@ -161,15 +138,23 @@ li a {
     white-space: nowrap;
 }
 
-a.event-calendar {
+/* Links that suppress the default purple highlight and use underline on hover instead */
+a.event-calendar,
+a.event-location,
+.events-recurring-intro a,
+.events-subscribe a {
     background: none;
 }
 
-a.event-calendar:hover {
+a.event-calendar:hover,
+a.event-location:hover,
+.events-recurring-intro a:hover,
+.events-subscribe a:hover {
     background: none;
     text-decoration: underline;
     opacity: 1;
 }
+
 
 .event-date {
     font-size: 1.8rem;
@@ -186,16 +171,6 @@ a.event-calendar:hover {
     font-size: 1.6rem;
     color: var(--color-dark-purple);
     opacity: 0.9;
-}
-
-a.event-location {
-    background: none;
-}
-
-a.event-location:hover {
-    background: none;
-    text-decoration: underline;
-    opacity: 1;
 }
 
 /* Recurring events section (next occurrence + link to project or calendar) */
@@ -217,15 +192,6 @@ a.event-location:hover {
     margin-bottom: 0.75rem;
 }
 
-.events-recurring-intro a {
-    background: none;
-}
-
-.events-recurring-intro a:hover {
-    background: none;
-    text-decoration: underline;
-}
-
 /* Add to your calendar links (events page) */
 
 .events-subscribe {
@@ -235,17 +201,7 @@ a.event-location:hover {
     opacity: 0.85;
 }
 
-.events-subscribe a {
-    background: none;
-}
-
-.events-subscribe a:hover {
-    background: none;
-    text-decoration: underline;
-}
-
-.event-description,
-.event-item .event-description {
+.event-description {
     font-size: 1.6rem;
     line-height: 1.45;
     margin-top: 0.5rem;
@@ -363,7 +319,7 @@ a.event-location:hover {
 }
 
 .post-content {
-    max-width: 800px;
+    max-width: 80rem;
 }
 
 picture,
@@ -384,7 +340,7 @@ ol {
 }
 
 .home-intro p {
-    max-width: 800px;
+    max-width: 80rem;
 }
 
 body {
@@ -435,18 +391,18 @@ body {
 
 .highlighted-project-list {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
 .highlighted-project-item {
-    max-width: 400px;
-    min-width: 200px;
+    max-width: 40rem;
+    min-width: 20rem;
     margin: 0 auto 2rem auto;
     width: 100%;
     background-color: var(--color-white);
     display: flex;
-    flex: 1 1 200px;
+    flex: 1 1 20rem;
 }
 
 .highlighted-project-item > a {
@@ -479,7 +435,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: start;
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -502,12 +458,12 @@ body {
 
 .project-item {
     margin-bottom: 2rem;
-    max-width: 800px;
+    max-width: 80rem;
 }
 
 .project-item a {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 20rem 1fr;
     gap: 2rem;
     align-items: start;
     text-decoration: none;
@@ -569,6 +525,47 @@ body {
 .song-lyrics {
     padding-bottom: 2rem;
     padding-top: 2rem;
+}
+
+.song-voice-memo-caption {
+    margin-top: 0.5rem;
+}
+
+.song-youtube {
+    width: 100%;
+    max-width: 80rem;
+    margin-top: 2rem;
+}
+
+.song-youtube-aspect {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.song-youtube-aspect iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.song-youtube-caption {
+    margin-top: 0.75rem;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-black);
+    max-width: 56rem;
+}
+
+.song-score-download {
+    margin-bottom: 1rem;
+}
+
+.song-score-download a {
+    background-color: var(--color-extra-light-purple);
+    padding: 0.5rem 1rem;
+    display: inline-block;
 }
 
 .song-score {
@@ -641,6 +638,23 @@ body {
     min-height: 100vh;
 }
 
+/* Shared floral overlay used on sidebar, mobile nav, mobile nav menu, mobile footer */
+.sidebar::before,
+.mobile-nav::before,
+.mobile-nav-menu::before,
+.mobile-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--floral-bg-image);
+    background-repeat: repeat;
+    background-size: 550px 550px;
+    opacity: 0.5;
+}
+
 .sidebar {
     height: 100vh;
     background: var(--color-white);
@@ -653,16 +667,6 @@ body {
 }
 
 .sidebar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/purple-floral-print-550.png');
-    background-repeat: repeat;
-    background-size: 550px 550px;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -678,7 +682,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* color: var(--color-dark-purple); */
 }
 
 .nav-bar .button {
@@ -776,16 +779,6 @@ blockquote {
 }
 
 .mobile-nav::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/purple-floral-print-550.png');
-    background-repeat: repeat;
-    background-size: 550px 550px;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -858,16 +851,6 @@ blockquote {
 }
 
 .mobile-nav-menu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/purple-floral-print-550.png');
-    background-repeat: repeat;
-    background-size: 550px 550px;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -944,16 +927,6 @@ blockquote {
 }
 
 .mobile-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/design-images/ALICE-vintage-floral-set/8-Patterns/purple-floral-print-550.png');
-    background-repeat: repeat;
-    background-size: 550px 550px;
-    opacity: 0.5;
     z-index: 0;
 }
 
@@ -1011,25 +984,6 @@ blockquote {
     border-bottom: 2px solid var(--color-semi-dark-purple);
 }
 
-.post-side-by-side {
-    display: flex;
-    align-items: flex-start;
-    gap: 1em;
-    flex-wrap: wrap;
-}
-
-.post-side-by-side .home-post-image {
-    width: 200px;
-    height: auto;
-    flex-shrink: 0;
-    display: block;
-}
-
-.post-side-by-side p {
-    flex: 1 1 200px;
-    min-width: 0;
-    margin: 0;
-}
 
 .post-wrap {
     overflow: hidden; /* Clear floats */
@@ -1037,7 +991,7 @@ blockquote {
 
 .post-wrap .home-post-image {
     float: left;
-    width: 200px;
+    width: 20rem;
     height: auto;
     margin-right: 1em;
     margin-bottom: 0.5em;
@@ -1068,10 +1022,6 @@ blockquote {
     }
 
     .side-by-side {
-        flex-direction: column;
-    }
-
-    .post-side-by-side {
         flex-direction: column;
     }
 
@@ -1141,8 +1091,6 @@ blockquote {
 
     /* Adjust blockquote and lists for mobile */
     blockquote {
-        margin-left: 2rem;
-        margin-right: 2rem;
         padding: 1rem;
     }
 
