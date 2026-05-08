@@ -109,6 +109,15 @@ li a {
     padding: 0.5rem 1rem;
 }
 
+.back-to-folkmadness {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-to-folkmadness a {
+    padding: 0.5rem 1rem;
+}
+
 /* --- 4. Events --- */
 .event-list {
     margin-top: 1.5rem;
