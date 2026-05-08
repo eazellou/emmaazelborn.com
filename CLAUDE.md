@@ -19,6 +19,16 @@ Always run `npm run lint && npm run format:check` before finalizing any changes.
 
 **Once a URL has been deployed, it must never change.** This applies to all content: posts (`p/<slug>/`), songs, projects, and static assets. Renaming files, changing slugs, restructuring directories, or altering permalink patterns are all high-risk operations. If a structural change is unavoidable, add Eleventy redirects rather than removing the old URL.
 
+### Previewing Claude worktree branches
+
+To run a dev server for a Claude-managed worktree branch without checking it out, use the `serve-worktree` shell function (defined in `~/.bash_profile`):
+
+```bash
+serve-worktree claude/cranky-grothendieck-ec31fa
+```
+
+This serves the worktree from a deterministic port derived from the branch name (range 3000–9999), so multiple worktrees can run simultaneously. The port is printed on start.
+
 ## Architecture
 
 This is an [Eleventy](https://www.11ty.dev/) static site. Source is in `src/`, output goes to `dist/`. Templates use Nunjucks (`.njk`); Markdown also runs through Nunjucks. Layouts and includes are both in `src/_layouts/`.
