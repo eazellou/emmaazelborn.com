@@ -41,7 +41,7 @@
             {% if projectOneOff.length or projectRecurring.length %}
                 {% if projectOneOff.length %}
                 <h3>Upcoming events</h3>
-                <p class="back-to-events">
+                <p class="back-link">
                     <a href="{{ calendarId | calendarWebUrl(calendars) }}" target="_blank" rel="noopener noreferrer">Add to your calendar</a>
                 </p>
                 {# Include expects calendarEvents and design; set locally for this include only #}
@@ -55,7 +55,7 @@
                 {% set recurringEvents = projectRecurring %}
                 {% include "includes/events-recurring-list.njk" %}
                 {% endif %}
-                <p class="back-to-events">
+                <p class="back-link">
                     <a href="/events/">All Events</a>
                 </p>
             {% endif %}

@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="stripe-content">
-        <p class="back-to-songs">
+        <p class="back-link">
             <a href="/songs/">« All Songs</a>
         </p>
         <h2>{{ title }}</h2>
@@ -40,26 +40,26 @@
             Your browser does not support the audio player.
           </audio>
           {% if voiceMemoCaption %}
-            <p style="margin-top: 0.5rem;"><em>{{ voiceMemoCaption }}</em></p>
+            <p class="song-voice-memo-caption"><em>{{ voiceMemoCaption }}</em></p>
           {% endif %}
         {% endif %}
         {% if youtube %}
           {% set youtubeId = youtube | youtubeEmbedId %}
           {% if youtubeId %}
-          <div class="song-youtube" style="width: 100%; max-width: 80rem; margin-top: 2rem;">
-            <div style="position: relative; padding-top: 56.25%;">
-              <iframe src="https://www.youtube-nocookie.com/embed/{{ youtubeId }}" title="{{ title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+          <div class="song-youtube">
+            <div class="song-youtube-aspect">
+              <iframe src="https://www.youtube-nocookie.com/embed/{{ youtubeId }}" title="{{ title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             {% if youtubeCaption %}
-            <p class="song-youtube-caption" style="margin-top: 0.75rem; font-size: var(--font-size-base); line-height: var(--line-height-base); color: var(--color-black); max-width: 56rem;">{{ youtubeCaption | captionSafe | safe }}</p>
+            <p class="song-youtube-caption">{{ youtubeCaption | captionSafe | safe }}</p>
             {% endif %}
           </div>
           {% endif %}
         {% endif %}
         {% if score %}
           <div class="song-score">
-            <div style="margin-bottom: 1rem;">
-              <a href="{{ score }}" download style="background-color: var(--color-extra-light-purple); padding: 0.5rem 1rem; display: inline-block;">Download Score (PDF)</a>
+            <div class="song-score-download">
+              <a href="{{ score }}" download>Download Score (PDF)</a>
             </div>
             <iframe src="{{ score }}" title="Score PDF">
               <p>Your browser does not support embedded PDFs. <a href="{{ score }}" download>Download the PDF</a> instead.</p>
