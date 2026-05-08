@@ -1,0 +1,3 @@
+---
+title: Stand Together
+---
