@@ -3,7 +3,11 @@
 {% block content %}
     <div class="stripe-content">
         <p class="back-link">
-            <a href="/songs/">« All Songs</a>
+            {% if page.url.startsWith('/songs-i-sing/') %}
+                <a href="/songs-i-sing/">« Songs I Sing</a>
+            {% else %}
+                <a href="/songs/">« All Songs</a>
+            {% endif %}
         </p>
         <h2>{{ title }}</h2>
         {% set releasedWithProjects = (released or []) | selectattr("project") | list %}
