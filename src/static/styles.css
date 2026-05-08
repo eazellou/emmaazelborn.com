@@ -155,7 +155,6 @@ a.event-location:hover,
     opacity: 1;
 }
 
-
 .event-date {
     font-size: 1.8rem;
     color: var(--color-dark-purple);
@@ -983,7 +982,6 @@ blockquote {
 .home-post-item:not(:last-child) {
     border-bottom: 2px solid var(--color-semi-dark-purple);
 }
-
 
 .post-wrap {
     overflow: hidden; /* Clear floats */

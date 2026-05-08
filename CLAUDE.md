@@ -13,7 +13,7 @@ npm run format     # Auto-format with Prettier
 
 No test suite — verify changes by running `serve` and checking the browser.
 
-Always run `npm run lint` before finalizing any changes.
+Always run `npm run lint && npm run format:check` before finalizing any changes. If `format:check` fails, run `npm run format` to auto-fix.
 
 ## URL stability — never break deployed URLs
 
