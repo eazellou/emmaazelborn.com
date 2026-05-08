@@ -21,7 +21,7 @@
             {% endfor %}
             </ul>
         </div>
-        {% elif not released %}
+        {% elif not released and not page.url.startsWith('/songs-i-sing/') %}
         <p><em>This song is not released yet, but I've been singing it out in the world. Feel free to learn it and sing it with your friends!</em></p>
         {% endif %}
         <div class="song-lyrics">
