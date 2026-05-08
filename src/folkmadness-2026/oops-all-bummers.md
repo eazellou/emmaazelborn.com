@@ -11,7 +11,7 @@ songs:
     lyricsUrl: /songs-i-sing/the-jeannie-c/
   - title: River Days
     lyricsUrl: /songs-i-sing/river-days/
-  - title: Down in the Greenwood Valley / Cruel Mother
+  - title: Down in the Greenwood Valley
     lyricsUrl: /songs-i-sing/down-in-the-greenwood-valley/
   - title: Final Trawl
     lyricsUrl: /songs-i-sing/final-trawl/

@@ -1,3 +1,3 @@
 ---
-title: Down in the Greenwood Valley / Cruel Mother
+title: Down in the Greenwood Valley
 ---
