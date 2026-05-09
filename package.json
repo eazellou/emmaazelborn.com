@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm run build && playwright test",
+        "test:ui": "npm run build && playwright test --ui",
+        "test:nobuild": "playwright test",
         "serve": "PROD=0 eleventy --serve",
         "build": "PROD=1 eleventy",
         "blog": "node scripts/blog.mjs",
@@ -18,9 +20,11 @@
     "description": "",
     "devDependencies": {
         "@eslint/js": "^9.15.0",
+        "@playwright/test": "^1.59.1",
         "eslint": "^9.15.0",
         "eslint-config-prettier": "^9.1.0",
         "globals": "^15.12.0",
+        "http-server": "^14.1.1",
         "markdownlint-cli": "^0.41.0",
         "prettier": "^3.3.3"
     },
