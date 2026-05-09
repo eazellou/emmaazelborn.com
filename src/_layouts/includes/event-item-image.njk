@@ -1,0 +1,11 @@
+{% if event.projectImage %}
+    {% if event.projectPath %}
+        <a class="event-item-image-link" href="{{ event.projectPath }}" tabindex="-1" aria-hidden="true">
+            <img class="event-item-image" src="{{ event.projectImage }}" alt="">
+        </a>
+    {% else %}
+        <div class="event-item-image-link">
+            <img class="event-item-image" src="{{ event.projectImage }}" alt="">
+        </div>
+    {% endif %}
+{% endif %}

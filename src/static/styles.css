@@ -282,6 +282,58 @@ a.event-location:hover,
     overflow-wrap: break-word;
 }
 
+.event-list--cards .event-item.event-item--has-image {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0;
+    padding: 0;
+}
+
+.event-list--cards .event-item.event-item--has-image .event-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.25rem;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* Right column inherits card background so there's no gap/bleed behind the image */
+.event-list--cards .event-item.event-item--has-image .event-item-image-link {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.25rem 1.25rem 0;
+}
+
+.event-list--cards .event-item.event-item--recurring.event-item--has-image .event-item-image-link {
+    background-color: var(--color-event-recurring-bg);
+}
+
+.event-item-image {
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .event-list--cards .event-item.event-item--has-image {
+        grid-template-columns: 1fr;
+    }
+
+    .event-list--cards .event-item.event-item--has-image .event-item-image-link {
+        padding: 0 1.25rem 1.25rem;
+        justify-content: center;
+    }
+
+    .event-item-image {
+        width: 100%;
+        height: 12rem;
+    }
+}
+
 .event-list--cards .event-item:last-child {
     border: none;
 }
