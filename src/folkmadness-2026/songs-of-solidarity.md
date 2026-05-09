@@ -6,21 +6,21 @@ songs:
     - title: It's Always Been About That
       lyricsUrl: /songs/its-always-been-about-that/
     - title: Make a Big Noise
-      lyricsUrl: /songs-i-sing/make-a-big-noise/
+      lyricsUrl: /songbook/make-a-big-noise/
     - title: Keep on Moving Forward
-      lyricsUrl: /songs-i-sing/keep-on-moving-forward/
+      lyricsUrl: /songbook/keep-on-moving-forward/
     - title: We Are Gentle People
-      lyricsUrl: /songs-i-sing/we-are-gentle-people/
+      lyricsUrl: /songbook/we-are-gentle-people/
     - title: Stand Together
-      lyricsUrl: /songs-i-sing/stand-together/
+      lyricsUrl: /songbook/stand-together/
     - title: When I Rise
-      lyricsUrl: /songs-i-sing/when-i-rise/
+      lyricsUrl: /songbook/when-i-rise/
     - title: More Waters Rising
-      lyricsUrl: /songs-i-sing/more-waters-rising/
+      lyricsUrl: /songbook/more-waters-rising/
     - title: Big Black Bird
-      lyricsUrl: /songs-i-sing/big-black-bird/
+      lyricsUrl: /songbook/big-black-bird/
     - title: Witch Hazel
-      lyricsUrl: /songs-i-sing/witch-hazel/
+      lyricsUrl: /songbook/witch-hazel/
     - title: Her Voice
-      lyricsUrl: /songs-i-sing/her-voice/
+      lyricsUrl: /songbook/her-voice/
 ---

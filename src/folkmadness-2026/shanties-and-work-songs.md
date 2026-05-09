@@ -2,27 +2,27 @@
 title: Shanties, Work Songs, and Easy Bangers
 songs:
     - title: Hog's Eye Man
-      lyricsUrl: /songs-i-sing/hogs-eye-man/
+      lyricsUrl: /songbook/hogs-eye-man/
     - title: One More Day
-      lyricsUrl: /songs-i-sing/one-more-day/
+      lyricsUrl: /songbook/one-more-day/
     - title: Haul Away Joe
-      lyricsUrl: /songs-i-sing/haul-away-joe/
+      lyricsUrl: /songbook/haul-away-joe/
     - title: Tilbury Town
-      lyricsUrl: /songs-i-sing/tilbury-town/
+      lyricsUrl: /songbook/tilbury-town/
     - title: Cape Cod Girls
-      lyricsUrl: /songs-i-sing/cape-cod-girls/
+      lyricsUrl: /songbook/cape-cod-girls/
     - title: Pull Down Below
-      lyricsUrl: /songs-i-sing/pull-down-below/
+      lyricsUrl: /songbook/pull-down-below/
     - title: Sam's Gone Away
-      lyricsUrl: /songs-i-sing/sams-gone-away/
+      lyricsUrl: /songbook/sams-gone-away/
     - title: Hilo Johnny Hilo
-      lyricsUrl: /songs-i-sing/hilo-johnny-hilo/
+      lyricsUrl: /songbook/hilo-johnny-hilo/
     - title: South Australia
-      lyricsUrl: /songs-i-sing/south-australia/
+      lyricsUrl: /songbook/south-australia/
     - title: Johnny Come Down to Hilo
-      lyricsUrl: /songs-i-sing/johnny-come-down-to-hilo/
+      lyricsUrl: /songbook/johnny-come-down-to-hilo/
     - title: Santiana
-      lyricsUrl: /songs-i-sing/santiana/
+      lyricsUrl: /songbook/santiana/
     - title: Dragons of Kilpatrick
       lyricsUrl: /songs/dragons-of-kilpatrick/
     - title: Hen House Ghost
@@ -30,5 +30,5 @@ songs:
     - title: Midnight Pizza
       lyricsUrl: /songs/midnight-pizza/
     - title: Chickalaleeoh
-      lyricsUrl: /songs-i-sing/chickalaleeoh/
+      lyricsUrl: /songbook/chickalaleeoh/
 ---
