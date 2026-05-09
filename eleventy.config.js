@@ -32,8 +32,8 @@ function addCollections(eleventyConfig) {
         collection.getFilteredByGlob('src/songs/*.md').sort(sortByTitle)
     )
 
-    eleventyConfig.addCollection('songsISing', (collection) =>
-        collection.getFilteredByGlob('src/songs-i-sing/*.md').sort(sortByTitle)
+    eleventyConfig.addCollection('songbook', (collection) =>
+        collection.getFilteredByGlob('src/songbook/*.md').sort(sortByTitle)
     )
 }
 
