@@ -9,50 +9,39 @@ import calendarFilters from './eleventy/filters/calendar.js'
 import eventFilters from './eleventy/filters/events.js'
 import lyricsFilter from './eleventy/filters/lyrics.js'
 
+function addCollections(eleventyConfig) {
+    const articlePattern = /^(the|a|an|o)\s+/i
+    const sortByTitle = (a, b) => {
+        const key = (title) => title.replace(articlePattern, '').trim()
+        return key(a.data.title).localeCompare(key(b.data.title))
+    }
+
+    eleventyConfig.addCollection('posts', (collection) =>
+        collection
+            .getFilteredByGlob('src/writing/*.md')
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+    )
+
+    eleventyConfig.addCollection('projects', (collection) =>
+        collection
+            .getFilteredByGlob('src/projects/*.md')
+            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+    )
+
+    eleventyConfig.addCollection('songs', (collection) =>
+        collection.getFilteredByGlob('src/songs/*.md').sort(sortByTitle)
+    )
+
+    eleventyConfig.addCollection('songsISing', (collection) =>
+        collection.getFilteredByGlob('src/songs-i-sing/*.md').sort(sortByTitle)
+    )
+}
+
 export default async function (eleventyConfig) {
     calendarFilters(eleventyConfig)
     eventFilters(eleventyConfig)
     lyricsFilter(eleventyConfig)
-    let projectsCollection = []
-    // Add a collection for posts
-    eleventyConfig.addCollection('posts', (collection) => {
-        return collection
-            .getFilteredByGlob('src/writing/*.md')
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
-    })
-
-    // Add a collection for projects
-    eleventyConfig.addCollection('projects', (collection) => {
-        projectsCollection = collection
-            .getFilteredByGlob('src/projects/*.md')
-            .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
-        return projectsCollection
-    })
-
-    // Add a collection for songs
-    eleventyConfig.addCollection('songs', (collection) => {
-        return collection.getFilteredByGlob('src/songs/*.md').sort((a, b) => {
-            const getSortKey = (title) => {
-                // Remove common articles from the beginning
-                const articles = /^(the|a|an|o)\s+/i
-                return title.replace(articles, '').trim()
-            }
-
-            return getSortKey(a.data.title).localeCompare(getSortKey(b.data.title))
-        })
-    })
-
-    // Add a collection for songs I sing (not original songs)
-    eleventyConfig.addCollection('songsISing', (collection) => {
-        return collection.getFilteredByGlob('src/songs-i-sing/*.md').sort((a, b) => {
-            const getSortKey = (title) => {
-                const articles = /^(the|a|an|o)\s+/i
-                return title.replace(articles, '').trim()
-            }
-
-            return getSortKey(a.data.title).localeCompare(getSortKey(b.data.title))
-        })
-    })
+    addCollections(eleventyConfig)
 
     // Add a filter to get a project by fileSlug
     eleventyConfig.addFilter('getProjectByName', function (projects, name) {
