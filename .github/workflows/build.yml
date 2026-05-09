@@ -42,6 +42,20 @@ jobs:
             - name: Build 11ty
               run: npm run build
 
+            - name: Install Playwright browser
+              run: npx playwright install --with-deps chromium
+
+            - name: Run smoke tests
+              run: npm run test:nobuild
+
+            - name: Upload Playwright report
+              if: failure()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: playwright-report
+                  path: playwright-report/
+                  retention-days: 7
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
