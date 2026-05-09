@@ -230,7 +230,7 @@ a.event-location:hover,
 
 .event-description-wrap.event-description--truncated {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
