@@ -71,6 +71,8 @@ credits: |
     Mastered by [Everest Witman][]  
     Recorded at The Record Co, and many home recording spaces  
 
+    Album Sponsored by Laura & Brian Azelborn, Doe Taryn, Michael Russell, Seán Hanson, Caitlin Bannan, Ben Douglas, and Harris Lapiroff
+
     Album Art by [Sarah Hirsch][]  
     Art Graphic Design by [MaryCate Azelborn][]  
     CD Graphic Design by [Harris Lapiroff][]  
