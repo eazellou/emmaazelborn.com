@@ -84,15 +84,13 @@ function getDateRange() {
     return { from, oneYearLater }
 }
 
-function enrichRecurringWithCalendar(events) {
+function enrichWithCalendar(events) {
     return events.map((ev) => {
         const cal = calendars.find((c) => c.id === ev.calendar)
-        const calendarUrl = cal?.webUrl || '#'
         return {
             ...ev,
-            linkUrl: cal?.projectPath || calendarUrl,
-            linkText: cal?.projectPath ? 'View project' : null,
-            calendarUrl,
+            projectImage: cal?.projectImage ?? null,
+            projectPath: cal?.projectPath ?? null,
         }
     })
 }
@@ -116,10 +114,8 @@ export default async function () {
 
     allInstances.sort(sortByStart)
 
-    const oneOff = allInstances.filter((e) => !e.isRecurring).sort(sortByStart)
-    const recurring = enrichRecurringWithCalendar(
-        allInstances.filter((e) => e.isRecurring).sort(sortByStart)
-    )
+    const oneOff = enrichWithCalendar(allInstances.filter((e) => !e.isRecurring).sort(sortByStart))
+    const recurring = enrichWithCalendar(allInstances.filter((e) => e.isRecurring).sort(sortByStart))
 
     return { oneOff, recurring }
 }

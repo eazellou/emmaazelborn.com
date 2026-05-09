@@ -13,12 +13,6 @@ export default function (eleventyConfig) {
         return cal?.displayName ?? calendarId
     })
 
-    eleventyConfig.addFilter('calendarProjectPath', function (calendarId, calendars) {
-        if (!Array.isArray(calendars)) return null
-        const cal = calendars.find((c) => c.id === calendarId)
-        return cal?.projectPath ?? null
-    })
-
     eleventyConfig.addFilter('calendarWebUrl', function (calendarId, calendars) {
         if (!Array.isArray(calendars)) return '#'
         const cal = calendars.find((c) => c.id === calendarId)
