@@ -115,7 +115,9 @@ export default async function () {
     allInstances.sort(sortByStart)
 
     const oneOff = enrichWithCalendar(allInstances.filter((e) => !e.isRecurring).sort(sortByStart))
-    const recurring = enrichWithCalendar(allInstances.filter((e) => e.isRecurring).sort(sortByStart))
+    const recurring = enrichWithCalendar(
+        allInstances.filter((e) => e.isRecurring).sort(sortByStart)
+    )
 
     return { oneOff, recurring }
 }
