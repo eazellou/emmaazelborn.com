@@ -10,7 +10,7 @@ import eventFilters from './eleventy/filters/events.js'
 import lyricsFilter from './eleventy/filters/lyrics.js'
 
 function addCollections(eleventyConfig) {
-    const articlePattern = /^(the|a|an|o)\s+/i
+    const articlePattern = /^(the|a|an|o|it[''']s)\s+/i
     const sortByTitle = (a, b) => {
         const key = (title) => title.replace(articlePattern, '').trim()
         return key(a.data.title).localeCompare(key(b.data.title))
