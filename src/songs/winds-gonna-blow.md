@@ -4,8 +4,6 @@ composer: Emma Azelborn
 voiceMemo: winds gonna blow memo.m4a
 ---
 
-we are here and we are **[rising]**
-
 gonna keep on **[walking]**
 and the wind's gonna blow
 gonna keep on **[walking]**
