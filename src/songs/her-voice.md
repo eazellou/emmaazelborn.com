@@ -6,7 +6,7 @@ voiceMemo: her voice memo.m4a
 
 The ancient trees were falling, the sawmills ever grinding
 Cathedral treetops burning by piles of ties and siding
-Then women called for action as the century began
+When women called for action as the century began
 Many hands and many voices defending redwood land
 
 _chorus:_
