@@ -1,3 +1,0 @@
----
-title: Red-Winged Blackbird
----

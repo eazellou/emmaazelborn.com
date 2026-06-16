@@ -1,3 +1,0 @@
----
-title: When I Rise
----

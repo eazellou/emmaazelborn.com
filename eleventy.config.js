@@ -31,10 +31,6 @@ function addCollections(eleventyConfig) {
     eleventyConfig.addCollection('songs', (collection) =>
         collection.getFilteredByGlob('src/songs/*.md').sort(sortByTitle)
     )
-
-    eleventyConfig.addCollection('songbook', (collection) =>
-        collection.getFilteredByGlob('src/songbook/*.md').sort(sortByTitle)
-    )
 }
 
 export default async function (eleventyConfig) {
