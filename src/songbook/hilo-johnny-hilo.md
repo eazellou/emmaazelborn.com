@@ -1,3 +1,0 @@
----
-title: Hilo Johnny Hilo
----

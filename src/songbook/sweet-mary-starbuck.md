@@ -1,3 +1,0 @@
----
-title: Sweet Mary Starbuck
----
