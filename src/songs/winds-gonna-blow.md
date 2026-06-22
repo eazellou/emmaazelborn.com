@@ -2,6 +2,7 @@
 title: Wind's Gonna Blow
 composer: Emma Azelborn
 voiceMemo: winds gonna blow memo.m4a
+description: "gonna keep on walking and the wind's gonna blow"
 ---
 
 gonna keep on **[walking]**

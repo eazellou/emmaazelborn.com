@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '4096891367'
 composer: Emma Azelborn
+description: 'we dance, we dance together / and the hall remembers when we dance'
 ---
 
 In this hall, we dance together

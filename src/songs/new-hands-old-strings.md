@@ -4,6 +4,7 @@ released:
     - project: lucy-goose
       bandcampTrackId: '1422606781'
 composer: Emma Azelborn
+description: 'new hands, old strings / passing their notes with bow and pen'
 ---
 
 New hands, old strings

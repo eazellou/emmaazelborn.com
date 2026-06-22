@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '1601244907'
+description: "this small house is too big for me, won't you join me here"
 ---
 
 this small house is too big for me

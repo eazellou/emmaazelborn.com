@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '3139554436'
 composer: Emma Azelborn
+description: 'houses can be made, but trees have to grow'
 ---
 
 you walk down broken tree-lined streets

@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '4247583798'
+description: "our shining scales protect their sails! / we're the dragons of kilpatrick"
 ---
 
 we are the glinting gilded girls who heard the calling sea

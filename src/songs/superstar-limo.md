@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '700160905'
 composer: Emma Azelborn
+description: 'if you ever wanna glow, you gotta go ride / superstar limo'
 ---
 
 _chorus:_

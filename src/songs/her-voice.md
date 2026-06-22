@@ -2,7 +2,7 @@
 title: Her Voice
 composer: Emma Azelborn
 voiceMemo: her voice memo.m4a
-description: A song about the women who fought to save California's redwood forests from logging in the early 1900s.
+description: 'her voice still echoes through the valley / it weaves through the leaves of the redwood trees'
 ---
 
 The ancient trees were falling, the sawmills ever grinding

@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '3623366432'
+description: 'I am making a promise to myself'
 ---
 
 I am making a promise to myself

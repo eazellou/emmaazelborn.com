@@ -4,6 +4,7 @@ released:
     - project: lucy-goose
       bandcampTrackId: '1259949644'
 composer: Emma Azelborn
+description: "I won't let you poison my memories"
 ---
 
 I trusted you and you threw me aside without warning

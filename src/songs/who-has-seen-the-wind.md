@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '150032415'
+description: 'who has seen the wind? / neither you nor I'
 ---
 
 Who has seen the wind?

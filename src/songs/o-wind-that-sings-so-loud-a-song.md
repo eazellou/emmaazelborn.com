@@ -3,6 +3,7 @@ title: O Wind (That Sings so Loud a Song)
 composer: Emma Azelborn
 voiceMemo: the wind that sings so loud a song.mp4
 permalink: /songs/o-wind-that-sings-so-loud-a-song/
+description: 'O wind, O wind, that sings so loud a song'
 ---
 
 I saw you toss the kites on high

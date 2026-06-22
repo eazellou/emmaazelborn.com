@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '2745536447'
+description: "I am hen house ghost / maybe someday I'll go home"
 ---
 
 Everybody gather round 'cause I can't come to you

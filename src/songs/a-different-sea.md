@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '1499190375'
 composer: Emma Azelborn
+description: "I've been thinking of you lately / but your shore faces a different sea"
 ---
 
 I've been thinking of you lately, my friend

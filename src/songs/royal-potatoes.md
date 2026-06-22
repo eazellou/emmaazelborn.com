@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '849002684'
+description: "stay away from the royal potatoes! / they're not for you"
 ---
 
 have you heard the latest news that's been going all around?

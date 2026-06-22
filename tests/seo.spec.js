@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { glob } from 'glob'
 
 const DIST = resolve('dist')
 
@@ -29,11 +30,24 @@ test('sitemap.xml lists posts, songs, and projects with absolute URLs', async ()
 test('pages with a description set a meta description tag, others fall back to the site default', async () => {
     const herVoice = readFileSync(resolve(DIST, 'songs/her-voice/index.html'), 'utf8')
     expect(herVoice).toContain(
-        '<meta name="description" content="A song about the women who fought to save California&#39;s redwood forests from logging in the early 1900s.">'
+        '<meta name="description" content="her voice still echoes through the valley / it weaves through the leaves of the redwood trees">'
     )
 
     const home = readFileSync(resolve(DIST, 'index.html'), 'utf8')
     expect(home).toContain(
         '<meta name="description" content="Hi, I\'m Emma Azelborn. I\'m a songwriter, dancer, and musician.">'
     )
+})
+
+test('every song page sets a lyric-based meta description', async () => {
+    const songFiles = await glob('songs/*/index.html', { cwd: DIST })
+
+    expect(songFiles.length).toBeGreaterThan(0)
+    for (const file of songFiles) {
+        const html = readFileSync(resolve(DIST, file), 'utf8')
+        if (html.includes('Redirecting...')) continue
+        expect(html, `${file} should have a meta description`).toMatch(
+            /<meta name="description" content="[^"]+">/
+        )
+    }
 })

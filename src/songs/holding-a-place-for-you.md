@@ -4,6 +4,7 @@ composer: Emma Azelborn
 released:
     - project: circle-songs-vol-ii
       bandcampTrackId: '3803581021'
+description: "I'm holding a place for you / between the mountains"
 ---
 
 I'm holding a place for you
