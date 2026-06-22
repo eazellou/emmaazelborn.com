@@ -2,6 +2,7 @@
 title: What the Winds Bring
 composer: Emma Azelborn
 voiceMemo: what the winds bring.m4a
+description: 'which is the wind that brings the cold? / the North-Wind! the North-Wind!'
 ---
 
 Which is the Wind that brings the cold?

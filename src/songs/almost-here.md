@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '3891230108'
 composer: Emma Azelborn
+description: "your voice in my ear, it is almost like you're here"
 ---
 
 you sang a song to me when I cried on the phone

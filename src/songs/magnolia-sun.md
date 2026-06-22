@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '1765836546'
 composer: Emma Azelborn
+description: 'she was more than her divining / her magnolia sun still shining'
 ---
 
 I miss her

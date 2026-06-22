@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '1768018580'
 composer: Emma Azelborn
+description: 'the sea creature of Greenland / most dreadful and monstrously big'
 ---
 
 Oh the year was 1734

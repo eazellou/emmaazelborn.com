@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '1873695983'
 composer: Emma Azelborn
+description: "it's been getting easier to cry"
 ---
 
 it's been getting harder to sing

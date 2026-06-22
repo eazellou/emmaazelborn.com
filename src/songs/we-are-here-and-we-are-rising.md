@@ -6,6 +6,7 @@ released:
 youtube: https://youtu.be/Botv3X6XZks
 youtubeCaption: |
     Premiering We Are Here & We Are Rising with Windborne at Flurry Festival 2026
+description: 'we are here and we are rising / we are rising, we hold on'
 ---
 
 we are here and we are **[rising]**

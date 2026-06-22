@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '1048893496'
 composer: Emma Azelborn
+description: 'I would raise my hand and petition the light / till I ran right out of breath'
 ---
 
 on every sunday morning

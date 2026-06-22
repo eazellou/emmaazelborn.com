@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '1739601537'
 composer: Emma Azelborn
+description: 'toss the bones high, be steady and small'
 ---
 
 You've been afraid for far too long

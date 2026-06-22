@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '2755393290'
 composer: Emma Azelborn
+description: 'this old floor has held us a hundred years'
 ---
 
 Today, my friends we stand upon these boards so old and worn

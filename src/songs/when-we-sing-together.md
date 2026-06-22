@@ -7,6 +7,7 @@ released:
       bandcampTrackId: '3062141228'
 composer: Emma Azelborn
 score: /static/scores/when we sing together.pdf
+description: "when we sing together it's like we were never alone"
 ---
 
 my friends we have traveled far to gather here today

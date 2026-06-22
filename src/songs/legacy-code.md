@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '1536210937'
 composer: Emma Azelborn
+description: "we've gotta go down, down, down / in our legacy, legacy code"
 ---
 
 We've got a problem

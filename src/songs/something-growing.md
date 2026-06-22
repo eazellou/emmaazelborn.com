@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '1026509064'
 composer: Emma Azelborn
+description: "I'm in the mood to see something growing"
 ---
 
 I'm going to grow all the good ones here

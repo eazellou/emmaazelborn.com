@@ -4,6 +4,7 @@ released:
     - project: circle-songs
       bandcampTrackId: '3449868315'
 composer: Emma Azelborn
+description: 'we know what we are wanting / midnight, midnight pizza'
 ---
 
 Late at night we've got the munchies

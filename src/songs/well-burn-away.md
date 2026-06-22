@@ -4,6 +4,7 @@ released:
     - project: magnolia-sun
       bandcampTrackId: '4276324639'
 composer: Emma Azelborn
+description: "nothing stays the same / we'll rest in the sun and we'll burn away"
 ---
 
 what will we do if the grass doesn't grow
