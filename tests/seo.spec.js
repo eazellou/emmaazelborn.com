@@ -39,15 +39,18 @@ test('pages with a description set a meta description tag, others fall back to t
     )
 })
 
-test('every song page sets a lyric-based meta description', async () => {
+test('every song page sets a lyric-based meta description, not the site default', async () => {
     const songFiles = await glob('songs/*/index.html', { cwd: DIST })
+    const genericDescription = "Hi, I'm Emma Azelborn. I'm a songwriter, dancer, and musician."
 
     expect(songFiles.length).toBeGreaterThan(0)
     for (const file of songFiles) {
         const html = readFileSync(resolve(DIST, file), 'utf8')
         if (html.includes('Redirecting...')) continue
-        expect(html, `${file} should have a meta description`).toMatch(
-            /<meta name="description" content="[^"]+">/
+        const match = html.match(/<meta name="description" content="([^"]+)">/)
+        expect(match, `${file} should have a meta description`).not.toBeNull()
+        expect(match[1], `${file} should not use the generic site description`).not.toBe(
+            genericDescription
         )
     }
 })
