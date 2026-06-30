@@ -4,6 +4,9 @@ released:
     - project: circle-songs
       bandcampTrackId: '1768018580'
 composer: Emma Azelborn
+document: /static/documents/cetaceans sex and sea serpents.pdf
+documentTitle: Cetaceans, Sex and Sea Serpents
+documentCaption: 'Paxton, Knatterud & Hedley''s 2005 paper re-examining the Egede accounts of the 1734 "most dreadful monster" sighting off Greenland — the historical source behind this song.'
 description: 'the sea creature of Greenland / most dreadful and monstrously big'
 ---
 
