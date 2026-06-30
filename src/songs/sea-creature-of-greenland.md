@@ -6,7 +6,7 @@ released:
 composer: Emma Azelborn
 document: /static/documents/cetaceans sex and sea serpents.pdf
 documentTitle: Cetaceans, Sex and Sea Serpents
-documentCaption: 'Paxton, Knatterud & Hedley''s 2005 paper re-examining the Egede accounts of the 1734 "most dreadful monster" sighting off Greenland — the historical source behind this song.'
+documentCaption: 'Paxton, Knatterud & Hedley''s 2005 paper re-examining the Egede accounts of the 1734 "most dreadful monster" sighting off the coast of Greenland.'
 description: 'the sea creature of Greenland / most dreadful and monstrously big'
 ---
 
