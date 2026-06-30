@@ -1,5 +1,16 @@
 {% extends "./base.njk" %}
 
+{% macro pdfEmbed(path, iframeTitle, downloadLabel) %}
+    <div class="song-pdf-embed">
+        <div class="song-pdf-embed-download">
+            <a href="{{ path }}" download>{{ downloadLabel }}</a>
+        </div>
+        <iframe src="{{ path }}" title="{{ iframeTitle }}">
+            <p>Your browser does not support embedded PDFs. <a href="{{ path }}" download>Download the PDF</a> instead.</p>
+        </iframe>
+    </div>
+{% endmacro %}
+
 {% block content %}
     <div class="stripe-content">
         <p class="back-link">
@@ -57,14 +68,13 @@
           {% endif %}
         {% endif %}
         {% if score %}
-          <div class="song-score">
-            <div class="song-score-download">
-              <a href="{{ score }}" download>Download Score (PDF)</a>
-            </div>
-            <iframe src="{{ score }}" title="Score PDF">
-              <p>Your browser does not support embedded PDFs. <a href="{{ score }}" download>Download the PDF</a> instead.</p>
-            </iframe>
-          </div>
+          {{ pdfEmbed(score, "Score PDF", "Download Score (PDF)") }}
+        {% endif %}
+        {% if document %}
+          {{ pdfEmbed(document, documentTitle or title, "Download " + (documentTitle or "Document") + " (PDF)") }}
+          {% if documentCaption %}
+            <p class="song-document-caption"><em>{{ documentCaption }}</em></p>
+          {% endif %}
         {% endif %}
     </div>
 {% endblock %}
