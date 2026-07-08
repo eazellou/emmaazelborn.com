@@ -49,7 +49,7 @@ permalink: /
                     </a>
                     <div class="post-wrap">
                         <img eleventy:pictureattr:class="home-post-image" src="{{ post.data.image }}" alt="{{ post.data.title }}" />
-                        <p>{{ post.page.excerpt | safe }}</p>
+                        <p>{{ post.page.excerpt | markdownInline | safe }}</p>
                     </div>
                     <a href="{{ post.url }}">Keep reading »</a>
                 </li>
