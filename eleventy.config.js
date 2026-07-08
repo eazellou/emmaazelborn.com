@@ -103,6 +103,18 @@ export default async function (eleventyConfig) {
         return markdownLib.render(content)
     })
 
+    // Renders inline markdown (no wrapping <p>) for use in contexts like the
+    // post excerpt, which is already placed inside a <p>. Footnote markers
+    // (e.g. [^1]) are stripped first: the footnote definitions live after the
+    // "+++" separator and aren't part of the excerpt, so rendering them would
+    // produce a broken reference. This lets links etc. render correctly in the
+    // homepage/writing listing excerpts while dropping post-only footnotes.
+    eleventyConfig.addFilter('markdownInline', (content) => {
+        if (!content) return content
+        const withoutFootnotes = content.replace(/\[\^[^\]]+\]/g, '')
+        return markdownLib.renderInline(withoutFootnotes)
+    })
+
     // "+++" is the read more separator; page.excerpt gets everything before it
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
