@@ -1,5 +1,14 @@
 {% extends "./base.njk" %}
 
+{% macro postImage(image, title, imageCredit, imageCreditUrl) %}
+    {% if image %}
+        <img class="post-image" src="{{ image }}" alt="{{ title }}">
+        {% if imageCredit %}
+            <p class="post-image-credit">{% if imageCreditUrl %}<a href="{{ imageCreditUrl }}">{{ imageCredit }}</a>{% else %}{{ imageCredit }}{% endif %}</p>
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
 {% block content %}
     <div class="post-content">
         <p class="back-link">
@@ -11,15 +20,11 @@
         {% if footnotesSep in content %}
             {% set parts = content.split(footnotesSep) %}
             {{ parts[0] | safe }}
-            {% if image %}
-                <img class="post-image" src="{{ image }}" alt="{{ title }}">
-            {% endif %}
+            {{ postImage(image, title, imageCredit, imageCreditUrl) }}
             {{ footnotesSep | safe }}{{ parts[1] | safe }}
         {% else %}
             {{ content | safe }}
-            {% if image %}
-                <img class="post-image" src="{{ image }}" alt="{{ title }}">
-            {% endif %}
+            {{ postImage(image, title, imageCredit, imageCreditUrl) }}
         {% endif %}
     </div>
 {% endblock %}
