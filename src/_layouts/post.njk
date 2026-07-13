@@ -4,7 +4,7 @@
     {% if image %}
         <img class="post-image" src="{{ image }}" alt="{{ title }}">
         {% if imageCredit %}
-            <p class="post-image-credit">{% if imageCreditUrl %}<a href="{{ imageCreditUrl }}">{{ imageCredit }}</a>{% else %}{{ imageCredit }}{% endif %}</p>
+            <p class="post-image-credit">{% if imageCreditUrl %}<a href="{{ imageCreditUrl }}">{{ imageCredit | markdownInline | safe }}</a>{% else %}{{ imageCredit | markdownInline | safe }}{% endif %}</p>
         {% endif %}
     {% endif %}
 {% endmacro %}
