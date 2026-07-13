@@ -38,8 +38,6 @@ I was worried at first that always offering skater's would mean more lower back 
 
 The small handful of briefly confused folks feels worth it to avoid dancing with my shoulder in a vulnerable position. I hope to continue dancing for many years to come, and making small changes to reduce my chance of injury on the floor helps make the odds of that higher.
 
-![No teapot hold](/static/images/no-teapot-hold.jpg)
-
 [^1]: Promenade Positions Image from [Jeff Kaufman's blog post on differences in contra dancing across the country](https://www.jefftk.com/p/changing-contra-dialects)
 
 [^2]: Pike JM, Singh SK, Barfield WR, Schoch B, Friedman RJ, Eichinger JK. [Impact of age on shoulder mobility and strength](https://pmc.ncbi.nlm.nih.gov/articles/PMC9637716/). JSES Int. 2022 Sep 14;6(6):1029-1033. doi: 10.1016/j.jseint.2022.08.016. PMID: 36353423; PMCID: PMC9637716.

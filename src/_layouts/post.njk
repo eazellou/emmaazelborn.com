@@ -7,6 +7,19 @@
         </p>
         <h2>{{ title }}</h2>
         <time>{{ date | date("LLLL d, yyyy") }}</time>
-        {{ content | safe }}
+        {% set footnotesSep = '<hr class="footnotes-sep">' %}
+        {% if footnotesSep in content %}
+            {% set parts = content.split(footnotesSep) %}
+            {{ parts[0] | safe }}
+            {% if image %}
+                <img src="{{ image }}" alt="{{ title }}">
+            {% endif %}
+            {{ footnotesSep | safe }}{{ parts[1] | safe }}
+        {% else %}
+            {{ content | safe }}
+            {% if image %}
+                <img src="{{ image }}" alt="{{ title }}">
+            {% endif %}
+        {% endif %}
     </div>
 {% endblock %}
