@@ -12,7 +12,9 @@ layout: page.njk
                     <p>{{ post.data.date | date("LLLL d, yyyy") }}</p>
                 </a>
                 <div class="post-wrap">
-                    <img eleventy:pictureattr:class="home-post-image" src="{{ post.data.image }}" alt="{{ post.data.title }}" />
+                    {% if post.data.image %}
+                        <img eleventy:pictureattr:class="home-post-image" src="{{ post.data.image }}" alt="{{ post.data.title }}" />
+                    {% endif %}
                     <p>{{ post.page.excerpt | markdownInline | safe }}</p>
                 </div>
                 <a href="{{ post.url }}">Keep reading »</a>
