@@ -373,6 +373,15 @@ a.event-location:hover,
     max-width: 80rem;
 }
 
+.post-content time {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.post-content p {
+    margin-bottom: 0.8rem;
+}
+
 .post-image {
     max-height: 32rem;
     width: auto;
