@@ -12,13 +12,13 @@
             {% set parts = content.split(footnotesSep) %}
             {{ parts[0] | safe }}
             {% if image %}
-                <img src="{{ image }}" alt="{{ title }}">
+                <img class="post-image" src="{{ image }}" alt="{{ title }}">
             {% endif %}
             {{ footnotesSep | safe }}{{ parts[1] | safe }}
         {% else %}
             {{ content | safe }}
             {% if image %}
-                <img src="{{ image }}" alt="{{ title }}">
+                <img class="post-image" src="{{ image }}" alt="{{ title }}">
             {% endif %}
         {% endif %}
     </div>
