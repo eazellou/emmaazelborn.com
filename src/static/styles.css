@@ -373,6 +373,11 @@ a.event-location:hover,
     max-width: 80rem;
 }
 
+.post-image {
+    max-height: 32rem;
+    width: auto;
+}
+
 picture,
 img {
     max-width: 100%;
