@@ -1,7 +1,7 @@
 ---
 title: Trad Songs Centering Women & Queerness
 date: 2026-07-08
-image:
+image: /static/images/audrey-sketch-by-angela.avif
 description: A spreadsheet of almost 100 traditional song recommendations centering women and queerness
 ---
 
