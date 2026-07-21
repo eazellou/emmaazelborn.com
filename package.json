@@ -26,6 +26,7 @@
         "@playwright/test": "^1.59.1",
         "eslint": "^9.15.0",
         "eslint-config-prettier": "^9.1.0",
+        "glob": "^11.1.0",
         "globals": "^15.12.0",
         "http-server": "^14.1.1",
         "markdownlint-cli": "^0.49.1",
