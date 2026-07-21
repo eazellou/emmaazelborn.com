@@ -25,12 +25,12 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
 
             - name: Use Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v5
               with:
-                  node-version: 20.7.0
+                  node-version: '20.x'
                   cache: 'npm'
 
             - name: Install dependencies
@@ -42,8 +42,26 @@ jobs:
             - name: Build 11ty
               run: npm run build
 
+            # Chromium is ~112 MiB; cache it so we only download on version bumps.
+            - name: Get Playwright version
+              id: playwright-version
+              run: echo "version=$(node -p "require('./package-lock.json').packages['node_modules/@playwright/test'].version")" >> "$GITHUB_OUTPUT"
+
+            - name: Cache Playwright browser
+              id: playwright-cache
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/ms-playwright
+                  key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
             - name: Install Playwright browser
+              if: steps.playwright-cache.outputs.cache-hit != 'true'
               run: npx playwright install --with-deps chromium
+
+            # Cached browsers restore the binary but not the apt system deps.
+            - name: Install Playwright system dependencies
+              if: steps.playwright-cache.outputs.cache-hit == 'true'
+              run: npx playwright install-deps chromium
 
             - name: Run smoke tests
               run: npm run test:nobuild
@@ -79,4 +97,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
