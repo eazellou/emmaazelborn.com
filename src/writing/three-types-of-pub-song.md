@@ -10,7 +10,9 @@ If you've ever led a song at a pub sing, you've been in the room thinking about 
 
 ### Pickupable
 
-A pickupable song will quickly get most folks singing along even if they've never heard the song before. It might have a simple chorus, an easy refrain or repeating line, or be call and response. It usually doesn't need a teach for folks to pick it up (unless the crowd is especially new to group singing). When a pickupable song is led at a sing, the whole room is full of confident singing. Some examples include lots of shanties like Sam's Gone Away, Santiana, Cape Cod Girls, etc, repeating refrain songs like Chickalaleeoh and Old Jacky Frost, or call and response songs like When I Rise and Tinny Lend Me Your Pigeon.
+A pickupable song will quickly get most folks singing along even if they've never heard the song before. It might have a simple chorus, an easy refrain or repeating line, or be call and response. It usually doesn't need a teach for folks to pick it up (unless the crowd is especially new to group singing). When a pickupable song is led at a sing, the whole room is full of confident singing.
+
+Some examples include lots of shanties like Sam's Gone Away, Santiana, Cape Cod Girls, etc, repeating refrain songs like Chickalaleeoh and Old Jacky Frost, or call and response songs like When I Rise and Tinny Lend Me Your Pigeon.
 
 ### Challenging
 
