@@ -37,6 +37,7 @@ It can be tough to judge how hard a song is to join. If you're excited about a s
 - How simple is the melody and rhythm? Are there big or surprising jumps in the melody? Does it have a tricky note?
 - Do the words the group sings change? If so, how long is it between hearing the words and singing them back?
 - How similar is it to other folk songs? A song with familiar tropes or melodic phrases will be easier for folks to pick up. A song with unexpected moments will be trickier
+- How strongly do I hear instruments in my head when I sing it? For example, if you always imagine a big guitar hit that helps set up the chorus, you might not realize the rhythm is tricky for folks who haven't heard the version with instruments
 
 Whether a song is pickupable or not depends on the skill level of the room as well as the difficulty of the song itself. A song might be pickupable at one sing but challenging at another. Following along with a song you don't know is itself a skill, so therefore the threshold for a song to be considered challenging is a lot higher in a room with skillful followers than in a room full of newcomers.
 
