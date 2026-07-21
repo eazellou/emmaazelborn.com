@@ -22,7 +22,7 @@ A challenging song is difficult to pick up and sing along with on first listen. 
 
 A standard song is a challenging song that is known by enough folks at the sing that it goes well even though it's difficult to pick up. It might have one or two spots that are easy and fun for everyone to join within the larger, trickier song. There are enough folks in the room singing it confidently that it is easier for others to join in and blend in with the crowd as they catch bits and pieces of it.
 
-Which specific songs are standard songs varies widely sing to sing and region to region. Some local examples at Violet Folk Sings include Old Dun Cow, Katie Cruel, When We Sing Together, and My Home.
+Which specific songs are standard songs varies widely sing to sing and region to region. Some local examples at [Violet Folk Sings](https://www.violetfolksings.org/) include Old Dun Cow, Katie Cruel, When We Sing Together, and My Home.
 
 ![Pub song categories on two axes](/static/images/types-of-pub-song.png)
 
@@ -48,7 +48,9 @@ When you're at a sing, you can try to judge the skill of the room by seeing how 
 
 ### How songs become standard
 
-If you have a challenging song that you love, and you want it to be standard at your local sing, you can make that happen. Sing it at several events in a row, in moments when the room has capacity for a challenging song. Teach it to friends so that they can sing along with you and be plants in the room. Consider a teach to introduce it to the room before you start; be aware of how much time your intro takes up so you don't dominate the floor for too long. Over time folks will know it more and more, you'll get known as "the person who sings x song", and eventually you'll reach critical mass and it'll be a standard. Be careful and thoughtful as you do this, because there's only so much capacity for challenging songs at a given sing. Pay attention to how up for learning the room is feeling, and to how many challenging or standard songs have happened already.
+If you have a challenging song that you love, and you want it to be standard at your local sing, you can make that happen. Sing it at several events in a row, in moments when the room has capacity for a challenging song. Teach it to friends so that they can sing along with you and be plants in the room. Consider a teach to introduce it to the room before you start; be aware of how much time your intro takes up so you don't dominate the floor for too long. Over time folks will know it more and more, you'll get known as "the person who sings x song", and eventually you'll reach critical mass and it'll be a standard.
+
+Be careful and thoughtful as you do this, because there's only so much capacity for challenging songs at a given sing. Pay attention to how up for learning the room is feeling, and to how many challenging or standard songs have happened already.
 
 ## Choosing when to lead your song
 
