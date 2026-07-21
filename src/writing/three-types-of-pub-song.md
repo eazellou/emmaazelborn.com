@@ -20,7 +20,9 @@ A challenging song is difficult to pick up and sing along with on first listen. 
 
 ### Standard
 
-A standard song is a challenging song that is known by enough folks at the sing that it goes well even though it's difficult to pick up. It might have one or two spots that are easy and fun for everyone to join within the larger, trickier song. There are enough folks in the room singing it confidently that it is easier for others to join in and blend in with the crowd as they catch bits and pieces of it. Which specific songs are standard songs varies widely sing to sing and region to region. Some local examples at Violet Folk Sings include Old Dun Cow, Katie Cruel, When We Sing Together, and My Home.
+A standard song is a challenging song that is known by enough folks at the sing that it goes well even though it's difficult to pick up. It might have one or two spots that are easy and fun for everyone to join within the larger, trickier song. There are enough folks in the room singing it confidently that it is easier for others to join in and blend in with the crowd as they catch bits and pieces of it.
+
+Which specific songs are standard songs varies widely sing to sing and region to region. Some local examples at Violet Folk Sings include Old Dun Cow, Katie Cruel, When We Sing Together, and My Home.
 
 ![Pub song categories on two axes](/static/images/types-of-pub-song.png)
 
