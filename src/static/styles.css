@@ -382,6 +382,35 @@ a.event-location:hover,
     margin-bottom: 0.8rem;
 }
 
+.post-content ul,
+.post-content ol {
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+    padding-left: 3rem;
+}
+
+.post-content ul {
+    list-style: disc;
+}
+
+.post-content ol {
+    list-style: decimal;
+}
+
+.post-content li {
+    margin-bottom: 0.8rem;
+}
+
+.post-content li:last-child {
+    margin-bottom: 0;
+}
+
+.post-content li ul,
+.post-content li ol {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
 .post-image {
     max-height: 32rem;
     width: auto;
