@@ -1,29 +1,29 @@
 ---
 title: Hire Me
 layout: page.njk
-description: Hire Emma Azelborn for audio engineering, song leading, private music lessons, or software engineering work.
+description: Hire Emma Azelborn for audio engineering, song leading & workshops, music lessons, or software engineering work.
 ---
 
-I do a few different kinds of work. Jump to a section for details, or [get in touch](/contact) if you're not sure where your project fits.
+- [Audio production](#audio-production)
+- [Song leading](#song-leading)
+- [Lessons](#lessons)
+- [Software](#software)
 
-- [Audio engineering](#audio-engineering) — recording, editing, and mixing
-- [Song leading](#song-leading) — leading group singing for events and gatherings
-- [Private lessons](#private-lessons) — songwriting, song leading, music theory, and voice
-- [Software engineering](#software-engineering) — my other career
-
-## Audio engineering
-
-I record, edit, and mix music for other artists and projects. Whether you need a full session tracked from scratch, an existing recording cleaned up and edited, or a rough mix polished into something releasable, I can help.
-
-[Get in touch](/contact) with a bit about your project — instrumentation, timeline, and whether you're looking for recording, mixing, or both — and I'll follow up with availability and rates.
+## Audio production
 
 ## Song leading
 
-I lead group singing for events, retreats, and gatherings — teaching songs by ear, leading rounds and harmonies, and helping a room full of people (many of whom don't think of themselves as singers) sound great together. I co-organize [Violet Folk Sings](https://www.violetfolksings.org/), a social folk singing event, so this is something I do regularly.
+I love helping folks connect through singing, whether they're seasoned social folk singers or brand new to the tradition.
 
-If you're planning an event and want a song leader, [reach out](/contact) with the date, size of group, and what kind of occasion it is.
+> Emma’s song sessions at FolkMadness were one of the absolute highlights of the weekend. Through song, she managed to carry the room through the full range of human emotion. We laughed until we cried, then actually cried, learned brand new songs, and rediscovered some old favorites reimagined.
+>
+> What stood out most to me was how welcoming and inclusive her leadership felt. Whether someone was a lifelong folk singer or brand new, Emma created a space where everyone could participate fully and authentically. Her sessions were educational without feeling rigid, joyful without feeling performative, and rooted in the spirit of folk music and community. I would consider myself lucky to attend any other camp or event she helps lead.
+>
+> \- Emily McFadden, FolkMadness 2026
 
-## Private lessons
+![Leading harmony singing at Swing Into Summer at Pinewoods Dance Camp](/static/images/swing-into-summer.JPG)
+
+## Lessons
 
 I teach one-on-one lessons in:
 
@@ -34,6 +34,6 @@ I teach one-on-one lessons in:
 
 Lessons can be in person or remote. [Contact me](/contact) to set up a first lesson or ask questions about fit.
 
-## Software engineering
+## Software
 
 Music isn't my only trade — I'm also a software engineer, and I'm interested in eventually taking on a full-time engineering role again. You can view my [resume (PDF)](/static/documents/emma-azelborn-resume.pdf), my background on [LinkedIn](https://www.linkedin.com/in/emmaazelborn/), and my code on [GitHub](https://github.com/eazellou). If you're hiring, I'd love to hear from you — [get in touch](/contact).
