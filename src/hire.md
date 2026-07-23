@@ -13,21 +13,22 @@ description: Hire Emma Azelborn for audio engineering, song leading & workshops,
 
 I record, edit, and mix music. I have a degree in audio engineering from the University of Michigan.
 
-https://www.youtube.com/watch?v=MNHChz4os68
-Recording Engineer: Emma Azelborn
-Mixing Engineer: Emma Azelborn
-Mastering Engineer: Everest Witman
+<div class="song-youtube">
+    <div class="song-youtube-aspect">
+        <iframe src="https://www.youtube-nocookie.com/embed/MNHChz4os68" title="Audio production example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="song-youtube-caption">Recording Engineer: Emma Azelborn<br>Mixing Engineer: Emma Azelborn<br>Mastering Engineer: Everest Witman</p>
+</div>
 
-https://emmaazelborn.bandcamp.com/track/trees
-Recording Engineer: Emma Azelborn
-Mixing Engineer: Emma Azelborn
-Mastering Engineer: Everest Witman
+<div class="song-youtube">
+    <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album=1983118898/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track=3139554436/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com/track/trees">Trees by Emma Azelborn</a></iframe>
+    <p class="song-youtube-caption">Recording Engineer: Emma Azelborn<br>Mixing Engineer: Emma Azelborn<br>Mastering Engineer: Everest Witman</p>
+</div>
 
-https://emmaazelborn.bandcamp.com/track/making-a-promise-to-myself
-Pre-production Engineer: Emma Azelborn
-Recording Engineers: Steven Bluestein and Abe Joyner-Meyers
-Mixing Engineer: Emma Azelborn
-Mastering Engineer: Lena Sutter
+<div class="song-youtube">
+    <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album=3577763146/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/track=3623366432/transparent=true/" seamless><a href="https://emmaazelborn.bandcamp.com/track/making-a-promise-to-myself">Making A Promise To Myself by Emma Azelborn</a></iframe>
+    <p class="song-youtube-caption">Pre-production Engineer: Emma Azelborn<br>Recording Engineers: Steven Bluestein and Abe Joyner-Meyers<br>Mixing Engineer: Emma Azelborn<br>Mastering Engineer: Lena Sutter</p>
+</div>
 
 ## Song leading
 
