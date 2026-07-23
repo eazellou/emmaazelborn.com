@@ -1166,7 +1166,7 @@ blockquote {
 }
 
 .hire-photo img {
-    max-width: 50rem;
+    max-width: min(100%, 50rem);
 }
 
 .hire-photo figcaption {
