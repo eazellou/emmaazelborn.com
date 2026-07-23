@@ -83,6 +83,28 @@
         });
       });
 
+      // In-page anchor links (e.g. "#audio-production") need manual scrolling because
+      // .page-content, not the document, is the scrolling container.
+      function scrollToHash(hash) {
+        if (!hash) return;
+        const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const hash = this.getAttribute('href');
+          if (!hash || hash === '#') return;
+          e.preventDefault();
+          scrollToHash(hash);
+          history.pushState(null, '', hash);
+        });
+      });
+
+      if (window.location.hash) {
+        scrollToHash(window.location.hash);
+      }
+
       // Expand/collapse event descriptions (toggle: read more… / show less)
       document.querySelectorAll('.event-description-toggle').forEach(btn => {
         btn.addEventListener('click', function() {

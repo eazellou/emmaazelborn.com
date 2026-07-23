@@ -11,6 +11,24 @@ description: Hire Emma Azelborn for audio engineering, song leading & workshops,
 
 ## Audio production
 
+I record, edit, and mix music. I have a degree in audio engineering from the University of Michigan.
+
+https://www.youtube.com/watch?v=MNHChz4os68
+Recording Engineer: Emma Azelborn
+Mixing Engineer: Emma Azelborn
+Mastering Engineer: Everest Witman
+
+https://emmaazelborn.bandcamp.com/track/trees
+Recording Engineer: Emma Azelborn
+Mixing Engineer: Emma Azelborn
+Mastering Engineer: Everest Witman
+
+https://emmaazelborn.bandcamp.com/track/making-a-promise-to-myself
+Pre-production Engineer: Emma Azelborn
+Recording Engineers: Steven Bluestein and Abe Joyner-Meyers
+Mixing Engineer: Emma Azelborn
+Mastering Engineer: Lena Sutter
+
 ## Song leading
 
 I love helping folks connect through singing, whether they're seasoned social folk singers or brand new to the tradition.
