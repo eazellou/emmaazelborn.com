@@ -65,12 +65,6 @@ I record, edit, and mix music, backed by a degree in audio engineering from the 
 
 I offer private music lessons, in person in Boston, MA or remotely. I teach songwriting, song leading, singing, and beginner Irish whistle.
 
-Rates:
-
-- 30 minute lesson: $40
-- 45 minute lesson: $50
-- 1 hour lesson: $60
-
 ## Software
 
 I have a decade of experience as a professional software engineer in the music industry. I was the tech lead for iZotope Ozone, and most recently worked for Adobe Podcast. Software that enables musicians to be creative, to bring their music to life and realize the sound in their head in the real world, is my passion. I'm currently in between software roles and looking for new opportunities.
