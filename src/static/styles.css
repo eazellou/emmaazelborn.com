@@ -1107,7 +1107,7 @@ blockquote {
 }
 
 /* 12. Hire page */
-.hire-page {
+.hire-page .main-content {
     max-width: 90rem;
 }
 
@@ -1116,13 +1116,13 @@ blockquote {
     max-width: 80rem;
 }
 
-.hire-page h2 {
+.hire-page h2:not(.page-title) {
     margin-top: 5rem;
     padding-top: 3rem;
     border-top: 2px solid var(--color-semi-dark-purple);
 }
 
-.hire-page h2:first-of-type {
+.hire-jumpnav + h2 {
     margin-top: 0;
 }
 

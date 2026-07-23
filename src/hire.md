@@ -1,10 +1,9 @@
 ---
 title: Hire Me
 layout: page.njk
+bodyClass: hire-page
 description: Hire Emma Azelborn for audio engineering, song leading & workshops, music lessons, or software engineering work.
 ---
-
-<div class="hire-page">
 
 <ul class="hire-jumpnav">
     <li><a class="button" href="#song-leading">Song leading</a></li>
@@ -67,8 +66,6 @@ I offer private music lessons, in person in Boston, MA or remotely. I teach song
 
 ## Software
 
-I have a decade of experience as a professional software engineer in the music industry. I was the tech lead for iZotope Ozone, and most recently worked for Adobe Podcast. Software that enables musicians to be creative, to bring their music to life and realize the sound in their head in the real world, is my passion. I'm currently in between software roles and looking for new opportunities.
+I have a decade of experience as a software engineer in the music industry. I was the tech lead for iZotope Ozone, and most recently worked for Adobe Podcast. Software that enables musicians to be creative, to bring their music to life and realize the sound in their head in the real world, is my passion. I'm currently in between software roles and looking for new opportunities.
 
 Here's my [resume](/static/documents/emma-azelborn-resume.pdf) and my [LinkedIn](https://www.linkedin.com/in/emmaazelborn/). [Get in touch](/contact) if you think I'd be a good fit at your company.
-
-</div>
