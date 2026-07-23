@@ -42,7 +42,7 @@ I record, edit, and mix music. I have a degree in audio engineering from the Uni
 
 ## Song leading
 
-I love helping folks connect through singing, whether they're seasoned social folk singers or brand new to the tradition.
+I love helping folks connect through singing, whether they're seasoned social folk singers or brand new to the tradition. I lead singing sessions and workshops, have a repertoire of songs to share with singers of all ability levels, and facilitate community led singing.
 
 > Emma’s song sessions at FolkMadness were one of the absolute highlights of the weekend. Through song, she managed to carry the room through the full range of human emotion. We laughed until we cried, then actually cried, learned brand new songs, and rediscovered some old favorites reimagined.
 >
