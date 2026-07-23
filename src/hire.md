@@ -15,7 +15,7 @@ description: Hire Emma Azelborn for audio engineering, song leading & workshops,
 
 ## Audio production
 
-I record, edit, and mix music. I have a degree in audio engineering from the University of Michigan.
+I record, edit, and mix music. I have a degree in audio engineering from the University of Michigan. I have access to [The Record Co.](https://therecordco.org/), a non-profit recording studio space in Boston, MA, and have experience making asynchronous records recorded in home studios sound cohesive and musical.
 
 <div class="hire-credit-card">
     <div class="hire-credit-card-embed song-youtube">
