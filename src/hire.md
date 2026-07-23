@@ -25,15 +25,18 @@ I love helping folks connect through singing, whether they're seasoned social fo
 
 ## Lessons
 
-I teach one-on-one lessons in:
+I offer private music lessons, in person in Boston, MA or remotely. I teach songwriting, song leading, singing, and beginner Irish whistle.
 
-- **Songwriting** — for people working on their own songs, at any stage from a first idea to a finished demo
-- **Song leading** — how to teach a song by ear, hold a room, and lead group singing with confidence
-- **Music theory** — practical theory grounded in real songs, not just worksheets
-- **Voice** — technique and expression for singers of all levels
+Rates:
 
-Lessons can be in person or remote. [Contact me](/contact) to set up a first lesson or ask questions about fit.
+30 minute lesson: $40
+
+45 minute lesson: $50
+
+1 hour lesson: $60
 
 ## Software
 
-Music isn't my only trade — I'm also a software engineer, and I'm interested in eventually taking on a full-time engineering role again. You can view my [resume (PDF)](/static/documents/emma-azelborn-resume.pdf), my background on [LinkedIn](https://www.linkedin.com/in/emmaazelborn/), and my code on [GitHub](https://github.com/eazellou). If you're hiring, I'd love to hear from you — [get in touch](/contact).
+I have a decade of experience as a professional software engineer in the music industry. I was the tech lead for iZotope Ozone, and most recently worked for Adobe Podcast. Software that enables musicians to be creative, to bring their music to life and realize the sound in their head in the real world, is my passion. I'm currently in between software roles and looking for new opportunities.
+
+Here's my [resume (PDF)](/static/documents/emma-azelborn-resume.pdf) and my [LinkedIn](https://www.linkedin.com/in/emmaazelborn/). [Get in touch](/contact) if you think I'd be a good fit at your company.
