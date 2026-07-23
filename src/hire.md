@@ -2,7 +2,7 @@
 title: Hire Me
 layout: page.njk
 bodyClass: hire-page
-description: Hire Emma Azelborn for audio engineering, song leading & workshops, music lessons, or software engineering work.
+description: Hire Emma Azelborn for audio production, song leading & workshops, music lessons, or software engineering work.
 ---
 
 <ul class="hire-jumpnav">
