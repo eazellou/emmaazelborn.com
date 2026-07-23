@@ -5,6 +5,7 @@ import { feedPlugin } from '@11ty/eleventy-plugin-rss'
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
+import markdownItAnchor from 'markdown-it-anchor'
 import calendarFilters from './eleventy/filters/calendar.js'
 import eventFilters from './eleventy/filters/events.js'
 import lyricsFilter from './eleventy/filters/lyrics.js'
@@ -95,7 +96,9 @@ export default async function (eleventyConfig) {
         typographer: true,
     }
 
-    const markdownLib = markdownIt(markdownItOptions).use(markdownItFootnote)
+    const markdownLib = markdownIt(markdownItOptions)
+        .use(markdownItFootnote)
+        .use(markdownItAnchor, { level: [2, 3] })
     eleventyConfig.setLibrary('md', markdownLib)
 
     // add a markdown filter
