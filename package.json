@@ -44,5 +44,8 @@
         "markdown-it-anchor": "^9.2.1",
         "markdown-it-footnote": "^4.0.0",
         "node-ical": "^0.25.3"
+    },
+    "overrides": {
+        "sharp": "^0.35.3"
     }
 }
