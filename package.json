@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
+        "prepare": "git config core.hooksPath hooks",
         "test": "npm run build && playwright test",
         "test:ui": "npm run build && playwright test --ui",
         "test:nobuild": "playwright test",
