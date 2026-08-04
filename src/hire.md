@@ -64,6 +64,10 @@ I love helping folks connect through singing, whether they're seasoned social fo
 
 I offer private music lessons, in person in Boston, MA or remotely. I teach songwriting, song leading, singing, and beginner Irish whistle.
 
+> I've gotten Emma's feedback on both the songs I've written. On one, her feedback on the draft led to a major rewrite, and on the other, she showed me a small tweak I could make to clarify what the song was about. In both cases talking to Emma made my songs better and helped them get from draft to finished form.
+>
+> \- Alex Ellis
+
 ## Software
 
 I have a decade of experience as a software engineer in the music industry. I was the tech lead for iZotope Ozone, and most recently worked for Adobe Podcast. Software that enables musicians to be creative, to bring their music to life and realize the sound in their head in the real world, is my passion. I'm currently in between software roles and looking for new opportunities.
