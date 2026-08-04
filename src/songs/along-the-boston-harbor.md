@@ -29,6 +29,9 @@ Union Wharf with the steamships
 Lincoln Wharf with the power plant
 Battery Wharf with the sea wall
 
+_ending:_
+Along the Boston Harbor!
+
 ---
 
 We saw Long Wharf, the longest wharf
@@ -100,4 +103,6 @@ And Lewis Wharf with the granite stores
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus_
+_chorus (x2)_
+
+Along the Boston Harbor!
