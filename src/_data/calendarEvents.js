@@ -126,7 +126,10 @@ export default async function () {
 
     if (failedCalendarIds.length > 0) {
         const message = `Calendar fetch failed with no usable data (fresh or cached) for: ${failedCalendarIds.join(', ')}. Refusing to build an events page that would silently be missing events.`
-        console.error(`::error::${message}`)
+        // GitHub Actions only recognizes `::error::` as a workflow command
+        // annotation when it's written to stdout (console.error writes to
+        // stderr and would be treated as plain log output, not an annotation).
+        console.log(`::error::${message}`)
         throw new Error(message)
     }
 
