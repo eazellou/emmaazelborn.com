@@ -8,14 +8,27 @@ The site is built using the following structure:
 
 ```text
 src/
-├── _layouts/          # Nunjucks templates
-│   ├── base.njk      # Base layout with common HTML structure
-│   ├── post.njk      # Layout for blog posts
-│   └── page.njk      # Layout for regular pages
-├── blog/             # Blog posts in Markdown
-├── index.njk         # Homepage template
+├── _data/             # Global data files (site config, calendar feeds/events)
+│   ├── config.yaml    # Site-level config (e.g. homepage highlighted projects)
+│   ├── calendars.js   # Google Calendar feed metadata
+│   └── calendarEvents.js  # Fetches/parses calendar feeds at build time
+├── _layouts/           # Nunjucks templates
+│   ├── base.njk       # Base layout with common HTML structure
+│   ├── post.njk       # Layout for blog posts
+│   ├── page.njk       # Layout for regular pages
+│   ├── project.njk    # Layout for project pages
+│   ├── song.njk       # Layout for song pages
+│   ├── events.njk     # Layout for the events page
+│   └── includes/      # Shared partials
+├── writing/            # Blog posts in Markdown (permalink pattern p/<slug>/)
+├── songs/              # Song pages in Markdown (lyrics as body content)
+├── projects/           # Project pages in Markdown (albums, releases)
+├── static/             # Passed through as-is to dist/static/ (styles, audio, images, scores)
+├── home.njk            # Homepage template
 └── ...other pages
 ```
+
+`eleventy/filters/` (project root, not under `src/`) holds custom Eleventy filters registered in `eleventy.config.js`: `calendar.js` (filter events by calendar ID), `events.js` (date/location formatting), and `lyrics.js` (stanza rendering for song pages).
 
 ## Development
 

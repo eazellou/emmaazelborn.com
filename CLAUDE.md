@@ -5,13 +5,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run serve      # Dev server at http://localhost:8080 (PROD=0, no cache)
-npm run build      # Production build to dist/ (PROD=1, 1d cache)
-npm run lint       # Run JS (eslint) + Markdown (markdownlint) linting
-npm run format     # Auto-format with Prettier
+npm run serve         # Dev server at http://localhost:8080 (PROD=0, no cache)
+npm run build         # Production build to dist/ (PROD=1, 1d cache)
+npm run test          # Build, then run the Playwright test suite against dist/
+npm run test:nobuild  # Run the Playwright test suite against the existing dist/ (skips the rebuild)
+npm run lint          # Run JS (eslint) + Markdown (markdownlint) linting
+npm run format        # Auto-format with Prettier
 ```
 
-No test suite — verify changes by running `serve` and checking the browser.
+Tests live in `tests/` and run against the built site (`dist/`) via a local `http-server`, not the dev server — see `playwright.config.js` for the webServer/port setup. Coverage includes:
+
+- `tests/smoke.spec.js` — key pages (homepage, a song page, a project page, writing index + a post, events page) render without console errors and show expected content
+- `tests/links.spec.js` — every internal `href` in the built HTML resolves to a real file in `dist/`
+- `tests/seo.spec.js` — `robots.txt`/`sitemap.xml` are correct and pages set proper meta descriptions
+
+`npm run test` always rebuilds first, so it reflects your latest changes; use `npm run test:nobuild` only when `dist/` is already current (e.g. re-running after a test-only edit). CI (`.github/workflows/build.yml`) lints, builds, caches the Playwright Chromium binary, installs it (with retries for system deps), and runs `npm run test:nobuild` against that build on every push/PR to `main`.
 
 Always run `npm run lint && npm run format:check` before finalizing any changes. If `format:check` fails, run `npm run format` to auto-fix.
 
@@ -31,7 +39,7 @@ This serves the worktree from a deterministic port derived from the branch name 
 
 ## Architecture
 
-This is an [Eleventy](https://www.11ty.dev/) static site. Source is in `src/`, output goes to `dist/`. Templates use Nunjucks (`.njk`); Markdown also runs through Nunjucks. Layouts and includes are both in `src/_layouts/`.
+This is an [Eleventy](https://www.11ty.dev/) static site. Source is in `src/`, output goes to `dist/`. Templates use Nunjucks (`.njk`). `eleventy.config.js` sets `markdownTemplateEngine: 'njk'`, intending for Markdown files to also run through Nunjucks, but the build currently processes them via Liquid instead (visible in the `npm run build` log, e.g. `(liquid)` next to each `.md` output) — see issue #50. Layouts and includes are both in `src/_layouts/`.
 
 ### Content collections
 
