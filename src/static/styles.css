@@ -702,15 +702,8 @@ body {
     margin-top: 0.5rem;
 }
 
-.song-lyrics .stanza {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
 .song-lyrics .stanza-empty {
-    min-height: calc(1 * var(--line-height-base-rem));
-    padding-top: 0;
-    padding-bottom: 0;
+    min-height: var(--line-height-base-rem);
 }
 
 .song-lyrics .stanza p {
