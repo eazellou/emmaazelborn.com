@@ -8,9 +8,9 @@ description: 'I am making a promise to myself'
 ---
 
 I am making a promise to myself
-I am making a promise to myself
+**I am making a promise to myself
 'cause I respect myself as much as anyone else
-I am making a promise to myself
+I am making a promise to myself**
 
 I will stand by this promise to myself
 …
