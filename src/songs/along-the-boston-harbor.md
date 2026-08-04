@@ -36,6 +36,7 @@ Along the Boston Harbor!
 
 We saw Long Wharf, the longest wharf
 
+_chorus:_
 **Along the Boston Harbor**
 **There's boats and ships galore**
 **And we say hi and pass them by**
@@ -43,88 +44,65 @@ We saw Long Wharf, the longest wharf
 
 We saw...
 Commercial Wharf with the counting house!
-Commercial Wharf with the counting house!
+**Commercial Wharf with the counting house!**
 
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus_
 
 We saw...
 Lewis Wharf with the granite stores!
-Lewis Wharf with the granite stores!
+**Lewis Wharf with the granite stores!**
 
-And Commercial Wharf with the counting house
+**And Commercial Wharf with the counting house**
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus_
 
 We saw...
 Sargents Wharf with the cold storage!
-Sargents Wharf with the cold storage!
+**Sargents Wharf with the cold storage!**
 
-And Lewis Wharf with the granite stores
-And Commercial Wharf with the counting house
+**And Lewis Wharf with the granite stores**
+**And Commercial Wharf with the counting house**
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus_
 
 We saw...
 Union Wharf with the steamships!
-Union Wharf with the steamships!
+**Union Wharf with the steamships!**
 
-And Sargents Wharf with the cold storage
-And Lewis Wharf with the granite stores
-And Commercial Wharf with the counting house
+**And Sargents Wharf with the cold storage**
+**And Lewis Wharf with the granite stores**
+**And Commercial Wharf with the counting house**
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus_
 
 We saw...
 Lincoln Wharf with the power plant!
-Lincoln Wharf with the power plant!
+**Lincoln Wharf with the power plant!**
 
-And Union Wharf with the steamships
-And Sargents Wharf with the cold storage
-And Lewis Wharf with the granite stores
-And Commercial Wharf with the counting house
+**And Union Wharf with the steamships**
+**And Sargents Wharf with the cold storage**
+**And Lewis Wharf with the granite stores**
+**And Commercial Wharf with the counting house**
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus_
 
 We saw...
 Battery Wharf with the sea wall!
-Battery Wharf with the sea wall!
+**Battery Wharf with the sea wall!**
 
-And Lincoln Wharf with the power plant
-And Union Wharf with the steamships
-And Sargents Wharf with the cold storage
-And Lewis Wharf with the granite stores
-And Commercial Wharf with the counting house
+**And Lincoln Wharf with the power plant**
+**And Union Wharf with the steamships**
+**And Sargents Wharf with the cold storage**
+**And Lewis Wharf with the granite stores**
+**And Commercial Wharf with the counting house**
 And Long Wharf, the longest wharf!!
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
+_chorus (x2)_
 
-**Along the Boston Harbor**
-**There's boats and ships galore**
-**And we say hi and pass them by**
-**On our way to the North Shore**
-
-Along the Boston Harbor!
+**Along the Boston Harbor!**
