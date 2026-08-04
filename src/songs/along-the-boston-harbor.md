@@ -16,6 +16,7 @@ On our way to the North Shore
 
 we saw...
 Commercial Wharf with the counting house!
+Commercial Wharf with the counting house!
 
 and
 ...
