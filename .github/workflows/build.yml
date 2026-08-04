@@ -24,6 +24,7 @@ permissions:
 jobs:
     build:
         runs-on: ubuntu-latest
+        timeout-minutes: 15
         steps:
             - uses: actions/checkout@v5
 
@@ -57,11 +58,18 @@ jobs:
             - name: Install Playwright browser
               if: steps.playwright-cache.outputs.cache-hit != 'true'
               run: npx playwright install --with-deps chromium
+              timeout-minutes: 5
 
             # Cached browsers restore the binary but not the apt system deps.
+            # Retries + a short per-attempt timeout guard against slow/flaky
+            # apt mirrors turning this into a multi-minute hang.
             - name: Install Playwright system dependencies
               if: steps.playwright-cache.outputs.cache-hit == 'true'
-              run: npx playwright install-deps chromium
+              uses: nick-fields/retry@v3
+              with:
+                  timeout_minutes: 3
+                  max_attempts: 3
+                  command: npx playwright install-deps chromium
 
             - name: Run smoke tests
               run: npm run test:nobuild
