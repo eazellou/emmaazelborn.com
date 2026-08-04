@@ -9,18 +9,18 @@ _intro:_
 We saw Long Wharf, the longest wharf
 
 _chorus:_
-Along the Boston Harbor
+**Along the Boston Harbor
 There's boats and ships galore
 And we say hi and pass them by
-On our way to the North Shore
+On our way to the North Shore**
 
 We saw...
 Commercial Wharf with the counting house!
-Commercial Wharf with the counting house!
+**Commercial Wharf with the counting house!**
 
-And
+**And
 ...
-And Long Wharf, the longest wharf!!
+And Long Wharf, the longest wharf!!**
 
 _on each repeat, add the next wharf going towards north shore:_
 Lewis Wharf with the granite stores
@@ -30,7 +30,7 @@ Lincoln Wharf with the power plant
 Battery Wharf with the sea wall
 
 _ending:_
-Along the Boston Harbor!
+**Along the Boston Harbor!**
 
 ---
 
