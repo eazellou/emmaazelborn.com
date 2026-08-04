@@ -127,6 +127,28 @@
         });
       });
 
+      // Toggle between structural and full song lyrics
+      document.querySelectorAll('.song-lyrics-toggle-button').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const wrap = this.closest('.song-lyrics-toggle').parentElement;
+          const structural = wrap.querySelector('.song-lyrics[data-lyrics-view="structural"]');
+          const full = wrap.querySelector('.song-lyrics[data-lyrics-view="full"]');
+          if (!structural || !full) return;
+          const showingFull = this.getAttribute('aria-pressed') === 'true';
+          if (showingFull) {
+            full.hidden = true;
+            structural.hidden = false;
+            this.setAttribute('aria-pressed', 'false');
+            this.textContent = 'Show full lyrics';
+          } else {
+            structural.hidden = true;
+            full.hidden = false;
+            this.setAttribute('aria-pressed', 'true');
+            this.textContent = 'Show structural lyrics';
+          }
+        });
+      });
+
       // Only show expand button when description actually overflows 2 lines (run after layout)
       function hideUnneededExpandButtons() {
         document.querySelectorAll('.event-description-wrap.event-description--truncated').forEach(wrap => {

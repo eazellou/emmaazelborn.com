@@ -31,9 +31,18 @@
         {% elif not released %}
         <p><em>This song is not released yet, but I've been singing it out in the world. Feel free to learn it and sing it with your friends!</em></p>
         {% endif %}
-        <div class="song-lyrics">
-            {{ content | lyrics | safe }}
+        {% set lyricsSections = content | lyricsSections %}
+        <div class="song-lyrics" data-lyrics-view="structural">
+            {{ lyricsSections.structural | safe }}
         </div>
+        {% if lyricsSections.full %}
+        <div class="song-lyrics" data-lyrics-view="full" hidden>
+            {{ lyricsSections.full | safe }}
+        </div>
+        <div class="song-lyrics-toggle">
+            <button type="button" class="song-lyrics-toggle-button" aria-pressed="false">Show full lyrics</button>
+        </div>
+        {% endif %}
         {% if released %}
           {% for rel in released %}
             {% if rel.bandcampTrackId %}
