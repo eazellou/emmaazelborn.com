@@ -628,6 +628,25 @@ body {
     padding-top: 2rem;
 }
 
+.song-lyrics-toggle {
+    padding-top: 2rem;
+}
+
+.song-lyrics-toggle-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    color: var(--color-dark-purple);
+    background-color: var(--color-extra-light-purple);
+    border: none;
+    cursor: pointer;
+}
+
+.song-lyrics-toggle-button:hover {
+    text-decoration: underline;
+}
+
 .song-voice-memo-caption {
     margin-top: 0.5rem;
 }

@@ -3,6 +3,10 @@
  */
 function stanzaHtmlToDivs(lyricsHtml) {
     const normalized = lyricsHtml.replace(/<p>\s*<\/p>/g, '<p class="empty-stanza-marker"></p>')
+    return stanzasFromHtml(normalized)
+}
+
+function stanzasFromHtml(normalized) {
     const paragraphs = []
     const paraRegex = /<p[^>]*>([\s\S]*?)<\/p>/g
     let match
@@ -44,6 +48,22 @@ function stanzaHtmlToDivs(lyricsHtml) {
     return result
 }
 
+/**
+ * Splits markdown-rendered lyrics HTML on a "***" horizontal rule into a
+ * structural (default) section and an optional fully-written-out section,
+ * each rendered to stanza divs. Songs without a "***" separator only have
+ * a structural section.
+ */
+function stanzaSections(lyricsHtml) {
+    const [structuralHtml, ...rest] = lyricsHtml.split(/<hr\s*\/?>/)
+    const fullHtml = rest.join('')
+    return {
+        structural: stanzaHtmlToDivs(structuralHtml),
+        full: rest.length > 0 ? stanzaHtmlToDivs(fullHtml) : null,
+    }
+}
+
 export default function (eleventyConfig) {
     eleventyConfig.addFilter('lyrics', stanzaHtmlToDivs)
+    eleventyConfig.addFilter('lyricsSections', stanzaSections)
 }
