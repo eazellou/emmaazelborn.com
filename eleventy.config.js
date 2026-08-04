@@ -124,10 +124,6 @@ export default async function (eleventyConfig) {
         excerpt_separator: '+++',
     })
 
-    eleventyConfig.addFilter('log', (value) => {
-        console.log(value)
-    })
-
     // Add RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
         type: 'atom',
