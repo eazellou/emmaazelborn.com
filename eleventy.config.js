@@ -9,6 +9,7 @@ import markdownItAnchor from 'markdown-it-anchor'
 import calendarFilters from './eleventy/filters/calendar.js'
 import eventFilters from './eleventy/filters/events.js'
 import lyricsFilter from './eleventy/filters/lyrics.js'
+import { escapeHtml } from './eleventy/filters/utils.js'
 
 function addCollections(eleventyConfig) {
     const articlePattern = /^(the|a|an|o|it[''']s)\s+/i
@@ -79,12 +80,7 @@ export default async function (eleventyConfig) {
     // Escape and normalize caption text (HTML-escape + newlines to <br>)
     eleventyConfig.addFilter('captionSafe', (text) => {
         if (!text || typeof text !== 'string') return ''
-        return text
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/\n/g, '<br>')
+        return escapeHtml(text).replace(/\n/g, '<br>')
     })
 
     // Add YAML as an acceptable data file format
