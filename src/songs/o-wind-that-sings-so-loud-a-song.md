@@ -14,10 +14,10 @@ and all around I heard you pass
 like layered skirts across the grass
 
 _chorus:_
-**O wind, O wind, a-blowing all day long**
-**a-blowing, a-blowing, a-blowing all day long**
-**O wind, O wind, that sings so loud a song,**
-**that sings so loud a song!**
+**O wind, O wind, a-blowing all day long
+a-blowing, a-blowing, a-blowing all day long
+O wind, O wind, that sings so loud a song,
+that sings so loud a song!**
 
 I saw the different things you did
 **the things you did, the things you did**
