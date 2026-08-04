@@ -42,7 +42,14 @@ export default async function (eleventyConfig) {
 
     // Add a filter to get a project by fileSlug
     eleventyConfig.addFilter('getProjectByName', function (projects, name) {
-        return projects.find((project) => project.fileSlug === name).data
+        const project = projects.find((project) => project.fileSlug === name)
+        if (!project) {
+            throw new Error(
+                `Unknown project "${name}" referenced in a song's released: frontmatter. ` +
+                    `Expected a file at src/projects/${name}.md`
+            )
+        }
+        return project.data
     })
 
     // Add a filter to format dates using date-fns
