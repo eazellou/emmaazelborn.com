@@ -1,4 +1,42 @@
 /**
+ * Splits a paragraph's inner HTML into per-line strings, keeping inline tags
+ * (e.g. <strong>, <em>) that span multiple lines balanced on every resulting
+ * line. This lets markdown like "**line one\nline two**" bold both lines
+ * instead of leaving an unclosed <strong> orphaned across the split.
+ */
+function splitLinesKeepingTagsBalanced(content) {
+    const rawLines = content.split(/<br\s*\/?>(?:\s*)?|\n/)
+    const openTags = []
+    const lines = []
+
+    for (const rawLine of rawLines) {
+        const prefix = openTags.map((tag) => `<${tag}>`).join('')
+        let line = prefix + rawLine
+
+        const tagRegex = /<(\/?)(\w+)[^>]*>/g
+        let match
+        while ((match = tagRegex.exec(rawLine)) !== null) {
+            const [, isClosing, tagName] = match
+            if (isClosing) {
+                const idx = openTags.lastIndexOf(tagName)
+                if (idx !== -1) openTags.splice(idx, 1)
+            } else {
+                openTags.push(tagName)
+            }
+        }
+
+        line += openTags
+            .slice()
+            .reverse()
+            .map((tag) => `</${tag}>`)
+            .join('')
+        lines.push(line.trim())
+    }
+
+    return lines.filter((line) => line.length > 0)
+}
+
+/**
  * Lyrics filter: converts markdown-rendered HTML into stanza divs with empty-line spacing preserved.
  */
 function stanzaHtmlToDivs(lyricsHtml) {
@@ -33,10 +71,7 @@ function stanzasFromHtml(normalized) {
             if (prevPara && prevPara.type === 'content') {
                 result += '<div class="stanza stanza-empty"></div>'
             }
-            const lines = para.content
-                .split(/<br\s*\/?>(?:\s*)?|\n/)
-                .map((line) => line.trim())
-                .filter((line) => line.length > 0)
+            const lines = splitLinesKeepingTagsBalanced(para.content)
             if (lines.length > 0) {
                 result +=
                     '<div class="stanza">' +
