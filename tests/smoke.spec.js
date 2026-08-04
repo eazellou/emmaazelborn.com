@@ -22,7 +22,11 @@ test('song page renders lyric stanzas and Bandcamp embed when released', async (
     await expect(stanzas.first()).toBeVisible()
     expect(await stanzas.count()).toBeGreaterThan(1)
     await expect(page.locator('.song-projects')).toContainText('Magnolia Sun')
-    await expect(page.locator('iframe[src*="bandcamp.com"]').first()).toBeVisible()
+    const iframe = page.locator('iframe[src*="bandcamp.com"]').first()
+    await expect(iframe).toBeVisible()
+    // Guards against YAML integer coercion of bandcampTrackId (unquoted IDs
+    // lose leading zeros or precision) silently swapping in the wrong track.
+    await expect(iframe).toHaveAttribute('src', /track=1765836546\b/)
     expect(getErrors()).toEqual([])
 })
 
@@ -30,9 +34,11 @@ test('project page renders Bandcamp embed and tracklist', async ({ page }) => {
     const getErrors = trackPageErrors(page)
     await page.goto('/projects/magnolia-sun/')
     await expect(page.locator('h2').first()).toContainText('Magnolia Sun')
-    await expect(
-        page.locator('iframe[src*="bandcamp.com/EmbeddedPlayer/album="]').first()
-    ).toBeVisible()
+    const iframe = page.locator('iframe[src*="bandcamp.com/EmbeddedPlayer/album="]').first()
+    await expect(iframe).toBeVisible()
+    // Guards against YAML integer coercion of bandcampID (unquoted IDs lose
+    // leading zeros or precision) silently swapping in the wrong album.
+    await expect(iframe).toHaveAttribute('src', /album=1983118898\b/)
     const tracks = page.locator('.project-content ol li')
     expect(await tracks.count()).toBeGreaterThan(0)
     await expect(page.locator('.credits')).toBeVisible()
