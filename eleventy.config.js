@@ -169,9 +169,11 @@ export const config = {
         // for simplicity
         layouts: '_layouts',
         includes: '_layouts',
-        // Switch Markdown and HTML template engines to Nunjucks
-        // (otherwise, the default is Liquid)
-        htmlTemplateEngine: 'njk',
-        markdownTemplateEngine: 'njk',
     },
+    // Switch Markdown and HTML template engines to Nunjucks (otherwise, the
+    // default is Liquid). These must be top-level keys, not nested under
+    // `dir` — Eleventy only reads `dir` for directory settings and silently
+    // ignores anything else placed inside it.
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
 }
