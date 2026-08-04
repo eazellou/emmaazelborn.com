@@ -36,11 +36,10 @@ Along the Boston Harbor!
 
 We saw Long Wharf, the longest wharf
 
-_chorus:_
-Along the Boston Harbor
-There's boats and ships galore
-And we say hi and pass them by
-On our way to the North Shore
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Commercial Wharf with the counting house!
@@ -48,7 +47,10 @@ Commercial Wharf with the counting house!
 
 And Long Wharf, the longest wharf!!
 
-_chorus_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Lewis Wharf with the granite stores!
@@ -57,7 +59,10 @@ Lewis Wharf with the granite stores!
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Sargents Wharf with the cold storage!
@@ -67,7 +72,10 @@ And Lewis Wharf with the granite stores
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Union Wharf with the steamships!
@@ -78,7 +86,10 @@ And Lewis Wharf with the granite stores
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Lincoln Wharf with the power plant!
@@ -90,7 +101,10 @@ And Lewis Wharf with the granite stores
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 We saw...
 Battery Wharf with the sea wall!
@@ -103,6 +117,14 @@ And Lewis Wharf with the granite stores
 And Commercial Wharf with the counting house
 And Long Wharf, the longest wharf!!
 
-_chorus (x2)_
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
+
+**Along the Boston Harbor**
+**There's boats and ships galore**
+**And we say hi and pass them by**
+**On our way to the North Shore**
 
 Along the Boston Harbor!
