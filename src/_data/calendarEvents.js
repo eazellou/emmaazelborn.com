@@ -101,6 +101,7 @@ export default async function () {
     const { from, oneYearLater } = getDateRange()
     const allInstances = []
     const isProd = process.env.PROD === '1'
+    const failedCalendarIds = []
 
     for (const { id, url } of calendars) {
         try {
@@ -108,8 +109,25 @@ export default async function () {
             const icsText = typeof raw === 'string' ? raw : (raw?.toString?.('utf8') ?? String(raw))
             allInstances.push(...parseCalendar(icsText, id, from, oneYearLater))
         } catch (err) {
-            console.warn(`Calendar fetch failed (${id}):`, err.message)
+            // @11ty/eleventy-fetch already falls back to a stale cache entry on
+            // fetch failure (see RemoteAssetCache#fetch) whenever one exists on
+            // disk and `duration` is non-zero, so reaching this catch means
+            // there is truly no usable data for this calendar: no fresh fetch
+            // *and* no cached fallback (or, in dev, caching is disabled via
+            // `duration: '0s'` so every failure lands here). That's worse than
+            // a build failure: it would silently ship an empty events page.
+            console.warn(
+                `Calendar fetch failed (${id}), no cached fallback available:`,
+                err.message
+            )
+            failedCalendarIds.push(id)
         }
+    }
+
+    if (failedCalendarIds.length > 0) {
+        const message = `Calendar fetch failed with no usable data (fresh or cached) for: ${failedCalendarIds.join(', ')}. Refusing to build an events page that would silently be missing events.`
+        console.error(`::error::${message}`)
+        throw new Error(message)
     }
 
     allInstances.sort(sortByStart)
