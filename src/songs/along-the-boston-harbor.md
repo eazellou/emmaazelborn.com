@@ -46,7 +46,7 @@ We saw...
 Commercial Wharf with the counting house!
 **Commercial Wharf with the counting house!**
 
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus_
 
@@ -55,7 +55,7 @@ Lewis Wharf with the granite stores!
 **Lewis Wharf with the granite stores!**
 
 **And Commercial Wharf with the counting house**
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus_
 
@@ -65,7 +65,7 @@ Sargents Wharf with the cold storage!
 
 **And Lewis Wharf with the granite stores**
 **And Commercial Wharf with the counting house**
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus_
 
@@ -76,7 +76,7 @@ Union Wharf with the steamships!
 **And Sargents Wharf with the cold storage**
 **And Lewis Wharf with the granite stores**
 **And Commercial Wharf with the counting house**
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus_
 
@@ -88,7 +88,7 @@ Lincoln Wharf with the power plant!
 **And Sargents Wharf with the cold storage**
 **And Lewis Wharf with the granite stores**
 **And Commercial Wharf with the counting house**
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus_
 
@@ -101,7 +101,7 @@ Battery Wharf with the sea wall!
 **And Sargents Wharf with the cold storage**
 **And Lewis Wharf with the granite stores**
 **And Commercial Wharf with the counting house**
-And Long Wharf, the longest wharf!!
+**And Long Wharf, the longest wharf!!**
 
 _chorus (x2)_
 
