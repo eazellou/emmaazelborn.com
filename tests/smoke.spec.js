@@ -11,6 +11,7 @@ test('homepage loads with highlighted projects', async ({ page }) => {
     await page.goto('/')
     await expect(page).toHaveTitle(/Emma Azelborn/)
     await expect(page.locator('.highlighted-project-item').first()).toBeVisible()
+    expect(await page.locator('.highlighted-project-item').count()).toBe(3)
     expect(getErrors()).toEqual([])
 })
 
@@ -34,7 +35,7 @@ test('project page renders Bandcamp embed and tracklist', async ({ page }) => {
         page.locator('iframe[src*="bandcamp.com/EmbeddedPlayer/album="]').first()
     ).toBeVisible()
     const tracks = page.locator('.project-content ol li')
-    expect(await tracks.count()).toBeGreaterThan(0)
+    expect(await tracks.count()).toBe(11)
     await expect(page.locator('.credits')).toBeVisible()
     expect(getErrors()).toEqual([])
 })
