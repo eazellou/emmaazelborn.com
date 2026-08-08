@@ -11,14 +11,14 @@ a man with teeth, a fearless ratter
 he's their queen's rat catcher
 
 _chorus:_
-hear his rat sash!
+**hear his rat sash!
 clatter clack clack!
 rat ratatat!
 stay back...
 ... scatter fast
 stay back...
 ... scatter fast
-Jack Black is on the attack
+Jack Black is on the attack**
 
 here, my tail, his ferrets bit it off
 the teeth, the snarls commanded by **Jack Black**
