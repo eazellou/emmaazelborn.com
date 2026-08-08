@@ -47,3 +47,5 @@ poisoned pockets, he won't hurry
 if he's caught you, death is mercy
 
 _chorus_
+
+[Jack Black was Queen Victoria's rat catcher, a very eccentric man](https://dl.tufts.edu/teiviewer/parent/5x21ts300/chapter/c1s5)
