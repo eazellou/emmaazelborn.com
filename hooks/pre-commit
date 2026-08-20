@@ -5,7 +5,7 @@ staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
 
 js_files=$(echo "$staged_files" | grep -E '\.(js|mjs|cjs)$')
 md_files=$(echo "$staged_files" | grep -E '\.md$')
-prettier_files=$(echo "$staged_files" | grep -E '\.(js|mjs|cjs|md|njk|yaml|yml|json|css|html)$')
+prettier_files=$(echo "$staged_files" | grep -E '\.(js|mjs|cjs|md|yaml|yml|json|css|html)$')
 
 status=0
 
