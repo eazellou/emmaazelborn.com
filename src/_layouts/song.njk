@@ -60,7 +60,7 @@
             Your browser does not support the audio player.
           </audio>
           {% if voiceMemoCaption %}
-            <p class="song-voice-memo-caption"><em>{{ voiceMemoCaption }}</em></p>
+            <p class="song-voice-memo-caption"><em>{{ voiceMemoCaption | markdownInline | safe }}</em></p>
           {% endif %}
         {% endif %}
         {% if youtube %}
