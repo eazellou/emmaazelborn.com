@@ -1,7 +1,8 @@
 ---
 title: What the Winds Bring
 composer: Emma Azelborn
-voiceMemo: what the winds bring.m4a
+voiceMemo: what the winds bring at sea.m4a
+voiceMemoCaption: "voice memo recorded at [the vox hunters'](https://thevoxhunters.com/) workshop at [cdss's sea session](https://cdss.org/event/sea-session-at-pinewoods/), [pinewoods dance camp](https://pinewoods.org/) 2026"
 description: 'which is the wind that brings the cold? / the North-Wind! the North-Wind!'
 ---
 
