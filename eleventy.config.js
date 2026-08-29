@@ -23,15 +23,60 @@ function addCollections(eleventyConfig) {
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     )
 
-    eleventyConfig.addCollection('projects', (collection) =>
-        collection
+    eleventyConfig.addCollection('projects', (collection) => {
+        const projects = collection
             .getFilteredByGlob('src/projects/*.md')
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
-    )
+        validateProjectBandcampFields(projects)
+        return projects
+    })
 
-    eleventyConfig.addCollection('songs', (collection) =>
-        collection.getFilteredByGlob('src/songs/*.md').sort(sortByTitle)
-    )
+    eleventyConfig.addCollection('songs', (collection) => {
+        const songs = collection.getFilteredByGlob('src/songs/*.md').sort(sortByTitle)
+        validateSongBandcampFields(songs)
+        return songs
+    })
+}
+
+// Bandcamp IDs are opaque identifiers, not numbers, and must be quoted as
+// strings in YAML frontmatter. An unquoted numeric ID gets parsed as a YAML
+// integer: leading zeros are silently stripped (e.g. 0849002684 becomes
+// 849002684, pointing at the wrong track), and sufficiently large IDs could
+// eventually lose precision as floats. The failure is invisible at build
+// time — the page renders and the iframe loads, it just embeds the wrong
+// track. These checks catch a future unquoted ID as soon as it's added.
+function validateSongBandcampFields(songs) {
+    for (const song of songs) {
+        const released = song.data.released
+        if (!Array.isArray(released)) continue
+        for (const release of released) {
+            const id = release.bandcampTrackId
+            if (id !== undefined && typeof id !== 'string') {
+                console.warn(
+                    `WARNING: ${song.inputPath} has a non-string bandcampTrackId (${id}). ` +
+                        `Quote it in the frontmatter (e.g. '${id}') to avoid YAML integer coercion.`
+                )
+            }
+        }
+    }
+}
+
+function validateProjectBandcampFields(projects) {
+    for (const project of projects) {
+        const { bandcampID, bandcampUrl } = project.data
+        if (bandcampID !== undefined && typeof bandcampID !== 'string') {
+            console.warn(
+                `WARNING: ${project.inputPath} has a non-string bandcampID (${bandcampID}). ` +
+                    `Quote it in the frontmatter (e.g. '${bandcampID}') to avoid YAML integer coercion.`
+            )
+        }
+        if (Boolean(bandcampID) !== Boolean(bandcampUrl)) {
+            console.warn(
+                `WARNING: ${project.inputPath} has only one of bandcampID/bandcampUrl set. ` +
+                    `The Bandcamp embed is gated on both being present, so it will silently not render.`
+            )
+        }
+    }
 }
 
 export default async function (eleventyConfig) {
