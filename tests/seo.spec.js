@@ -46,6 +46,9 @@ test('every song page sets a lyric-based meta description, not the site default'
     expect(songFiles.length).toBeGreaterThan(0)
     for (const file of songFiles) {
         const html = readFileSync(resolve(DIST, file), 'utf8')
+        // Skip client-side redirect stubs (old slugs kept alive per the URL-stability
+        // policy in CLAUDE.md). They intentionally have no lyrics or meta description,
+        // and are identifiable by their "Redirecting..." <title>.
         if (html.includes('Redirecting...')) continue
         const match = html.match(/<meta name="description" content="([^"]+)">/)
         expect(match, `${file} should have a meta description`).not.toBeNull()
