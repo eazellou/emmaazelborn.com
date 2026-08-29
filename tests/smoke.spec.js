@@ -26,6 +26,45 @@ test('song page renders lyric stanzas and Bandcamp embed when released', async (
     expect(getErrors()).toEqual([])
 })
 
+test('song with a "***" separator renders a structural/full lyrics toggle', async ({ page }) => {
+    const getErrors = trackPageErrors(page)
+    await page.goto('/songs/along-the-boston-harbor/')
+    await expect(page.locator('h2')).toContainText('Along the Boston Harbor')
+
+    const structural = page.locator('.song-lyrics[data-lyrics-view="structural"]')
+    const full = page.locator('.song-lyrics[data-lyrics-view="full"]')
+    await expect(structural).toBeVisible()
+    await expect(full).toHaveCount(1)
+    await expect(full).toBeHidden()
+
+    const toggleButton = page.locator('.song-lyrics-toggle-button')
+    await expect(toggleButton).toBeVisible()
+    await expect(toggleButton).toHaveText('Show full lyrics')
+    await expect(toggleButton).toHaveAttribute('aria-pressed', 'false')
+
+    await toggleButton.click()
+    await expect(full).toBeVisible()
+    await expect(structural).toBeHidden()
+    await expect(toggleButton).toHaveText('Show structural lyrics')
+    await expect(toggleButton).toHaveAttribute('aria-pressed', 'true')
+
+    expect(getErrors()).toEqual([])
+})
+
+test('song without a separator renders only structural lyrics and no toggle', async ({ page }) => {
+    const getErrors = trackPageErrors(page)
+    await page.goto('/songs/almost-here/')
+    await expect(page.locator('h2')).toContainText('Almost Here')
+
+    const structural = page.locator('.song-lyrics[data-lyrics-view="structural"]')
+    const full = page.locator('.song-lyrics[data-lyrics-view="full"]')
+    await expect(structural).toBeVisible()
+    await expect(full).toHaveCount(0)
+    await expect(page.locator('.song-lyrics-toggle-button')).toHaveCount(0)
+
+    expect(getErrors()).toEqual([])
+})
+
 test('project page renders Bandcamp embed and tracklist', async ({ page }) => {
     const getErrors = trackPageErrors(page)
     await page.goto('/projects/magnolia-sun/')
