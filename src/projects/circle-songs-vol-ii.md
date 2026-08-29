@@ -16,11 +16,11 @@ songs:
       lyricsUrl: /songs/royal-potatoes
     - title: Join Me Here
       lyricsUrl: /songs/join-me-here
-    - title: Who Has Seen The Wind?
+    - title: Who Has Seen the Wind?
       lyricsUrl: /songs/who-has-seen-the-wind
-    - title: Holding A Place For You
+    - title: Holding a Place for You
       lyricsUrl: /songs/holding-a-place-for-you
-    - title: Dragons Of Kilpatrick
+    - title: Dragons of Kilpatrick
       lyricsUrl: /songs/dragons-of-kilpatrick
 credits: |
     Lead Vocals: Emma&nbsp;Azelborn  
