@@ -12,6 +12,12 @@ credits: |
 <div style="width: 100%; max-width: 80rem">
 <div style="width: 100%; margin-bottom: 3rem; margin-top: 2rem">
   <div style="position: relative; padding-top: 56.25%;"> <!-- 16:9 aspect ratio (9/16 * 100) -->
+    <iframe src="https://www.youtube-nocookie.com/embed/JNHf7_pGptc" title="Emma Azelborn and Paper Plane at Brooklyn Contra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
+</div>
+
+<div style="width: 100%; margin-bottom: 3rem; margin-top: 2rem">
+  <div style="position: relative; padding-top: 56.25%;"> <!-- 16:9 aspect ratio (9/16 * 100) -->
     <iframe src="https://www.youtube-nocookie.com/embed/WWviUniPQTE" title="Quebecois Set" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
   </div>
 </div>
