@@ -2,7 +2,7 @@
 title: The Nightengale and the Blindworm
 composer: Emma Azelborn
 voiceMemo: nightengale and blindworm in group.m4a
-description: "I'll build my nest in the linden / so high, so high, so high"
+description: "I'll build my nest in the linden / I will pierce your eggs"
 ---
 
 _nightengale:_
