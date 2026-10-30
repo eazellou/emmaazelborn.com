@@ -1,11 +1,11 @@
 ---
-title: The Nightengale and the Blindworm
+title: The Nightingale and the Blindworm
 composer: Emma Azelborn
-voiceMemo: nightengale and blindworm in group.m4a
+voiceMemo: nightingale and blindworm in group.m4a
 description: "I'll build my nest in the linden / I will pierce your eggs"
 ---
 
-_nightengale:_
+_nightingale:_
 I'll build my nest in the linden
 so high, so high, so high
 you'll never be able to find it
@@ -17,4 +17,4 @@ I will drink them up
 for I live beneath
 I will not stop
 
-_inspired by the Brothers Grimm fable The Nightengale and the Blindworm_
+_inspired by the Brothers Grimm fable The Nightingale and the Blindworm_
