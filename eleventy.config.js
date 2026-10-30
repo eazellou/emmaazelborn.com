@@ -45,6 +45,25 @@ export default async function (eleventyConfig) {
         return projects.find((project) => project.fileSlug === name).data
     })
 
+    // Add a filter to resolve a list of project fileSlugs (e.g.
+    // config.highlightedProjects) into the matching project objects, in the
+    // order the slugs were given. Throws at build time if a slug doesn't
+    // match any project, so a typo or a renamed project can't silently drop
+    // a card with no warning.
+    eleventyConfig.addFilter('projectsBySlug', function (projects, slugs) {
+        const projectsBySlug = new Map(projects.map((project) => [project.fileSlug, project]))
+        return slugs.map((slug) => {
+            const project = projectsBySlug.get(slug)
+            if (!project) {
+                throw new Error(
+                    `highlightedProjects references unknown project slug "${slug}". ` +
+                        'Check src/_data/config.yaml against the fileSlugs in src/projects/.'
+                )
+            }
+            return project
+        })
+    })
+
     // Add a filter to format dates using date-fns
     eleventyConfig.addFilter('date', (date, formatStr = 'MMMM d, yyyy') =>
         format(new UTCDate(date), formatStr)
