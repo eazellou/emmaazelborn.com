@@ -2,7 +2,29 @@
  * Event display filters: location links, description HTML, Eastern-time date formatting.
  */
 
+import { escapeHtml } from './utils.js'
+
 const EASTERN_TZ = 'America/New_York'
+
+// Shared Intl.DateTimeFormat option sets, reused by dateEastern below.
+const DATE_PART_OPTIONS = {
+    timeZone: EASTERN_TZ,
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+}
+const TIME_PART_OPTIONS = {
+    timeZone: EASTERN_TZ,
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+}
+
+// Constructing an Intl.DateTimeFormat is relatively expensive, so build these
+// once at module scope and reuse them across calls rather than per-call.
+const dateFormatter = new Intl.DateTimeFormat('en-US', DATE_PART_OPTIONS)
+const timeFormatter = new Intl.DateTimeFormat('en-US', TIME_PART_OPTIONS)
 
 const NON_ADDRESS_PATTERNS = [
     /^zoom\b/i,
@@ -38,47 +60,26 @@ export default function (eleventyConfig) {
         if (str == null || str === '') return ''
         const s = String(str).replace(/\r\n/g, '\n').replace(/\r/g, '\n')
         if (/<[a-z][^>]*>/i.test(s)) return s
-        const escaped = s
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-        return escaped.replace(/\n/g, '<br>')
+        return escapeHtml(s).replace(/\n/g, '<br>')
     })
 
+    // Event dates use raw Intl + a fixed Eastern timezone here instead of the
+    // date-fns + @date-fns/utc combo used for content dates (see the `date`
+    // filter in eleventy.config.js). Content dates (posts, projects) are
+    // date-only values with no meaningful timezone, so they're formatted as
+    // UTC to avoid off-by-one-day shifts. Event times are genuinely
+    // timezone-bound — they represent a specific instant that should always
+    // display in Eastern regardless of server/viewer timezone — which is a
+    // different problem best solved with Intl's built-in timeZone support.
     eleventyConfig.addFilter('dateEastern', (date, formatType = 'date') => {
         if (!date) return ''
         const d = new Date(date)
         if (formatType === 'time') {
-            return new Intl.DateTimeFormat('en-US', {
-                timeZone: EASTERN_TZ,
-                hour: 'numeric',
-                minute: '2-digit',
-                hour12: true,
-            }).format(d)
+            return timeFormatter.format(d)
         }
         if (formatType === 'datetime') {
-            const dateStr = new Intl.DateTimeFormat('en-US', {
-                timeZone: EASTERN_TZ,
-                weekday: 'short',
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric',
-            }).format(d)
-            const timeStr = new Intl.DateTimeFormat('en-US', {
-                timeZone: EASTERN_TZ,
-                hour: 'numeric',
-                minute: '2-digit',
-                hour12: true,
-            }).format(d)
-            return `${dateStr} at ${timeStr}`
+            return `${dateFormatter.format(d)} at ${timeFormatter.format(d)}`
         }
-        return new Intl.DateTimeFormat('en-US', {
-            timeZone: EASTERN_TZ,
-            weekday: 'short',
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-        }).format(d)
+        return dateFormatter.format(d)
     })
 }
