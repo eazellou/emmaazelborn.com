@@ -31,7 +31,7 @@
         {% elif not released %}
         <p><em>This song is not released yet, but I've been singing it out in the world. Feel free to learn it and sing it with your friends!</em></p>
         {% endif %}
-        {% set lyricsSections = content | lyricsSections %}
+        {% set lyricsSections = content | lyricsSections(title) %}
         <div class="song-lyrics" data-lyrics-view="structural">
             {{ lyricsSections.structural | safe }}
         </div>

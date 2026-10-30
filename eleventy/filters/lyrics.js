@@ -88,10 +88,18 @@ function stanzasFromHtml(normalized) {
  * structural (default) section and an optional fully-written-out section,
  * each rendered to stanza divs. Songs without a "***" separator only have
  * a structural section.
+ *
+ * `songTitle` is optional and only used to make the build-time log (below)
+ * identify which song gained a toggle.
  */
-function stanzaSections(lyricsHtml) {
+function stanzaSections(lyricsHtml, songTitle) {
     const [structuralHtml, ...rest] = lyricsHtml.split(/<hr\s*\/?>/)
     const fullHtml = rest.join('')
+    if (rest.length > 0) {
+        console.log(
+            `[lyrics] "${songTitle || 'unknown song'}" has a "***" separator — rendering a structural/full lyrics toggle.`
+        )
+    }
     return {
         structural: stanzaHtmlToDivs(structuralHtml),
         full: rest.length > 0 ? stanzaHtmlToDivs(fullHtml) : null,
