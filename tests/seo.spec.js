@@ -54,3 +54,30 @@ test('every song page sets a lyric-based meta description, not the site default'
         )
     }
 })
+
+test('feed.xml lists the newest posts first and is discoverable from pages', async () => {
+    const feed = readFileSync(resolve(DIST, 'feed.xml'), 'utf8')
+    expect(feed).toContain('<feed xmlns="http://www.w3.org/2005/Atom"')
+
+    // Expected order: posts in src/writing sorted newest-first by `date`, capped at 10
+    const files = await glob('src/writing/*.md')
+    const expected = files
+        .map((file) => ({
+            slug: file.split('/').pop().replace(/\.md$/, ''),
+            date: new Date(readFileSync(file, 'utf8').match(/^date:\s*(.+)$/m)[1]),
+        }))
+        .sort((a, b) => b.date - a.date)
+        .slice(0, 10)
+        .map(({ slug }) => `https://emmaazelborn.com/p/${slug}/`)
+
+    const entryUrls = [
+        ...feed.matchAll(/<entry>\s*<title>.*?<\/title>\s*<link href="(.*?)"/gs),
+    ].map((m) => m[1])
+    expect(entryUrls.length).toBeGreaterThan(0)
+    expect(entryUrls).toEqual(expected)
+
+    const home = readFileSync(resolve(DIST, 'index.html'), 'utf8')
+    expect(home).toContain(
+        '<link rel="alternate" type="application/atom+xml" title="Emma Azelborn" href="https://emmaazelborn.com/feed.xml">'
+    )
+})
