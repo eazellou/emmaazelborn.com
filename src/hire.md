@@ -64,6 +64,12 @@ I love helping folks connect through singing, whether they're seasoned social fo
 
 I offer private music lessons, in person in Boston, MA or remotely. I teach songwriting, song leading, singing, and beginner Irish whistle.
 
+> Emma has deep knowledge and experience with song writing and how to work collaboratively in the song editing process. In minutes, she helped me rework the lyrical arrangement of a song in a way in which I felt really heard and understood. Working with Emma, I suddenly understood more deeply the trade-offs in the artistic choices I was making and why—to push my song over the finish line and launch it more confidently into the world.
+>
+> \- Aaron Marcus
+
+<!-- -->
+
 > I've gotten Emma's feedback on both the songs I've written. On one, her feedback on the draft led to a major rewrite, and on the other, she showed me a small tweak I could make to clarify what the song was about. In both cases talking to Emma made my songs better and helped them get from draft to finished form.
 >
 > \- Alex Ellis
