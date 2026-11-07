@@ -47,7 +47,7 @@ Each collection directory has a `<dir>.yaml` file (e.g. `songs.yaml`) that sets 
 
 Songs are Markdown files with lyrics as body content. Key frontmatter fields:
 
-- `released`: array of `{ project, bandcampTrackId }` — links song to a project for the "Appears in" section and Bandcamp embed. If `project` is omitted but `bandcampTrackId` is present, embeds a standalone track player.
+- `released`: array of `{ project, bandcampTrackId }` — links song to a project for the "Appears in" section and Bandcamp embed. If `project` is omitted but `bandcampTrackId` is present, embeds a standalone track player. **`bandcampTrackId` must always be single-quoted** (e.g. `'849002684'`) — it's an opaque Bandcamp identifier, not a number. Left unquoted, YAML parses it as an integer: leading zeros are silently stripped (pointing at the wrong track), and very large IDs could eventually lose precision as floats. A build-time check in `eleventy.config.js` warns if any `bandcampTrackId` isn't a string.
 - `voiceMemo` / `voiceMemoCaption`: filename in `src/static/audio/` for an audio player (shown only when not released)
 - `youtube` / `youtubeCaption`: YouTube URL or 11-char video ID
 - `score`: path to PDF in `src/static/scores/`
@@ -59,7 +59,7 @@ The `lyrics` Nunjucks filter (`eleventy/filters/lyrics.js`) converts the rendere
 
 Projects link to Bandcamp albums, list track songs, and optionally show upcoming calendar events.
 
-- `bandcampID` + `bandcampUrl`: renders a Bandcamp album embed
+- `bandcampID` + `bandcampUrl`: renders a Bandcamp album embed (both must be present — `src/_layouts/project.njk` gates the embed on `bandcampID and bandcampUrl`). **`bandcampID` must always be single-quoted** (e.g. `'1408015257'`) for the same reason as `bandcampTrackId` above — it's an opaque identifier, not a number, and unquoted values are vulnerable to YAML integer coercion (stripped leading zeros, eventual float precision loss). A build-time check in `eleventy.config.js` warns if any `bandcampID` isn't a string, or if only one of `bandcampID`/`bandcampUrl` is set (the embed would silently fail to render).
 - `songLink`: streaming link (Apple Music, etc.)
 - `songs`: array of `{ title, lyricsUrl }` — tracklist with optional links to song pages
 - `calendarId`: matches a calendar `id` in `src/_data/calendars.js` — pulls live events from that Google Calendar into the project page

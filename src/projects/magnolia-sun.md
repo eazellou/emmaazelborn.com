@@ -5,7 +5,7 @@ image: /static/images/magnolia-sun-album-art.png
 summary: "An introspective mix of original songs blending folk, jazz, and pop"
 description: "During the lonely days of COVID quarantine, I dove into songwriting. What started as an escape turned into a collection of songs that follow the journey from those isolated times through the gradual reopening of the world.
 It’s been incredible to see these songs grow far beyond what I imagined. A huge part of that has been the chance to collaborate with the amazing friends and musicians that brought these songs to life in ways I never could have alone."
-bandcampID: "1983118898"
+bandcampID: '1983118898'
 bandcampUrl: "/album/magnolia-sun"
 songLink: "https://album.link/s/7grSbplzaqUnZo2wsteiXv"
 songs:
