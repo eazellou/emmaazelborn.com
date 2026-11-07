@@ -9,7 +9,6 @@
         "test:nobuild": "playwright test",
         "serve": "PROD=0 eleventy --serve",
         "build": "PROD=1 eleventy",
-        "blog": "node scripts/blog.mjs",
         "lint": "npm run lint:js && npm run lint:md",
         "lint:js": "eslint .",
         "lint:md": "markdownlint .",

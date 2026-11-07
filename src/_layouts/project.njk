@@ -44,16 +44,14 @@
                 <p class="back-link">
                     <a href="{{ calendarId | calendarWebUrl(calendars) }}" target="_blank" rel="noopener noreferrer">Add to your calendar</a>
                 </p>
-                {# Include expects calendarEvents and design; set locally for this include only #}
-                {% set calendarEvents = projectOneOff %}
-                {% set design = 'cards' %}
-                {% include "includes/events-list.njk" %}
+                {% from "includes/events-list.njk" import eventsList with context %}
+                {{ eventsList(projectOneOff, 'cards') }}
                 {% endif %}
                 {% if projectRecurring.length %}
                 <h3>Recurring events</h3>
                 <p class="events-recurring-intro">See <a href="{{ calendarId | calendarWebUrl(calendars) }}" target="_blank" rel="noopener noreferrer">full calendar</a> for all dates.</p>
-                {% set recurringEvents = projectRecurring %}
-                {% include "includes/events-recurring-list.njk" %}
+                {% from "includes/events-recurring-list.njk" import recurringEventsList with context %}
+                {{ recurringEventsList(projectRecurring) }}
                 {% endif %}
                 <p class="back-link">
                     <a href="/events/">All Events</a>
