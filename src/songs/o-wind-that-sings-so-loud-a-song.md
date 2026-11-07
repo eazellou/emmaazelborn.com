@@ -2,6 +2,13 @@
 title: O Wind (That Sings so Loud a Song)
 composer: Emma Azelborn
 voiceMemo: the wind that sings so loud a song.mp4
+# Do not remove this permalink even though it matches what Eleventy would
+# generate from the filename anyway. It pins the URL after this song was
+# renamed from "o wind (that sings so loud a song)". The old URL is preserved
+# by the redirect stub at "src/songs/o wind (that sings so loud a song).html".
+# If this file is ever renamed again, this permalink must stay put (or be
+# updated deliberately alongside a new redirect stub) so the deployed URL
+# doesn't silently change. See CLAUDE.md's URL-stability section.
 permalink: /songs/o-wind-that-sings-so-loud-a-song/
 description: 'O wind, O wind, that sings so loud a song'
 ---
