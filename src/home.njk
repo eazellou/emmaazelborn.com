@@ -11,27 +11,23 @@ permalink: /
 <section class="full-width-stripe home-projects">
     <div class="stripe-content">
         <ul class="highlighted-project-list">
-            {% for project_title in config.highlightedProjects %}
-                {% for project in collections.projects %}
-                    {% if project.data.title == project_title %}
-                        <li class="highlighted-project-item">
-                            <a href="{{ project.url }}">
-                                <div class="highlighted-project-image-wrapper">
-                                    <img
-                                        class="highlighted-project-image"
-                                        src="{{ project.data.image }}"
-                                        alt="{{ project.data.title }}"
-                                        eleventy:widths="800"
-                                    />
-                                </div>
-                                <div class="highlighted-project-details">
-                                    <h2>{{ project.data.title }}</h2>
-                                    <p>{{ project.data.summary }}</p>
-                                </div>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
+            {% for project in collections.projects | projectsBySlug(config.highlightedProjects) %}
+                <li class="highlighted-project-item">
+                    <a href="{{ project.url }}">
+                        <div class="highlighted-project-image-wrapper">
+                            <img
+                                class="highlighted-project-image"
+                                src="{{ project.data.image }}"
+                                alt="{{ project.data.title }}"
+                                eleventy:widths="800"
+                            />
+                        </div>
+                        <div class="highlighted-project-details">
+                            <h2>{{ project.data.title }}</h2>
+                            <p>{{ project.data.summary }}</p>
+                        </div>
+                    </a>
+                </li>
             {% endfor %}
         </ul>
         <a class="button" href="/projects">View all projects »</a>
