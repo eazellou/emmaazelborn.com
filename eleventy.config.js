@@ -23,6 +23,14 @@ function addCollections(eleventyConfig) {
             .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     )
 
+    // The feed plugin reverses its collection and takes the first `limit`
+    // items, so it expects oldest-first order (the opposite of `posts`).
+    eleventyConfig.addCollection('feedPosts', (collection) =>
+        collection
+            .getFilteredByGlob('src/writing/*.md')
+            .sort((a, b) => new Date(a.data.date) - new Date(b.data.date))
+    )
+
     eleventyConfig.addCollection('projects', (collection) => {
         const projects = collection
             .getFilteredByGlob('src/projects/*.md')
@@ -178,7 +186,7 @@ export default async function (eleventyConfig) {
         type: 'atom',
         outputPath: '/feed.xml',
         collection: {
-            name: 'posts',
+            name: 'feedPosts',
             limit: 10,
         },
         metadata: {
