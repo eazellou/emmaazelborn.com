@@ -19,5 +19,15 @@ export default [
             complexity: ['error', { max: 15 }],
         },
     },
+    {
+        files: ['src/static/**/*.js'],
+        languageOptions: {
+            ecmaVersion: 'latest',
+            sourceType: 'script',
+            globals: {
+                ...globals.browser,
+            },
+        },
+    },
     eslintConfigPrettier,
 ]
