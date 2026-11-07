@@ -21,7 +21,8 @@ call our dances
 sing the chorus
 dance together
 
----
+<!-- prettier-ignore -->
+***
 
 In this hall, we dance together
 **We dance together
