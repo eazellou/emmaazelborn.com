@@ -19,6 +19,53 @@ Always run `npm run lint && npm run format:check` before finalizing any changes.
 
 **Once a URL has been deployed, it must never change.** This applies to all content: posts (`p/<slug>/`), songs, projects, and static assets. Renaming files, changing slugs, restructuring directories, or altering permalink patterns are all high-risk operations. If a structural change is unavoidable, add Eleventy redirects rather than removing the old URL.
 
+### Redirect-stub pattern
+
+This site is hosted on GitHub Pages, which has no server-side redirect support (no `_redirects`, no custom server config). When a song's slug changes, the old URL is kept alive as a client-side redirect stub instead of being removed.
+
+A stub is a standalone `.html` file (not `.md`) placed at the old path inside `src/songs/`, using frontmatter to opt out of the normal song template and collection:
+
+- `permalink` — pins the file to the exact old URL. **Never change this value once deployed** — it _is_ the deployed URL.
+- `eleventyExcludeFromCollections: true` — keeps the stub out of the `songs` collection (listings, sorting, "Appears in" sections, etc.)
+- `layout: false` — the stub supplies its own complete `<html>` document instead of using a song layout
+- `templateEngineOverride: false` — the file's HTML is emitted as-is, not run through Nunjucks
+
+The body is a minimal HTML page combining three redirect mechanisms for maximum compatibility: a `<meta http-equiv="refresh">` (works without JS), a `<link rel="canonical">` (tells search engines the real URL to index), and a `window.location.href` script (fast redirect when JS is available), plus a visible fallback link for anyone who lands there before any of those fire.
+
+`src/songs/the-north-wind.html` is the simplest existing example and can be copied as a template for a new stub — swap the `permalink`, the three occurrences of the destination URL, and the visible link text:
+
+```html
+---
+permalink: /songs/the-north-wind/
+eleventyExcludeFromCollections: true
+layout: false
+templateEngineOverride: false
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0; url=/songs/the-north-wind-doth-blow/" />
+        <link rel="canonical" href="/songs/the-north-wind-doth-blow/" />
+        <title>Redirecting...</title>
+        <script>
+            window.location.href = '/songs/the-north-wind-doth-blow/'
+        </script>
+    </head>
+    <body>
+        <p>
+            I renamed this song. If you are not redirected automatically,
+            <a href="/songs/the-north-wind-doth-blow/">click here</a>.
+        </p>
+    </body>
+</html>
+```
+
+The `<title>Redirecting...</title>` text is also used as a marker: `tests/seo.spec.js` skips any page containing "Redirecting..." when asserting on lyric-based meta descriptions, since stub pages intentionally have neither lyrics nor a meaningful description.
+
+Other existing stubs: `src/songs/the-winds-song.html` and `src/songs/o wind (that sings so loud a song).html`.
+
 ### Previewing Claude worktree branches
 
 To run a dev server for a Claude-managed worktree branch without checking it out, use the `serve-worktree` shell function (defined in `~/.bash_profile`):
