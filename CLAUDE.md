@@ -53,7 +53,7 @@ Songs are Markdown files with lyrics as body content. Key frontmatter fields:
 - `score`: path to PDF in `src/static/scores/`
 - `composer`: credit line
 
-The `lyrics` Nunjucks filter (`eleventy/filters/lyrics.js`) converts the rendered Markdown body into stanza `<div>`s, grouping lines by blank-line separators.
+The `lyrics` Nunjucks filter (`eleventy/filters/lyrics.js`) converts the rendered Markdown body into stanza `<div>`s, grouping lines by blank-line separators. A `***` horizontal rule in the body (via the `lyricsSections` filter) splits the lyrics into a structural (default) section and an optional fully-written-out section, shown behind a "Show full lyrics" toggle. Use `***`, not `---`, for this separator — `---` is also the frontmatter fence delimiter, so reusing it in the body risks parser ambiguity and accidental toggles.
 
 ### Project frontmatter
 

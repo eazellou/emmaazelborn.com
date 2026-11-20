@@ -24,7 +24,8 @@ I am living this promise to myself
 I am making a promise to myself
 …
 
----
+<!-- prettier-ignore -->
+***
 
 I am making a promise to myself
 **I am making a promise to myself

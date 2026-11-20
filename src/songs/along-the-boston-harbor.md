@@ -32,7 +32,8 @@ Battery Wharf with the sea wall
 _ending:_
 **Along the Boston Harbor!**
 
----
+<!-- prettier-ignore -->
+***
 
 We saw Long Wharf, the longest wharf
 

@@ -30,7 +30,8 @@ fighting crime / racist hate
 
 keeping us safe / keeping us scared
 
----
+<!-- prettier-ignore -->
+***
 
 you say it's all about keeping us safe
 **no, it's not about keeping us safe
