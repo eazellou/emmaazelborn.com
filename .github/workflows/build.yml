@@ -40,6 +40,22 @@ jobs:
             - name: Lint
               run: npm run lint && npm run format:check
 
+            # calendarEvents.js fails the build when a calendar feed can't be
+            # fetched AND there's no cached fallback (see @11ty/eleventy-fetch's
+            # RemoteAssetCache#fetch). Without persisting .cache/ across runs,
+            # every CI build starts with an empty cache, so that fallback could
+            # never kick in here and a transient feed outage would fail every
+            # build, not just the daily refresh cron. Restoring the most recent
+            # cache (any day, via restore-keys) gives transient outages a real
+            # stale-data fallback in CI, matching local/prod dev behavior.
+            - name: Cache calendar feed data
+              uses: actions/cache@v4
+              with:
+                  path: .cache
+                  key: calendar-fetch-${{ github.run_id }}
+                  restore-keys: |
+                      calendar-fetch-
+
             - name: Build 11ty
               run: npm run build
 
