@@ -4,17 +4,15 @@
 <div class="stripe-content">
     <h2 class="page-title">{{ title }}</h2>
 
-    {# Upcoming one-off events: include expects `calendarEvents` and `design` #}
-    {% set oneOffEvents = calendarEvents.oneOff %}
+    {% from "includes/events-list.njk" import eventsList with context %}
+    {{ eventsList(calendarEvents.oneOff, 'cards') }}
     {% set recurringEvents = calendarEvents.recurring %}
-    {% set calendarEvents = oneOffEvents %}
-    {% set design = 'cards' %}
-    {% include "includes/events-list.njk" %}
 
     {% if recurringEvents.length %}
     <section class="events-recurring-section" aria-labelledby="recurring-heading">
         <h3 id="recurring-heading" class="events-recurring-heading">Recurring events</h3>
-        {% include "includes/events-recurring-list.njk" %}
+        {% from "includes/events-recurring-list.njk" import recurringEventsList with context %}
+        {{ recurringEventsList(recurringEvents) }}
     </section>
     {% endif %}
 

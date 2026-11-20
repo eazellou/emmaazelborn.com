@@ -1,5 +1,6 @@
+{% macro recurringEventsList(events) %}
 <ul class="event-list event-list--cards">
-    {% for event in recurringEvents %}
+    {% for event in events %}
     <li class="event-item event-item--recurring{% if event.projectImage %} event-item--has-image{% endif %}">
         <div class="event-item-content">
             <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
@@ -21,3 +22,4 @@
     </li>
     {% endfor %}
 </ul>
+{% endmacro %}

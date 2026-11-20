@@ -1,5 +1,6 @@
+{% macro eventsList(events, design) %}
 <ul class="event-list event-list--{{ design }}">
-    {% for event in calendarEvents %}
+    {% for event in events %}
         <li class="event-item event-item--{{ event.calendar }}{% if event.isRecurring %} event-item--recurring{% endif %}{% if event.projectImage %} event-item--has-image{% endif %}">
             <div class="event-item-content">
                 <time class="event-date" datetime="{{ event.start | date('yyyy-MM-dd') }}">
@@ -23,3 +24,4 @@
         <li class="events-empty">No upcoming events at the moment.</li>
     {% endfor %}
 </ul>
+{% endmacro %}
