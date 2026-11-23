@@ -28,9 +28,7 @@ credits: |
   </div>
 </div>
 
-Paper Plane is a soaring contra dance trio from the Boston area, comprised of multi-instrumentalists Daniel Raine, Emma Azelborn and Rohan Weeden. Hypnotic whistle and vocals will have you floating over the dance floor while rocking fiddle and strumming grooves bring you in for a smooth landing.
-
-Paper Plane has played the Brooklyn Contra double dance with Will Mentor calling, and toured the Mid-Atlantic, including dances in Philadelphia and at Glen Echo with Gaye Fifer calling.
+Paper Plane is a soaring contra dance trio from the Boston area, comprised of multi-instrumentalists Daniel Raine, Emma Azelborn and Rohan Weeden. Hypnotic whistle and vocals will have you floating over the dance floor while rocking fiddle and strumming grooves bring you in for a smooth landing. Paper Plane has played a Brooklyn contra double dance with Will Mentor calling and toured the Mid-Atlantic, including Philly and Glen Echo with Gaye Fifer calling.
 
 <div style="width: 100%; margin-bottom: 2rem; margin-top: 2rem">
   <div style="position: relative; padding-top: 56.25%;"> <!-- 16:9 aspect ratio (9/16 * 100) -->
